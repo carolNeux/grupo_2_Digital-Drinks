@@ -18,6 +18,9 @@ Soy un web developer junior con amplios conocimientos en el mundo de la cocteler
 
 Carol: 
 
+Soy artista visual, trabajo en diseño grafico y de producto.
+Amo manejar por cualquier ruta. Me gustan los libros, el cine, y viajar.
+
 
              Referentes
 
