@@ -3,10 +3,10 @@ Proyecto integrador
 
 Nuestro sitio esta orientado a la venta y distribucion de bebidas con y sin alcohol, herramientas de barra (bar tools) y cursos online. Ademas se ofrecera un espacio interactivo para compartir tecnicas y recetas. 
 
-Nuestra clientela abarca a toda persona mayor de 18 años que desee iniciarse en el mundo de la cocteleria y que esten abiertos a nuevas experiencias sensoriales. Si deseas aprender lo basico para impresionar a tus amigos, estas en el sitio indicado. (Pondremos un pop up para validar la edad). 
+Nuestra clientela abarca a toda persona mayor de 18 años que desee iniciarse en el mundo de la cocteleria y que esten abiertos a nuevas experiencias sensoriales. Recetas de tragos para principiantes y Bartenders. (Pondremos un pop up para validar la edad). 
 
 
-           Participantes
+           Participantes. 
 
 Ximena:
 
