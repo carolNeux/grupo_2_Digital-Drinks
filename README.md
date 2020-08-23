@@ -8,7 +8,9 @@ Nuestra clientela abarca a toda persona mayor de 18 años que desee iniciarse en
 
            Participantes. 
 
-Ximena:
+Ximena Camacho:
+
+Estudiante de programación front y back-end, con anterioridad estudie un año la Tecnicatura Superior en Programación en la UTN. Soy entusiasta a la hora de realizar cada actividad y autodidacta para lograr mis objetivos. Me apasiona todo lo que representa un desafío y expandir mis conocimientos. Mamá x 4, y en mi tiempo libre disfruto de la música y los juegos online.
 
 Carlos: 
 
