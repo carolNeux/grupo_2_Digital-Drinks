@@ -12,8 +12,10 @@ Ximena Camacho:
 
 Estudiante de programación front y back-end, con anterioridad estudie un año la Tecnicatura Superior en Programación en la UTN. Soy entusiasta a la hora de realizar cada actividad y autodidacta para lograr mis objetivos. Me apasiona todo lo que representa un desafío y expandir mis conocimientos. Mamá x 4, y en mi tiempo libre disfruto de la música y los juegos online.
 
-Carlos: 
+Carlos:
 
+ Soy comerciante y me encuentro estudiando programación front-end y back-end. Me gusta el cine, los video juegos, la música y me intriga mucho como funciona todo en el mundo digital.
+ 
 Robert: 
 
 Soy un web developer junior con amplios conocimientos en el mundo de la cocteleria clasica y mixologia. Me apasiona el futbol, el cine, los videojuegos y la música.
