@@ -1,9 +1,10 @@
 # grupo_2_Digital-Drinks
 Proyecto integrador 
 
-Nuestro sitio esta orientado a la venta y distribucion de bebidas con y sin alcohol, herramientas de barra (bar tools) y cursos online. Ademas se ofrecera un espacio interactivo para compartir tecnicas y recetas. 
+Nuestro e-commers está orientado a bartenders profesionales y a quienes deseen incursionar en el mundo de la cockteleria, ofreciendo gran variedad de productos asociados a cada necesidad, como herramientas de barra, bebidas, cristalería, cursos, etc. 
+Queremos que nuestros clientes tengan una agradable experiencia a la hora de visitar nuestro sitio y puedan encontrar en el, los recursos necesarios para aprender, crecer profesionalmente o probar nuevas cosas. Por este motivo, añadiremos una sección donde los usuarios registrados puedan compartir sus recetas, métodos y secretos con vista al público en general.
+Dentro de los cursos, ofreceremos distintas especialidades como barista, mixologia, bartender, enología y más, ampliando nuestra cartera de productos conjuntamente.
 
-Nuestra clientela abarca a toda persona mayor de 18 años que desee iniciarse en el mundo de la cocteleria y que esten abiertos a nuevas experiencias sensoriales. Recetas de tragos para principiantes y Bartenders. (Pondremos un pop up para validar la edad). 
 
 
            Participantes. 
@@ -18,7 +19,7 @@ Carlos:
  
 Robert: 
 
-Soy un web developer junior con amplios conocimientos en el mundo de la cocteleria clasica y mixologia. Me apasiona el futbol, el cine, los videojuegos y la música.
+Soy estudiante de web developer con amplios conocimientos en el mundo de la cocteleria clasica y mixologia. Me apasiona el futbol, el cine, los videojuegos y la música.
 
 Carol: 
 
