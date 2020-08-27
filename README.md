@@ -28,17 +28,15 @@ Amo manejar por cualquier ruta. Me gustan los libros, el cine, y viajar.
 
              Referentes
 
- Santiago 'Pichin' Policastro 
+ https://www.amazon.com/   --> Referente mundial como e-commerce, lo tomamos como referente por su funcionalidad y practicidad.
 
- https://www.amazon.com/   --> por su funcionalidad
+ https://www.absolut.com/ar/ --> Marca de vodka ampliamente conocida, tomamos como referencia su sitio web por su estetica, colores y sensaciones que transmiten.
 
- https://www.absolut.com/ar/ --> por su estetica 
+ https://iba-world.com/iba-cocktails/ --> Pagina oficial de la Asociación Internacional de Bartenders (IBA), tomada como referencia por la información que transmite y lo importante que es para el mundo de la coctelería. 
 
- https://iba-world.com/iba-cocktails/ --> por la informacion que ofrecen 
+ https://www.lumianbartools.com/ --> E-commerce que tomamos como referente por la gran variedad de productos que ofrecen.
 
- https://www.lumianbartools.com/ --> por los productos que ofrecen 
-
- https://www.100x100chef.com/es/about-barman/ --> por los servicios 
+ https://www.100x100chef.com/es/about-barman/ --> Sitio web con distintos tipos de servicios y productos para el área de la cocina y la coctelería. Nos gusta su versatilidad.
 
  
 
