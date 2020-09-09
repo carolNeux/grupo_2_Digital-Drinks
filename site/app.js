@@ -16,6 +16,9 @@ app.get('/registro', (req,res)=>{
 });
 
 app.get('/productos', (req,res)=>{
+    res.sendFile(__dirname + '/products.html')
+});
+app.get('/productos/detalleDeProducto', (req,res)=>{
     res.sendFile(__dirname + '/productDetail.html')
 });
 
