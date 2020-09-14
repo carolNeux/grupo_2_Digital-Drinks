@@ -26,8 +26,20 @@ app.get('/carrito', (req,res)=>{
     res.sendFile(__dirname + '/productCart.html')
 });
 
+app.get('/cursos', (req,res)=>{
+    res.sendFile(__dirname + '/courses.html')
+});
+app.get('/recetas', (req,res)=>{
+    res.sendFile(__dirname + '/recepies.html')
+});
+app.get('/miCuenta', (req,res)=>{
+    res.sendFile(__dirname + '/myAccount.html')
+});
 app.get('*', (req, res)=>{
     res.sendFile(__dirname + '/error.html')
+})
+app.post('/validar', (req, res) =>{
+    res.sendFile(__dirname + '/index.html')
 })
 
 app.listen(3000, ()=>console.log('Corriendo el servidor')

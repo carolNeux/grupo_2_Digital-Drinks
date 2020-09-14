@@ -3,65 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Drinks</title>
     <link rel="stylesheet" href="/styles/styles.css">
+    <script src="https://kit.fontawesome.com/5376d63d7e.js" crossorigin="anonymous"></script>
+    <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
+    <title>Digital Drinks</title>
 </head>
 <body>
-    <header class="site__header">
-        <div>
-            <img src="public/img/DD-logo.jpeg" alt="logo">
-        </div>
-        <nav class="navigation__bar">
+<div class="central_container">
+    <header class="header_container">
+        <div class="always_visible">
+            <img src="/img/header/logoAzul.svg" alt="Digital Drinks Logo" class="logo">
+            <a href="#" class="toggle_nav">
+                <span class="fa fa-bars"></span>
+            </a>
+        </div>  
+        <nav class="navigation_bar">
             <ul>
-             <li>
-                <a href="products.html">PRODUCTOS</a>
-             </li>
-             <li>
-                <a href="courses.html">CURSOS</a>
-             </li>
-             <li>
-                <a href="recepies.html">RECETAS</a>
-             </li>
-             <li>
-                <a href="myAccount.html">MI CUENTA</a>
-             </li>
-             <li>
-              <a href="productCart.html"><img src="public/img/cart-icon.png" alt="CARRITO" class='cart-icon'></a>
-             </li>
+                <div class="sign_button">
+                    <li>
+                        <a href="login" class="sign_up_button"><b>Ingresar</b></a>
+                    </li>
+                     <li>
+                         <a href="registro" class="sign_in_button"><b>Crear Cuenta</b></a>  
+                    </li>
+                </div>
+                <div class="options">
+                    <li><a href="miCuenta"><img src="/img/header/carrito.png" alt="foto de carrito">Mi cuenta</a></li>
+                    <li><a href="carrito"><img src="/img/header/carrito.png" alt="">Carrito</a></li>
+                    <li><a href="/"><img src="/img/header/carrito.png" alt="">Home</a></li>
+                    <li><a href="productos"><img src="/img/header/carrito.png" alt="">Productos</a></li>
+                    <li><a href="cursos"><img src="/img/header/carrito.png" alt="">Cursos</a></li>
+                    <li><a href="recetas"><img src="/img/header/carrito.png" alt="">Recetas</a></li>
+                    <div class="not_visible">
+                        <li ><a href="#"><img src="/img/header/carrito.png" alt="" >Contacto</a></li>
+                        <li><a href="#"><img src="/img/header/carrito.png" alt="">Quienes somos</a></li>
+                    </div>  
+                </div>
             </ul>
         </nav>
     </header>
-    <main>
-    <div>
-     <h2>Productos</h2>
-     <section>
-        <a href=""><img src="" alt="Productos"></a>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate perferendis consequuntur natus nemo rem quaerat eaque quos eum at iusto.</p>
-     </section>
-    </div>
-    <div>
-        <h2>Cursos</h2>
-        <section>
-            <a href=""><img src="" alt="Cursos"></a>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate perferendis consequuntur natus nemo rem quaerat eaque quos eum at iusto.</p>
-        </section>
-        </div>
-        <div>
-            <h2>Recetas</h2>
-            <section>
-                <a href=""><img src="" alt="Recetas"></a>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate perferendis consequuntur natus nemo rem quaerat eaque quos eum at iusto.</p>
+        <main class="main_container">
+            <section class="item_container">
+                <article class="item">
+                    <img src="/img/home/productos.jpg" alt="">
+                    <div class="item_description">
+                        <h4>Productos</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vitae.</p>
+                        <a href="productos" class="see_more">Ver más</a>
+                    </div>
+                </article>
+                <article class="item">
+                    <img src="/img/home/cursos.jpg" alt="">
+                    <div class="item_description">
+                        <h4>Cursos</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vita.</p>
+                        <a href="cursos" class="see_more">Ver más</a>
+                    </div>
+                </article>
+                <article class="item">
+                    <img src="/img/home/recetas.jpg" alt="">
+                    <div class="item_description">
+                        <h4>Recetas</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vita.</p>
+                        <a href="recetas" class="see_more">Ver más</a>
+                    </div>
+                </article>
             </section>
-        </div>
-    </main>
-    <footer>
-        <ul>
-            <li><a href="">Facebook</a></li>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">Twitter</a></li>
-        </ul>
-        <small>Copyright © 2020-2021 Digital Drinks</small>
-        
-    </footer>
+        </main>
+        <footer class="footer_container">
+            <article class="contact">
+                <a href="#"><img src="/img/header/carrito.png" alt="">Quienes somos</a>
+                <a href="#"><img src="/img/header/carrito.png" alt="">Contacto</a>                
+            </article>
+            <article>
+                <p>Seguinos en nuestras redes sociales:</p>
+                <div class="social_media">
+                    <a href="#">
+                        <img src="/img/footer/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="">
+                        <img src="/img/footer/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="">
+                        <img src="/img/footer/twitter.svg" alt="Twitter">
+                    </a>
+                </div>
+            </article>
+            <article class="copyright">
+                <p>Copyright © Todos los derechos reservados</p>
+            </article>
+        </footer>
+    </div>
 </body>
 </html>
