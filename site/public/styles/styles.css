@@ -20,10 +20,10 @@ body{
 /*--------------------------------------------------------*/
 /*Fuente agregada para Digital Drinks*/
 /*--------------------------------------------------------*/
-@font-face {
+/* @font-face {
     font-family: 'crunchyregular';
     src: url(../font/crunchy.woff2);
-}
+} */
 /*--------------------------------------------------------*/
 /*Caja creada para dar estilos y centrados al cuerpo del site Y NO TOCAR EL BODY*/
 /*--------------------------------------------------------*/
@@ -62,10 +62,52 @@ body{
     font-size: 30px;
     text-decoration: none;
     border-radius: 5px;
+
 }
 .toggle_nav:hover {
     background-color: #FF6600;
 }
+/* Probando la barra desplegable */
+
+/* .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  } */
 /*Estilos de la barra de navegación. Oculta para mobile*/
 .navigation_bar { /*Oculta el menu de opciones para versión mobile*/
     display: none; 
@@ -163,7 +205,7 @@ body{
     justify-content: center;
     margin: 0px 0px 20px 0px;
 }
-.item_description h4 {
+.item_description h2, h4 {
     margin: 7px;
 }
 .item_description p {
@@ -318,3 +360,4 @@ font-size: 14px;
 .login-box a:hover{
     color: white;
 }
+

@@ -13,9 +13,40 @@
         <header class="header_container">
             <div class="always_visible">
                 <img src="/img/header/logoAzul.svg" alt="Digital Drinks Logo" class="logo">
+                
                 <a href="#" class="toggle_nav">
                     <span class="fa fa-bars"></span>
                 </a>
+                
+                 <!-- <div class="dropdown">
+                    <button class="dropbtn">Dropdown</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>
+                               <a href="registro" class="sign_up_button"><b>Ingresar</b></a>
+                            </li>
+                            <li>
+                                <a href="login" class="sign_in_button"><b>Crear Cuenta</b></a>
+                            </li>
+                            <li>
+                            <a href="miCuenta"><img src="/img/header/carrito.png" alt="foto de carrito">Mi cuenta</a>
+                            </li>
+                            <li>
+                            <a href="carrito"><img src="/img/header/carrito.png" alt="">Carrito</a>
+                            </li>
+                            <li>
+                            <a href="productos"><img src="/img/header/carrito.png" alt="">Productos</a>
+                            </li>
+                            <li>
+                            <a href="cursos"><img src="/img/header/carrito.png" alt="">Cursos</a>
+                            </li>
+                            <li>
+                            <a href="recetas"><img src="/img/header/carrito.png" alt="">Recetas</a>
+                            </li>
+        
+                       </ul>    
+                    </div>
+                  </div> -->
             </div>  
             <nav class="navigation_bar">
                 <ul>
@@ -28,76 +59,110 @@
                         </li>
                     </div>
                     <div class="options">
-                        <li><a href="miCuenta"><img src="/img/header/carrito.png" alt="foto de carrito">Mi cuenta</a></li>
-                        <li><a href="carrito"><img src="/img/header/carrito.png" alt="">Carrito</a></li>
-                        <li><a href="/"><img src="/img/header/carrito.png" alt="">Home</a></li>
-                        <li><a href="productos"><img src="/img/header/carrito.png" alt="">Productos</a></li>
-                        <li><a href="cursos"><img src="/img/header/carrito.png" alt="">Cursos</a></li>
-                        <li><a href="recetas"><img src="/img/header/carrito.png" alt="">Recetas</a></li>
+                        <li>
+                            <a href="miCuenta"><img src="/img/header/carrito.png" alt="foto de carrito">Mi cuenta</a>
+                        </li>
+                        <li>
+                            <a href="carrito"><img src="/img/header/carrito.png" alt="">Carrito</a>
+                        </li>
+                        <li>
+                            <a href="/"><img src="/img/header/carrito.png" alt="">Home</a>
+                        </li>
+                        <li>
+                            <a href="productos"><img src="/img/header/carrito.png" alt="">Productos</a>
+                        </li>
+                        <li>
+                            <a href="cursos"><img src="/img/header/carrito.png" alt="">Cursos</a>
+                        </li>
+                        <li>
+                            <a href="recetas"><img src="/img/header/carrito.png" alt="">Recetas</a>
+                        </li>
                         <div class="not_visible">
-                            <li ><a href="#"><img src="/img/header/carrito.png" alt="" >Contacto</a></li>
-                            <li><a href="#"><img src="/img/header/carrito.png" alt="">Quienes somos</a></li>
+                            <li >
+                                <a href="#"><img src="/img/header/carrito.png" alt="" >Contacto</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/header/carrito.png" alt="">Quienes somos</a>
+                            </li>
                         </div>  
                     </div>
 				</ul>
             </nav>
         </header>
+        <!-- Barra de busqueda productos -->
+        <div class="search_container">
+          <form action="">
+            <label for="products_search">Busqueda de productos:</label>
+            <input type="search" id="products_search" name="products_search">
+            <button type="submit" value="Buscar">Buscar</button>
+          </form>
+        </div>
         <!--Inicio de productos-->
+
         <main class="">
-            <section class="">
-                <article class="">
-                    <img src="" alt="imagen producto">
-                    <div class="">
-                        <h2>Nombre del Producto</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aperiam dolorem dolores architecto fugit, id non iste quisquam explicabo eaque cumque, optio sapiente atque.</p>
+            <section class="item_container">
+                <article class="item">
+                    <img src="/img/products/cocktail-french-tins-shaker.jpg" alt="imagen producto">
+                    <div class="item_description">
+                        <h2>Coctelera Tin Francesa </h2>
+                        <p>$ PRECIO</p>
                     </div>
-                        <a href=""><b>VER MÁS</b></a>                
+                        <a href="" class="see_more"><b>VER MÁS</b></a>                
                 </article>
-                <article class="">
-                    <img src="" alt="imagen producto">
-                    <div>
-                        <h2>Nombre del Producto</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aperiam dolorem dolores architecto fugit, id non iste quisquam explicabo eaque cumque, optio sapiente atque.</p>
-                        <a href=""><b>VER MÁS</b></a>
-                    </div>
-                </article>
-                <article class="">
-                    <img src="" alt="imagen producto">
-                    <div>
-                        <h2>Nombre del Producto</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aperiam dolorem dolores architecto fugit, id non iste quisquam explicabo eaque cumque, optio sapiente atque.</p>
-                        <a href=""><b>VER MÁS</b></a>
+                <article class="item">
+                    <img src="/img/products/cocktail-shaker-boston.jpg" alt="Coctelera Boston">
+                    <div class="item_description">
+                        <h2>Coctelera Boston</h2>
+                        <p>$ PRECIO</p>
+                        <a href="" class="see_more"><b>VER MÁS</b></a>
                     </div>
                 </article>
-                <article class="">
-                    <img src="" alt="imagen producto">
-                    <div>
-                        <h2>Nombre del Producto</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aperiam dolorem dolores architecto fugit, id non iste quisquam explicabo eaque cumque, optio sapiente atque.</p>
-                        <a href=""><b>VER MÁS</b></a>
+                <article class="item">
+                    <img src="/img/products/cocktail-shaker-cobbler.jpg" alt="Coctelera Cobbler">
+                    <div class="item_description">
+                        <h2>Coctelera Cobbler</h2>
+                        <p>$ PRECIO</p>
+                        <a href="" class="see_more"><b>VER MÁS</b></a>
                     </div>
                 </article>
-                <article class="">
-                    <img src="" alt="imagen producto">
-                    <div>
-                        <h2>Nombre del Producto</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aperiam dolorem dolores architecto fugit, id non iste quisquam explicabo eaque cumque, optio sapiente atque.</p>
-                        <a href=""><b>VER MÁS</b></a>
+                <article class="item">
+                    <img src="/img/products/fine-mesh-strainer.jpeg" alt="Colador fino">
+                    <div class="item_description">
+                        <h2>Colador fino</h2>
+                        <p>$ PRECIO</p>
+                        <a href="" class="see_more"><b>VER MÁS</b></a>
                     </div>
                 </article>
-                <article class="">
-                    <img src="" alt="imagen producto">
-                    <div>
-                        <h2>Nombre del Producto</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aperiam dolorem dolores architecto fugit, id non iste quisquam explicabo eaque cumque, optio sapiente atque.</p>
-                        <a href=""><b>VER MÁS</b></a>
+                <article class="item">
+                    <img src="/img/products/hawthorne-classic-strainer.jpg" alt="Colador Hawthorne classic">
+                    <div class="item_description">
+                        <h2>Colador Hawthorne classic</h2>
+                        <p>$ PRECIO</p>
+                        <a href="" class="see_more"><b>VER MÁS</b></a>
                     </div>
                 </article>
+                <article class="item">
+                    <img src="/img/products/hawthorne-strainer.jpg" alt="Colador Hawthorne">
+                    <div class="item_description">
+                        <h2>Colador Hawthorne</h2>
+                        <p>$ PRECIO</p>
+                        <a href="" class="see_more"><b>VER MÁS</b></a>
+                    </div>
+                </article>
+                <article class="item">
+                    <img src="/img/products/julep-strainer.jpeg" alt="Colador Julep">
+                    <div class="item_description">
+                        <h2>Colador Julep</h2>
+                        <p>$ PRECIO</p>
+                        <a href="" class="see_more"><b>VER MÁS</b></a>
+                    </div>
+                </article>
+                
             </section>
             <!--Inicio de los aside-->
-            <div>
-                <aside class="lateral-tutoriales">
-                    <h2>seccion de opciones de busqueda</h2>
+            <section class="categories_container">
+                <aside class="categories">
+                    <h2>Categorias/h2>
                     <ul>
                         <li> 
                             <a href="">Articulo de interes</a> 
@@ -116,7 +181,7 @@
                         </li>
                     </ul>
                 </aside>
-            </div>
+            </section>
         </main>
         <footer class="footer_container">
             <article class="contact">
