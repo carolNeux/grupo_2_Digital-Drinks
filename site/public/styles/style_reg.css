@@ -1,0 +1,81 @@
+/* aca comienza el style de registro,html*/
+
+*{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 5%;
+  
+}
+/* no se porque me aparece el titulo */
+title {visibility: hidden;
+}
+.reg-box{
+    width: 300px;
+    background: whitesmoke;
+    color:darkslateblue; 
+    top: 40%;
+    box-sizing: border-box;
+
+    padding: 25px;
+    margin-top: auto;
+    text-align: center;
+    }
+
+.reg-box label{
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+.reg-box input{
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.reg-box input[type="password"]:focus{
+    color: rgb(84, 76, 138);
+    font-size: 14px;
+}
+
+
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+.reg-button {
+    width: 50%;
+    height: 50%;
+    background-color:  #ff9100;;
+	border-radius:  30px;
+	border:1px solid #ff9100;
+    display:inline-block;
+    justify-content: center;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font: size 18px;
+    margin-top: 10px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px rgb(52, 44, 107);
+}
+a.reg-button{
+   align-self: center;
+   cursor: pointer;
+}
+.reg-button:hover {
+	transform: translateY(5px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    background-color: darkslateblue;
+    border:1px solid darkslateblue;
+}
+.reg-button:active {
+	position:relative;
+	top:1px;
+}

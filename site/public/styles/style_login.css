@@ -2,31 +2,34 @@ body{
     background-color: white;
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+    font-family: sans-serif;   
 }
 
  .login-box{
+
     width: 320px;
-    height: 420px; 
-    background: rgba(240, 240, 240, 0.7); 
+    height: 520px; 
+    background: whitesmoke;
     color:darkslateblue; 
     top: 25%;
     left: 40%;
     translate: (-50%, -50%);
     box-sizing: border-box;
-    border-radius: 10%;
+    border-radius: 5%;
     padding-top: 0px;
     position: absolute;
-    padding-bottom: 70px;
-    padding-left: 30px;
+    align-self: auto;
+   
 }
-.login-box .logo {
+
+.login-box  .logo {
     width: 50%;
     position: relative;
     top: 5px;
-    align-items:center;
+    align-items: center;
     
 }
+
 .login-box .h1{
     margin: 0;
     position: relative;
@@ -67,12 +70,15 @@ font-size: 14px;
     color: white;
     font-size: 18px;
     border-radius: 30px;
+    cursor: pointer;
 }
+
+.login-box input[type="submit"]:hover {
+	transform: translateY(5px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    background-color: darkslateblue;
 .login-box a {
     color: darkslateblue;
     font-size: 12px;
     text-decoration: none;
-}
-.login-box a:hover{
-    color: white;
 }
