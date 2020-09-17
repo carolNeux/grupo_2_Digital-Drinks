@@ -19,4 +19,5 @@ Tambien buena comunicacion.
     Irnos por las ramas con tantas posibilidades.
 
 5. Dejar de hacer: 
+    En el primer Sprint no tuvimos ninguna complicación con las consignas y administramos las tareas de manera correcta.
 
