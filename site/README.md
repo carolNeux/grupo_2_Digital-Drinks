@@ -40,6 +40,7 @@ Amo manejar por cualquier ruta. Me gustan los libros, el cine, y viajar.
 
  https://www.100x100chef.com/es/about-barman/ --> Sitio web con distintos tipos de servicios y productos para el área de la cocina y la coctelería. Nos gusta su versatilidad.
 
+
 Para nuestro tablero de trabajo decidimos utilizar la plataforma trello :
 
 https://trello.com/b/yYPcrsMZ/digital-drinks
