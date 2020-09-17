@@ -125,6 +125,72 @@ body{
     margin-right: 15px; /*Distancia de texto*/
 }
 /*--------------------------------------------------------*/
+/*Slider*/
+/*--------------------------------------------------------*/
+.contenedor {
+    width: 100%;
+    overflow: hidden;
+}
+.slider-contenedor {
+    width: 100%;
+    display: flex;
+}
+.offer_style {
+    position: absolute;
+    width: 100%;
+    display: block;
+    text-align: left;
+    padding: 1%; 
+    background-color: #ff660049;
+}
+.offer_style p, .offer_style h2 {
+    margin: 5px;
+}
+.offer_style a {
+    margin: 10px;
+}
+.contenido-slider {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+.contenido-slider img {
+    width: 75%;
+    height: auto;
+}
+.contenido-slider a {
+    color: white;
+    background: rgba(3, 3, 70, 0.788);
+    width: 150px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 200;
+}
+.contenido-slider a:hover {
+    background:rgba(182, 48, 0, 0.8);
+    transition: 1s;
+}
+.fade{
+    -webkit-animation-name:fade;
+    -webkit-animation-duration:2s;
+    animation-name:fade;
+    animation-duration:2s;
+} 
+@-webkit-keyframes fade{
+    from{opacity:.4}
+    to{opacity:1}
+}
+@keyframes fade{
+    from{opacity:.4}
+    to{opacity:1}
+} 
+/*--------------------------------------------------------*/
 /*Organizacion de cajas item*/
 /*--------------------------------------------------------*/
 .item_container {
