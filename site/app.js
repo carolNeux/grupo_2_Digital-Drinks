@@ -35,11 +35,12 @@ app.get('/recetas', (req,res)=>{
 app.get('/miCuenta', (req,res)=>{
     res.sendFile(__dirname + '/myAccount.html')
 });
-app.get('*', (req, res)=>{
-    res.sendFile(__dirname + '/error.html')
-})
+
 app.post('/validar', (req, res) =>{
     res.sendFile(__dirname + '/index.html')
+})
+app.get('*', (req, res)=>{
+    res.sendFile(__dirname + '/error.html')
 })
 
 app.listen(3000, ()=>console.log('Corriendo el servidor')

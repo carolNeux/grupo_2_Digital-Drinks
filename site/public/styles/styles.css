@@ -15,8 +15,6 @@ body{
     background-repeat: no-repeat; /*No repite la imagen de fondo para rellenar*/
     background-attachment: fixed; /*Fija la imagen que aparece en el fondo y queda estatica*/
 }
-
-/*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
 /*Fuente agregada para Digital Drinks*/
 /*--------------------------------------------------------*/
@@ -43,14 +41,14 @@ body{
 .always_visible { 
     width: 100%;
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 /*Redimension del logo para poder centrarlo*/
 .logo {
     width: 60%;
     margin-left: 20%;
 }
-/*Posición de toggle_nav*/
+/* Posición de toggle_nav
 .toggle_nav {
     text-align: center;
     margin: 10px;
@@ -66,51 +64,11 @@ body{
 }
 .toggle_nav:hover {
     background-color: #FF6600;
-}
-/* Probando la barra desplegable */
+} */
 
-/* .dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  } */
 /*Estilos de la barra de navegación. Oculta para mobile*/
 .navigation_bar { /*Oculta el menu de opciones para versión mobile*/
-    display: none; 
+    /* display: none;  */
 }
 /*Estilo y dimensiones de la lista*/
 .navigation_bar ul li { 
@@ -211,6 +169,53 @@ body{
 .item_description p {
     margin: 0px 10px;
 }
+/* Barra de busqueda */
+.search_container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.search_container input{
+    border: solid 1px slategray;
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+}
+/* CSS products */
+
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 20px 0px;
+    /* codigo para hacer el efecto donde se levanta la ventana o seleccion */
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.25s;
+}
+.product img{
+    width: 150px;
+    height: 150px;
+    margin: 20px 5px;
+}
+.product_description{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+}
+.product_description h2{
+    text-align: center;
+}
+
+/* Aside */
+
+.categories_container{
+    display: none;
+}
+
 /*Botones de ver mas*/
 .see_more {
     color: white;
