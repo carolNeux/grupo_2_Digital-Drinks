@@ -5,7 +5,7 @@
   "price": 1900,
   "discount": 50,
   "category": "Whiskey",
-  "description": " Color caramelo profundo con un aroma inicial de heno recién cortado, con un carácter crujiente de frutas, manzanas verdes y peras, junto con una rodaja de lima, especias, té verde, avellana y chocolate con leche, roble tostado y granos de cebada. dejando un sabor en boca dulce, toque sutil de lúpulo, cacao en grano, mazapán y roble carbonizado. Largo y dulce en el final de chocolate con leche y caramelo."
+  "description": " Color caramelo profundo con un aroma inicial de heno recién cortado, con un carácter crujiente de frutas, manzanas verdes y peras, junto con una rodaja de lima, especias, té verde, avellana y chocolate con leche, roble tostado y granos de cebada. dejando un sabor en boca dulce, toque sutil de lúpulo, cacao en grano, mazapán y roble carbonizado. Largo y dulce en el final de chocolate con leche y caramelo.",
   "Origen":"Irlanda",
   "Volumen": "750ml",
   "ABV": "40%",
@@ -16,7 +16,7 @@
   "name": "Whiskey Jameson Black Barrel",
   "price": 2810,
   "discount": 3,
-  "category": "Whiskey,
+  "category": "Whiskey",
   "description": "Macbook Pro 2019 Mpxq2ll/a Intel Core i5 2.3 Ghz 8gb RAM 128gb SSD Pantalla 13.3\" Retina Apple Nueva Original. Importada de USA. Se entrega con la factura de compra para contar con la garantía del fabricante",
   "Origen":"Irlanda",
   "Volumen": "750ml",
@@ -29,8 +29,7 @@
   "price": 1670,
   "discount": 25,
   "category": "Gin",
-  "description": "Balance perfecto de sus cuatro botanicos. La misma seleccion de ingredientes utilizada por Charles Tanqueray. La ginebra favorita de los bartenders para el gin tonic perfecto.
-  ",
+  "description": "Balance perfecto de sus cuatro botanicos. La misma seleccion de ingredientes utilizada por Charles Tanqueray. La ginebra favorita de los bartenders para el gin tonic perfecto.",
   "Origen":"Reino Unido",
   "Volumen": "750ml",
   "ABV": "47,3%",
@@ -41,7 +40,7 @@
   "name": "Beefeter",
   "price": 1540,
   "discount": 10,
-  "category": "Gin"
+  "category": "Gin",
   "description": "La Ginebra Beefeater es fabricada usando alcohol neutro de grano, en el cual son macerados durante 24 horas los ingredientes vegetales que le dan su sabor y aroma. (Bayas de enebro, junto a cáscara de naranja amarga y limón, almendras, raíz de lirio, semillas de cilantro, raíz y semillas de Angelica y regaliz). Después de este proceso la mezcla es destilada durante 7 horas, conservándose solo el producto intermedio de la misma, conocido como el corazón.",
   "Origen":"Reino Unido",
   "Volumen": "750ml",
@@ -53,7 +52,7 @@
   "name": "Bombay Sapphire",
   "price": 2570,
   "discount": 10,
-  "category": "Gin"
+  "category": "Gin",
   "description": "La Ginebra Beefeater es fabricada usando alcohol neutro de grano, en el cual son macerados durante 24 horas los ingredientes vegetales que le dan su sabor y aroma. (Bayas de enebro, junto a cáscara de naranja amarga y limón, almendras, raíz de lirio, semillas de cilantro, raíz y semillas de Angelica y regaliz). Después de este proceso la mezcla es destilada durante 7 horas, conservándose solo el producto intermedio de la misma, conocido como el corazón.",
   "Origen":"Reino Unido",
   "Volumen": "750ml",
@@ -65,7 +64,7 @@
   "name": "Talisker",
   "price": 6290,
   "discount": 0,
-  "category": "Whiskey de Malta"
+  "category": "Whiskey de Malta",
   "description": "La característica más destacada de este whisky envejecido durante 10 años reside en la metamorfosis que experimenta en boca de aquel que lo degusta. Talisker 10 años saluda en nariz con un aroma intenso, potente y ahumado, transformándose luego en boca con un sabor dulce que es acompañado por la siempre presente cebada malteada. Su color dorado no esconde su suavidad y textura cremosa que, en su final en boca, se crece en potencia y perseverancia de sabores.",
   "Origen":"Escocia",
   "Volumen": "750ml",
@@ -77,10 +76,8 @@
   "name": "Macallan Quest Singler",
   "price": 7680,
   "discount": 0,
-  "category": "Whiskey de Malta"
-  "description": " 'La colección “Quest'
- Cada single malt de esta gama es una exploración de sabores y texturas, desde notas vibrantes y frescas hasta toques intensos y pronunciados, que finaliza con un whisky que manifiesta la esencia de The Macallan. The Macallan Quest representa el punto de partida del viaje de la Quest Collection en este whisky animado y fresco.
-El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toque de vainilla dulce que aporta el roble.",
+  "category": "Whiskey de Malta",
+  "description": " 'La colección Quest' Cada single malt de esta gama es una exploración de sabores y texturas, desde notas vibrantes y frescas hasta toques intensos y pronunciados, que finaliza con un whisky que manifiesta la esencia de The Macallan. The Macallan Quest representa el punto de partida del viaje de la Quest Collection en este whisky animado y fresco.El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toque de vainilla dulce que aporta el roble. ",
   "Origen":"Escocia",
   "Volumen": "700ml",
   "ABV": "40%",
@@ -104,7 +101,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Pisco 1615 Alcholado",
   "price": 1860,
   "discount": 0,
-  "category": "Pisco"
+  "category": "Pisco",
   "description": " Pisco 1615 Acholado revive la pasión por la excelencia de aquellos artesanos pisqueros, es el punto de encuentro entre lo ancestral y lo moderno que da origen a un destilado, excepcional y sofisticado, de gran calidad. El nombre lo debe al año en que se registro por primera vez el cultivo de uvas para hacer una destilación y producir los primeros piscos, allá en 1615. A la vista es limpio, brillante e incoloro. En nariz encotramos aromas dulces de frutas como plátano, manzana y matices cítricos. En boca es calido y con notables notas de manzana. Un pisco perfecto para elaborar el Pisco Tonic y el Chilcano.",
   "Origen":"Peru",
   "Volumen": "750ml",
@@ -116,7 +113,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Noctua Vodka",
   "price": 835,
   "discount": 0,
-  "category": "Vodka"
+  "category": "Vodka",
   "description": " Neutro en nariz, suave y delicado en boca con un final dulce e intenso que deja al descubierto el carácter de este Vodka.",
   "Origen":"Patagonia  Argentina",
   "Volumen": "700ml",
@@ -128,7 +125,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Absolut Blue",
   "price": 1360,
   "discount": 0,
-  "category": "Vodka"
+  "category": "Vodka",
   "description": "El primero de todos los Absolut, producido en 1979. Es producido del trigo de invierno, un grano de trigo robusto que da su carácter de grano liso al vodka. Cada año aproximadamente 80,000 toneladas son usadas para producir el Vodka Absolut.",
   "Origen":"Suecia",
   "Volumen": "750ml",
@@ -140,7 +137,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Absolut Apeach",
   "price": 1620,
   "discount": 0,
-  "category": "Vodka"
+  "category": "Vodka",
   "description": "Absolut Apeach se hace exclusivamente a partir de ingredientes naturales y, a diferencia de lo que ocurre con muchos otros vodkas de sabores, no contiene azúcar añadido. Es suave y maduro, con el carácter afrutado y sofisticado del durazno.",
   "Origen":"Suecia",
   "Volumen": "750ml",
@@ -152,7 +149,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Absolut Mango",
   "price": 1620,
   "discount": 0,
-  "category": "Vodka"
+  "category": "Vodka",
   "description": "Absolut Mango se elabora exclusivamente con ingredientes naturales y, a diferencia de otros vodkas aromatizados, no contiene azúcar añadido. Absolut Mango es corpulento y jugoso con un carácter de mango maduro y notas de frutas tropicales.",
   "Origen":"Suecia",
   "Volumen": "750ml",
@@ -164,7 +161,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Danzka Regular",
   "price": 720,
   "discount": 0,
-  "category": "Vodka"
+  "category": "Vodka",
   "description": "Un vodka delicado y bien equilibrado, suave y puro con un incomparable sabor rico. Sirve como la base perfecta en un cóctel o directamente para el disfrute puro.",
   "Origen":"Canada",
   "Volumen": "750ml",
@@ -176,9 +173,8 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Ron Barceló Blanco",
   "price": 850,
   "discount": 0,
-  "category": "Ron"
-  "description": "Ron Barceló Blanco 750mlRon Barceló Blanco 750ml
-   Ron Barceló es el resultado de la mezcla de los más finos rones dominicanos que son envejecidos de forma natural en barricas de roble.",
+  "category": "Ron",
+  "description": " Ron Barceló es el resultado de la mezcla de los más finos rones dominicanos que son envejecidos de forma natural en barricas de roble.",
   "Origen":"República Dominicana",
   "Volumen": "750ml",
   "ABV": "37,5%",
@@ -189,7 +185,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Ron Barceló Premium Blend",
   "price": 11020,
   "discount": 0,
-  "category": "Ron"
+  "category": "Ron",
   "description": "Este ron es el resultado del doble envejecimiento de las reservas antiguas del Imperial, reposadas en barricas de roble blanco americano y barricas de roble francés con distintos grados de tueste. Este tipo de ron envolvente, tiene aromas a frutos secos y vanilla prinicipalmente.",
   "Origen":"España",
   "Volumen": "750ml",
@@ -201,8 +197,8 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Havana Club 3 años",
   "price": 850,
   "discount": 0,
-  "category": "Ron"
-  "description": "El ron más joven de los Havana Club. "El más blanco de los rones añejos y el más añejo de los rones blancos". Su color lo deja muy claro: este ron es algo más que una bebida espirituosa. El proceso de añejamiento de tres años permite que el néctar se empape del ambiente circundante, el optimismo y la pasión. Las notas de vainilla, pera caramelizada, plátano y un toque a roble ahumado que cosquillea la nariz dan al ron su aroma típicamente cubano, mientras que el chocolate y la vainilla harán las delicias del paladar. Estos sabores son una combinación perfecta para la frescura de la menta, el azúcar y la lima: todo lo necesario para un auténtico Mojito cubano.",
+  "category": "Ron",
+  "description": "El ron más joven de los Havana Club. 'El más blanco de los rones añejos y el más añejo de los rones blancos'. Su color lo deja muy claro: este ron es algo más que una bebida espirituosa. El proceso de añejamiento de tres años permite que el néctar se empape del ambiente circundante, el optimismo y la pasión. Las notas de vainilla, pera caramelizada, plátano y un toque a roble ahumado que cosquillea la nariz dan al ron su aroma típicamente cubano, mientras que el chocolate y la vainilla harán las delicias del paladar. Estos sabores son una combinación perfecta para la frescura de la menta, el azúcar y la lima: todo lo necesario para un auténtico Mojito cubano.",
   "Origen":"Cuba",
   "Volumen": "750ml",
   "ABV": "40%",
@@ -213,7 +209,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Bacardi Gold 1L",
   "price": 790,
   "discount": 0,
-  "category": "Ron"
+  "category": "Ron",
   "description": "Bacardi es una compañía de bebidas alcohólicas fundada en Santiago de Cuba en 1862 por el español Facundo Bacardí Massó. La sede internacional de esta empresa está en Bermudas, pero también tiene oficinas en México, Miami y en Puerto Rico.",
   "Origen":"Cuba",
   "Volumen": "1000 ml",
@@ -225,7 +221,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Bitter Angostura",
   "price": 2970,
   "discount": 0,
-  "category": "Bitter"
+  "category": "Bitter",
   "description": "El angostura Bitter es un producto premium utilizado en la coctelería. fue inventado por un cirujano alemán para aumentar el apetito y mejorar la digestión de los soldados. Ideal para un trago como el Ron Fashioned.",
   "Origen":"Reino Unido",
   "Volumen": "200 ml",
@@ -237,7 +233,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Bitter Gibson Tiko",
   "price": 660,
   "discount": 0,
-  "category": "Bitter"
+  "category": "Bitter",
   "description": "Amargo intenso y sabor especiado y de frutos tropicales. Realza toda clase de rones y es un complemento ideal en coctelería Tiki, integrando aromas a Enebro, nuez moscada, clavo, cardamomo y frutos tropicales.",
   "Origen":"Argentina",
   "Volumen": "100 ml",
@@ -249,21 +245,20 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Pitú",
   "price": 630,
   "discount": 0,
-  "category": " Cachaça"
-  "description": "Cachaza tradicional con alto estándar de calidad y de sabor unico. De acuerdo con registros historicos, se concluye que la cachaza es el primer destilado de america latina, fue producido antes que el pisco peruano, del tequila mexicano y del ron caribeño. Ideal para esas calurosas tardes de verano, combinando la lima y este gran destilado se obtienen las tan apreciadas "Caipis". Indicada para acompañar entremeses y tentempiés.
-  Como se dice por brazil, "Cachaza, el mas brasileño de los placeres".",
+  "category": " Cachaça",
+  "description": "Cachaza tradicional con alto estándar de calidad y de sabor unico. De acuerdo con registros historicos, se concluye que la cachaza es el primer destilado de america latina, fue producido antes que el pisco peruano, del tequila mexicano y del ron caribeño. Ideal para esas calurosas tardes de verano, combinando la lima y este gran destilado se obtienen las tan apreciadas 'Caipis'. Indicada para acompañar entremeses y tentempiés. Como se dice por brazil, 'Cachaza, el mas brasileño de los placeres'.",
   "Origen":"Brazil",
   "Volumen": "1000 ml",
   "ABV": "40%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "img-heladera-whirpool.jpg"
  },
  {
   "id": 20,
   "name": "VELHO BARREIRO",
   "price": 740,
   "discount": 0,
-  "category": " Cachaça"
-  "description": "La cachaça, conocida por los locales como "pinga" o "branquinha", proviene de la destilación de la caña de azúcar fermentada. Típica de Brasil (mayor productor y consumidor del mundo) es fundamental para uno de los cocktails más populares, como es la caipirinha. Cachaça Velho Barreiro se diferencia de otras por su añejado en barrica, lo cual le otorga gran profundidad y sabor.",
+  "category": " Cachaça",
+  "description": "La cachaça, conocida por los locales como 'pinga' o 'branquinha', proviene de la destilación de la caña de azúcar fermentada. Típica de Brasil (mayor productor y consumidor del mundo) es fundamental para uno de los cocktails más populares, como es la caipirinha. Cachaça Velho Barreiro se diferencia de otras por su añejado en barrica, lo cual le otorga gran profundidad y sabor.",
   "Origen":"Brazil",
   "Volumen": "910 ml",
   "ABV": "39%",
@@ -274,7 +269,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Baum Blonde",
   "price": 740,
   "discount": 0,
-  "category": "Cerveza"
+  "category": "Cerveza",
   "description": "Estilo de cerveza americana, de color dorado brillante, bien filtrada y cristalina. Aroma y sabor maltoso, levemente frutado. Suave y fácil de tomar debido a su simpleza y baja intensidad alcohólica.",
   "Origen":"Brazil",
   "Volumen": "150 ml",
@@ -286,7 +281,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Baum Blonde",
   "price": 185,
   "discount": 0,
-  "category": "Cerveza"
+  "category": "Cerveza",
   "description": "Estilo de cerveza americana, de color dorado brillante, bien filtrada y cristalina. Aroma y sabor maltoso, levemente frutado. Suave y fácil de tomar debido a su simpleza y baja intensidad alcohólica.",
   "Origen":"Estados Unidos",
   "Volumen": "500 ml",
@@ -298,9 +293,8 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Baum California Sesion Ipa",
   "price": 255,
   "discount": 0,
-  "category": "Cerveza"
-  "description": "Nuestra California Session IPA es una cerveza de origen estadounidense de color amarillo pajizo, levemente turbia y con espuma blanca compacta de gran retención
-  Intensamente lupulada, con notas a frutas tropicales (como melón, mango y ananá), cítricas (pomelo) y herbales tanto en aroma como en sabor, manifestando toda la complejidad y atractivo de los nuevos lúpulos americanos.",
+  "category": "Cerveza",
+  "description": "Nuestra California Session IPA es una cerveza de origen estadounidense de color amarillo pajizo, levemente turbia y con espuma blanca compacta de gran retención. Intensamente lupulada, con notas a frutas tropicales (como melón, mango y ananá), cítricas (pomelo) y herbales tanto en aroma como en sabor, manifestando toda la complejidad y atractivo de los nuevos lúpulos americanos.",
   "Origen":"Estados Unidos",
   "Volumen": "500 ml",
   "ABV": "4,7 ",
@@ -311,9 +305,8 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Ortuzar German Pils",
   "price": 195,
   "discount": 0,
-  "category": "Cerveza"
-  "description": "Cerveza Alemana amarga de cuerpo ligero. Altamente atenuada de color dorado y fermentación baja que exhibe una excelente retención de espuma y un elegante
-  aroma a lúpulo floral. Chispeante, limpia y refrescante, una Pilsner que exhibe la más fina calidad de malta y lúpulo alemán.",
+  "category": "Cerveza",
+  "description": "Cerveza Alemana amarga de cuerpo ligero. Altamente atenuada de color dorado y fermentación baja que exhibe una excelente retención de espuma y un elegante aroma a lúpulo floral. Chispeante, limpia y refrescante, una Pilsner que exhibe la más fina calidad de malta y lúpulo alemán.",
   "Origen":"Argentina",
   "Volumen": "500 ml",
   "ABV": "5,7 ",
@@ -324,11 +317,8 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Ortuzar Session Ipas",
   "price": 195,
   "discount": 0,
-  "category": "Cerveza"
-  "description": "Cerveza clara de color amarillento.
-   Cuerpo ligero, con sabores a malta y caramelo, aunque
-   el predominante principal es el lúpulo. Amargor medio
-   alto. Notas a resina, frutas tropicales y cítricas.",
+  "category": "Cerveza",
+  "description": " Cerveza clara de color amarillento. Cuerpo ligero, con sabores a malta y caramelo, aunque el predominante principal es el lúpulo. Amargor medio alto. Notas a resina, frutas tropicales y cítricas.",
   "Origen":"Argentina",
   "Volumen": "500 ml",
   "ABV": "5,7 ",
@@ -339,7 +329,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Fernet Branca",
   "price": 660,
   "discount": 0,
-  "category": "Aperitivos"
+  "category": "Aperitivos",
   "description": "Cl fernet es una bebida alcohólica amarga del tipo amaro elaborada a partir de varios tipos de hierbas (mirra, ruibarbo, manzanilla, cardamomo, orégano y azafrán,1? entre otras), que son maceradas en alcohol de vino, posteriormente filtrada y añejada en toneles de roble durante un período que puede ser de seis a doce meses.",
   "Origen":"Italia",
   "Volumen": "1000 ml",
@@ -351,7 +341,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Fernet Branca",
   "price": 340,
   "discount": 0,
-  "category": "Aperitivos"
+  "category": "Aperitivos",
   "description": "Cl fernet es una bebida alcohólica amarga del tipo amaro elaborada a partir de varios tipos de hierbas (mirra, ruibarbo, manzanilla, cardamomo, orégano y azafrán,1? entre otras), que son maceradas en alcohol de vino, posteriormente filtrada y añejada en toneles de roble durante un período que puede ser de seis a doce meses.",
   "Origen":"Italia",
   "Volumen": "450 ml",
@@ -363,7 +353,7 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Campari",
   "price": 360,
   "discount": 0,
-  "category": "Aperitivos"
+  "category": "Aperitivos",
   "description": "Aperitico nº 1 a nivel Mundial",
   "Origen":"Italia",
   "Volumen": "750 ml",
@@ -375,11 +365,11 @@ El Macallan Quest es una mezcla suave de frutas cítricas equilibrada con el toq
   "name": "Aperol",
   "price": 420,
   "discount": 0,
-  "category": "Aperitivos"
+  "category": "Aperitivos",
   "description": "El nombre lo dice todo: Aperol es el aperitivo perfecto. De color naranja brillante, tiene un sabor único gracias a la receta secreta que nunca ha sido modificada, infusionado con ingredientes seleccionados, incluyendo naranjas amargas y dulces y muchas otras hierbas (incluyendo ruibarbo) y raíces en perfectas proporciones.",
   "Origen":"Italia",
   "Volumen": "750 ml",
   "ABV": "11%",
   "image": "img-heladera-whirpool.jpg",
- },
+ }
 ]
