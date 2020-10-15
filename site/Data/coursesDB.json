@@ -1,0 +1,57 @@
+[
+ {
+  "id": 1,
+  "name": "Bartender Profesional",
+  "price": 11500,
+  "discount": 0,
+  "category": "",
+  "description": " Destinado para toda persona que quiera iniciarse en esta profesión con o sin conocimientos previos. Las clases son teóricas y prácticas, donde el alumno tiene la posibilidad de entrenar lo aprendido en una barra real, con bebidas reales. El objetivo del curso es que el alumno se pueda desempeñar en una barra en forma profesional, tanto en el manejo de las herramientas, como en la elaboración de un cocktail con la correcta atención al cliente.",
+  "image": "bartender.jpeg"
+ },
+ {
+    "id": 2,
+    "name": "Bar Manager",
+    "price": 15500,
+    "discount": 0,
+    "category": "",
+    "description": "Destinado a que desarrolles una capacidad de análisis crítico, con el objetivo de poder crear y resolver de una forma óptima cada situación en Bares, Restaurantes, Clubes u Hoteles. Descubrirás en nuestro programa una forma nueva de desempeñarte tras una barra, de una manera efectiva con relación al trabajo en equipo, preparación de cocteles, rentabilidad de producto, organización de espacio de trabajo y recepción de clientes.    Basado en la experiencia de nuestro Director Académico, recorrerás en este programa desde el surgimiento de la palabra coctel hasta el hoy día, donde las técnicas clásicas se fusionan con las modernas, el diseño estético con el operativo y el buen desarrollo de un team leader genera un excelente desempeño del grupo, dando como único resultado una grata experiencia y el éxito de tu negocio.",
+    "image": "bar-manager.png"
+   },
+   {
+    "id": 3,
+    "name": "Barista",
+    "price": 11500,
+    "discount": 0,
+    "category": "",
+    "description": "Destinado a toda persona que quiera profundizar y perfeccionar las bases del servicio de café y Arte Latte. Dibujo en la espuma del café, formas y figuras, distintos tipos de arte. Todas las técnicas y todas las formas de preparación del café y todo sobre el servicio, maquinarias y herramientas. Aprenderás todos los aspectos desde la planta de café hasta la taza. Todos los pasos y sugerencias, tips y detalles del negocio y empresas de café como así también pautas a tener en cuenta para futuros dueños de cafeterías.  En todas las clases el alumno realiza las técnicas mencionadas, hace uso de las maquinarias y herramientas y se realizaran las catas correspondientes a cada clase.",
+    "image": "barista.png"
+   },
+   {
+    "id": 4,
+    "name": "Flair Bartending",
+    "price": 11500,
+    "discount": 0,
+    "category": "",
+    "description": " Este curso es dirigido a aquellas personas a las que le interesa sumar un plus a su estilo de trabajo, resaltar en las barras utilizando herramientas para entretener al público realizando movimientos acrobáticos con las mismas a la hora de realizar un coctel.  Cada clase está diseñada para que de manera fácil y sencilla se pueda aprender movimientos aplicables a cualquier estilo de barra y de esta manera el alumno se va ambientando en el mundo de la cocteleria tomando dinámica, precisión y velocidad en el trabajo..",
+    "image": "flair-bartending.jpg"
+   },
+   {
+    "id": 5,
+    "name": "Mixologia Molecular",
+    "price": 11500,
+    "discount": 0,
+    "category": "",
+    "description": " Capacitarte desde cero, Aplicando recetas ya existentes de cocteles moleculares y crear otras nuevas. La Mixología Molecular se trata, basicamente, de cambiar las texturas a los cocteles y a la cocteleria tradicional y clasica. En nuestro Centro de Coctelería, nuestro instructor mixologo, es uno de los primeros en dictar esta materia en Argentina y a nivel Internacional, con mas de 18 años de Experiencia en el Rubro de la Cocteleria y en busca de mejorar cada dia la cocteleria mundial.   Lo que te enseñamos: Esferificacion, gelificacion, espesantes, espumas frias y calientes, hielo seco, Carbonatacion y nitrogenado, geles, gelatinas de licores y cocteles, aires, burbujas, tragos con te, tragos con especias y vegetales, tragos con vodkas saborizados (vodka de chocolate, vodka de canela, vodka de pepino y romero, vodka de chile), nuevos garnish en cocteleria, ultimas tendencias, alta cocteleria, cockteleria de vanguardia, cockteleria de autor, mixologia clásica y la mixologia fusión, hot ice.   Tambien en el curso de mixologia molecular veremos la Elaboracion de aguardientes y licores artesanales, tecnicas de Elaboracion de Nubes, elaboracion de jaleas aplicadas a la alta cocteleria, Gastrique, reducciones y bitters, cremas caseras, Emulsiones, Bizcochuelo de Sifon, Saborizacion de frutas y carbonatacion de cocteles, uso y posobilidades del CO2, , bizcochuelo con sabores al trago que quieras o bebida que quieras, tragos efervescentes, Introduccion y explicacion sobre el NITROGENO LIQUIDO.",
+    "image": "mixologia-molecular-3.jpg"
+   },
+   {
+    "id": 6,
+    "name": "Bartender Profesional",
+    "price": 11500,
+    "discount": 0,
+    "category": "",
+    "description": " Destinado para toda persona que quiera iniciarse en esta profesión con o sin conocimientos previos. Las clases son teóricas y prácticas, donde el alumno tiene la posibilidad de entrenar lo aprendido en una barra real, con bebidas reales. El objetivo del curso es que el alumno se pueda desempeñar en una barra en forma profesional, tanto en el manejo de las herramientas, como en la elaboración de un cocktail con la correcta atención al cliente.",
+    "image": "bartender.jpeg"
+   }
+]
+ 

@@ -21,7 +21,9 @@ app.get('/productos', (req,res)=>{
 app.get('/productos/detalleDeProducto', (req,res)=>{
     res.sendFile(__dirname + '/productDetail.html')
 });
-
+app.get('/recetas/detalleDeReceta', (req,res)=>{
+    res.sendFile(__dirname + '/recepiesDetail.html')
+});
 app.get('/carrito', (req,res)=>{
     res.sendFile(__dirname + '/productCart.html')
 });
@@ -43,5 +45,5 @@ app.get('*', (req, res)=>{
     res.sendFile(__dirname + '/error.html')
 })
 
-app.listen(3000, ()=>console.log('Corriendo el servidor')
+app.listen(8000, ()=>console.log('Corriendo el servidor')
 );
