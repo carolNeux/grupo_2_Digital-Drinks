@@ -9,7 +9,7 @@
   "Origen":"Irlanda",
   "Volumen": "750ml",
   "ABV": "40%",
-  "image": "jamesonCaskmates.jpg"
+  "image": "/bebidas/jamesonCaskmates.png"
  },
  {
   "id": 2,
@@ -21,7 +21,7 @@
   "Origen":"Irlanda",
   "Volumen": "750ml",
   "ABV": "40%",
-  "image": "jamesonBlackBarrel.jpg"
+  "image": "/bebidas/jamesonBlackBarrel.png"
  },
  {
   "id": 3,
@@ -33,7 +33,7 @@
   "Origen":"Reino Unido",
   "Volumen": "750ml",
   "ABV": "47,3%",
-"image": "img-samsung-galaxy-s10.jpg"
+"image": "/bebidas/tanqueray.png"
  },
  {
   "id": 4,
@@ -45,7 +45,7 @@
   "Origen":"Reino Unido",
   "Volumen": "750ml",
   "ABV": "40%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/beefeter.png"
  },
   {
   "id": 5,
@@ -57,7 +57,7 @@
   "Origen":"Reino Unido",
   "Volumen": "750ml",
   "ABV": "47%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/bombaySapphire.png"
  },
   {
   "id": 6,
@@ -69,7 +69,7 @@
   "Origen":"Escocia",
   "Volumen": "750ml",
   "ABV": "5,807%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/talisker.png"
  },
  {
   "id": 7,
@@ -81,7 +81,7 @@
   "Origen":"Escocia",
   "Volumen": "700ml",
   "ABV": "40%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/macallan.png"
  },
 
 {
@@ -94,7 +94,7 @@
   "Origen":"Escocia",
   "Volumen": "750ml",
   "ABV": "40%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/glenlivet.png"
  }, 
 {
   "id": 9,
@@ -106,7 +106,7 @@
   "Origen":"Peru",
   "Volumen": "750ml",
   "ABV": "42%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/piscoAlcoholado.png"
  }, 
  {
   "id": 10,
@@ -118,7 +118,7 @@
   "Origen":"Patagonia  Argentina",
   "Volumen": "700ml",
   "ABV": "40%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/noctuaVodka.png"
  },
  {
   "id": 11,
@@ -130,7 +130,7 @@
   "Origen":"Suecia",
   "Volumen": "750ml",
   "ABV": "40%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/absolut.png"
  },
   {
   "id": 12,
@@ -142,7 +142,7 @@
   "Origen":"Suecia",
   "Volumen": "750ml",
   "ABV": "40%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/absolutApeach.png"
  },
  {
   "id": 13,
@@ -154,19 +154,7 @@
   "Origen":"Suecia",
   "Volumen": "750ml",
   "ABV": "40%",
-  "image": "img-heladera-whirpool.jpg",
- },
- {
-  "id": 13,
-  "name": "Danzka Regular",
-  "price": 720,
-  "discount": 0,
-  "category": "Vodka",
-  "description": "Un vodka delicado y bien equilibrado, suave y puro con un incomparable sabor rico. Sirve como la base perfecta en un cóctel o directamente para el disfrute puro.",
-  "Origen":"Canada",
-  "Volumen": "750ml",
-  "ABV": "40%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/absolutMango.png"
  },
   {
   "id": 14,
@@ -178,7 +166,7 @@
   "Origen":"República Dominicana",
   "Volumen": "750ml",
   "ABV": "37,5%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/ronBarceloBlanco.png"
  },
  {
   "id": 15,
@@ -190,7 +178,7 @@
   "Origen":"España",
   "Volumen": "750ml",
   "ABV": "43%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/ronBarcelo.png"
  },
  {
   "id": 16,
@@ -202,7 +190,7 @@
   "Origen":"Cuba",
   "Volumen": "750ml",
   "ABV": "40%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/havanaClub.png"
  },
  {
   "id": 17,
@@ -214,7 +202,7 @@
   "Origen":"Cuba",
   "Volumen": "1000 ml",
   "ABV": "40%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/bacardi.png"
  },
 {
   "id": 18,
@@ -226,7 +214,7 @@
   "Origen":"Reino Unido",
   "Volumen": "200 ml",
   "ABV": "44,7%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/bitterAngostura.png"
  },
  {
   "id": 19,
@@ -238,23 +226,11 @@
   "Origen":"Argentina",
   "Volumen": "100 ml",
   "ABV": "40%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/bitterGibson.png"
  },
  {
   "id": 20,
-  "name": "Pitú",
-  "price": 630,
-  "discount": 0,
-  "category": " Cachaça",
-  "description": "Cachaza tradicional con alto estándar de calidad y de sabor unico. De acuerdo con registros historicos, se concluye que la cachaza es el primer destilado de america latina, fue producido antes que el pisco peruano, del tequila mexicano y del ron caribeño. Ideal para esas calurosas tardes de verano, combinando la lima y este gran destilado se obtienen las tan apreciadas 'Caipis'. Indicada para acompañar entremeses y tentempiés. Como se dice por brazil, 'Cachaza, el mas brasileño de los placeres'.",
-  "Origen":"Brazil",
-  "Volumen": "1000 ml",
-  "ABV": "40%",
-  "image": "img-heladera-whirpool.jpg"
- },
- {
-  "id": 20,
-  "name": "VELHO BARREIRO",
+  "name": "Velho Barreiro",
   "price": 740,
   "discount": 0,
   "category": " Cachaça",
@@ -262,19 +238,7 @@
   "Origen":"Brazil",
   "Volumen": "910 ml",
   "ABV": "39%",
-  "image": "img-heladera-whirpool.jpg",
- },
-  {
-  "id": 21,
-  "name": "Baum Blonde",
-  "price": 740,
-  "discount": 0,
-  "category": "Cerveza",
-  "description": "Estilo de cerveza americana, de color dorado brillante, bien filtrada y cristalina. Aroma y sabor maltoso, levemente frutado. Suave y fácil de tomar debido a su simpleza y baja intensidad alcohólica.",
-  "Origen":"Brazil",
-  "Volumen": "150 ml",
-  "ABV": " ",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/velhoBarreiro.png"
  },
   {
   "id": 22,
@@ -286,7 +250,7 @@
   "Origen":"Estados Unidos",
   "Volumen": "500 ml",
   "ABV": " ",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/cervezaBlonde.png"
  },
   {
   "id": 23,
@@ -298,7 +262,7 @@
   "Origen":"Estados Unidos",
   "Volumen": "500 ml",
   "ABV": "4,7 ",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/cervezaBaumCalif.png"
  },
  {
   "id": 24,
@@ -310,7 +274,7 @@
   "Origen":"Argentina",
   "Volumen": "500 ml",
   "ABV": "5,7 ",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/cervezaOrtuzarGerman.png"
  },
   {
   "id": 25,
@@ -322,7 +286,7 @@
   "Origen":"Argentina",
   "Volumen": "500 ml",
   "ABV": "5,7 ",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/cervezaOrtuzarIpa.png"
  },
   {
   "id": 26,
@@ -334,7 +298,7 @@
   "Origen":"Italia",
   "Volumen": "1000 ml",
   "ABV": "39%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/fernet1litro.png"
  },
   {
   "id": 27,
@@ -346,7 +310,7 @@
   "Origen":"Italia",
   "Volumen": "450 ml",
   "ABV": "39%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/fernet450.png"
  },
  {
   "id": 28,
@@ -358,7 +322,7 @@
   "Origen":"Italia",
   "Volumen": "750 ml",
   "ABV": "25%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/campari.png"
  },
   {
   "id": 29,
@@ -370,6 +334,18 @@
   "Origen":"Italia",
   "Volumen": "750 ml",
   "ABV": "11%",
-  "image": "img-heladera-whirpool.jpg",
+  "image": "/bebidas/aperol.png"
+ },
+ {
+  "id": 30,
+  "name": "Danzka Regular",
+  "price": 720,
+  "discount": 0,
+  "category": "Vodka",
+  "description": "Un vodka delicado y bien equilibrado, suave y puro con un incomparable sabor rico. Sirve como la base perfecta en un cóctel o directamente para el disfrute puro.",
+  "Origen":"Canada",
+  "Volumen": "750ml",
+  "ABV": "40%",
+  "image": "/bebidas/danzka.png"
  }
 ]

@@ -6,7 +6,7 @@
      "Ingredients":"30 ml Cognac, 30 ml Crème de Cacao (Brown),30 ml Crema de Leche",
      "Method": "Verter todos los ingredientes en una coctelera llena con cubos de hielo. Batir y colar en una copa cocktail previamente enfriada.",
      "Garnish": "Polvorear un poco de Nuez Moscada fresca sobre el cocktail",
-     "image": "alexander.jpg"
+     "image": "/alexander.png"
      },
     {
       "id": 2,
@@ -15,7 +15,7 @@
         "Ingredients":"30 ml Bitter Campari, 30 ml de Vermouth Rosso, un Dash de Soda",
         "Method": "Mezcla todos los ingredientes en un vaso old fashioned lleno con cubos de hielo. Agregar un dash de Soda. Revolver gentilmente",
         "Garnish": "Decorar con media rodaja de naranja y piel de limon.",
-        "image": "americano.jpg"
+        "image": "/americano.png"
        },
        {
         "id": 3,
@@ -24,7 +24,7 @@
         "Ingredients":"45 ml Bourbon o Whiskey de Centeno, 30 ml Bitter Campari, 30 ml Vermouth Rosso",
         "Method": "Verter todos los ingredientes vaso de mezclador con cubos de hielo. Revolver bien, Colar en una copa cocktail previamente enfriada.",
         "Garnish": "Decorar con piel de naranja o piel de limon.",
-        "image": "boulevardier.jpg"
+        "image": "/boulevardier.png"
        },
        {
         "id": 4,
@@ -33,7 +33,7 @@
         "Ingredients":"60 ml Ron Blanco, 20 ml Jugo de Lima Fresco, 2 cucharaditas de Azucar",
         "Method": "En una coctelera agregar todos los ingredientes. Revolver bien hasta que se disuelva el azucar. Agregar hielo y batir. Colar dentro de una copa cocktail previamente enfriada.",
         "Garnish": "Rodaja de Lima",
-        "image": "daiquiri.jpg"
+        "image": "/daiquiri.png"
        },
        {
         "id": 5,
@@ -42,7 +42,7 @@
         "Ingredients":"60 ml Gin, 10 ml Vermouth Dry",
         "Method": "Verter todos los ingredientes en un vaso mezclador con cubos de hielo. Revolver bien. Colar en una copa martini previamente enfriada.",
         "Garnish": "Exprimir los aceites de una piel de limon sobre la bebida o decorar con aceitunas verdes si asi lo solicitan.",
-        "image": "dry-martini.jpg"
+        "image": "/dryMartini.png"
        },
        {
         "id": 6,
@@ -51,7 +51,7 @@
         "Ingredients":"345 ml Gin, 30 ml Jugo de Limon Fresco, 10 ml Almibar Simple, Dash de Soda",
         "Method": "Batir todos los ingredientes con hielo menos la soda. Verter dentro de un vaso de trago largo, completa con la soda. Servir sin hielo.",
         "Garnish": "Decorar con una rodaja de limon o piel de limon.",
-        "image": "gin-fizz.jpg"
+        "image": "/ginFizz.png"
        },
        {
         "id": 7,
@@ -60,7 +60,7 @@
         "Ingredients":"45 ml London Dry Gin, 45 ml Vermouth Rosso, 7.5 ml Fernet Branca",
         "Method": "Verter todos los ingredientes dentro de un vaso mezclador con cubos de hielo. Revolver bien. Colar en una copa cocktail previamente enfriada.",
         "Garnish": "Piel de Naranja.",
-        "image": "hanky-panky.jpg"
+        "image": "/hankyPanky.png"
        },
        {
         "id": 8,
@@ -69,7 +69,7 @@
         "Ingredients":"45 ml Gin, 30 ml Jugo de Limon Fresco, 15 ml de Almibar Simple, 60 ml  Soda",
         "Method": "Verter todos los ingredientes directamente en un vaso Highball lleno de hielo. Revolver gentilmente. Usar ‘Old Tom’ Gin para hacer Tom Collins.",
         "Garnish": "Decorar con una rodaja de limon y una cereza de marrasquino.",
-        "image": "john-collins.jpg"
+        "image": "/johnCollins.png"
        },
        {
         "id": 9,
@@ -78,7 +78,7 @@
         "Ingredients":"50 ml Whiskey de Centeno, 20 ml Vermouth Rosso, 1 dash de Angostura Bitter",
         "Method": "Verter todos los ingredientes en un vaso mezclador con cubos de hielo. Revolver bien. Colar en una copa cocktail previamente enfriada.",
         "Garnish": "Decorar con una cereza.",
-        "image": "manhattan.jpg"
+        "image": "/manhattan.png"
        },
        {
         "id": 10,
@@ -87,7 +87,7 @@
         "Ingredients":"30 ml Gin, 30 ml Bitter Campari, 30 ml Sweet Red Vermouth",
         "Method": "Verter todos los ingredientes en un vaso mezclador con cubos de hielo. Revolver bien. Colar en un vaso old fashioned lleno de hielo.",
         "Garnish": "Decorar con media rodaja de naranja.",
-        "image": "negroni.jpg"
+        "image": "/negroni.png"
        },
        {
         "id": 11,
@@ -96,7 +96,7 @@
         "Ingredients":"45 ml Bourbon o Whiskey de Centeno, 1 Terron de Azucar o 1 cucharada, unos cuantos dashes de Angostura Bitter, un par de dashes de agua (opcional).",
         "Method": "Colocar el terron de azucar en un vaso old fashioned y aplica los dashes de Angostura. Macerar hasta crear una pasta, llenar el vaso con cubos de hielo y agregar el whiskey. Revolver gentilmente.",
         "Garnish": "Decorar con media rodaja o piel de naranja y una cereza.",
-        "image": "old-Fashioned.jpg"
+        "image": "/oldFashioned.png"
        },
        {
         "id": 12,
@@ -105,7 +105,7 @@
         "Ingredients":"45 ml Whisky Escoces, 25ml Drambuie",
         "Method": "Verter todos los ingredientes directamente en un vaso old fashioned lleno de hielo. Revolver gentilmente.",
         "Garnish": "Decorar con piel de limon.",
-        "image": "rusty-Nail.jpg"
+        "image": "/rustyNail.png"
        },
        {
         "id": 13,
@@ -114,7 +114,7 @@
         "Ingredients":"350 ml Cognac, 20 ml Triple Sec, 20 ml Jugo de Limon Fresco ",
         "Method": "Verter todos los ingredientes en una coctelera con hielo. Batir bien y colar en una copa cocktail previamente enfriada.",
         "Garnish": "N/A",
-        "image": "sidecar.jpg"
+        "image": "/sidecar.png"
        },
        {
         "id": 14,
@@ -123,7 +123,7 @@
         "Ingredients":"45 ml Whiskey Bourbon, 25 ml Jugo de Limon Fresco, 20 ml Almibar Simple,20 ml Clara de Huevo",
         "Method": "Verter todos los ingredientes en una coctelera con hielo. Batir bien. Colar en una copa Cobbler. Si se desea servir 'a las rocas', colar los ingredientes en un vaso old fashioned lleno de hielo.",
         "Garnish": "Decorar con media rodaja de naranja y una cereza de marrasquino.",
-        "image": "whiskey-Sour.jpg"
+        "image": "/whiskeySour.png"
        },
        {
         "id": 15,
@@ -132,6 +132,6 @@
         "Ingredients":"350 ml Vodka,20 ml Licor de Cafe",
         "Method": "Verter los ingredientes en un vaso old fashioned lleno de hielo. Revolver gentilmente. Para el WHITE RUSSIAN – colocar crema de leche fresca sobre el cocktail y revolver suavemente.",
         "Garnish": "N/A",
-        "image": "black-russian.jpg"
+        "image": "/blackRussian.png"
        }
    ]
