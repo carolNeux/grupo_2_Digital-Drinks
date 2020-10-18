@@ -6,36 +6,34 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="https://kit.fontawesome.com/5376d63d7e.js" crossorigin="anonymous"></script>
     <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
-    <title> Cursos|Digital Drinks</title>
+    <title>Recetas|Digital Drinks</title>
 </head>
 <body>
     <div class="central_container">
     <!--header/partial-->
     <%- include('../partials/header') %>
     <!--fin header/partial-->
-
-        <!-- Barra de busqueda courses -->
+        <!-- Barra de busqueda recetas -->
         <div class="search_container">
           <form action="">
             <label for="products_search"></label>
-            <input type="search" id="products_search" name="products_search" placeholder="Busqueda de Cursos">
+            <input type="search" id="products_search" name="products_search" placeholder="Busqueda de Recetas">
             <button type="submit" value="Buscar">Buscar</button>
           </form>
         </div>
-        <!--Inicio de courses-->
+        <!--Inicio de Recetas-->
 
         <main class="">
-            <% courses.forEach(course => { %>
+            <% recipes.forEach(recipe => { %>
              
                 <section class="item_container">
                     <article class="product">
-                        <a href="/courses/courseDetail/<%= course.id %> ">
-                        <img src= /images/courses<%= course.image %>  alt="<%= course.name %> ">
+                        <a href="/recipes/recepieDetail/<%= recipe.id %> ">
+                        <img src= /images/recipes<%= recipe.image %>  alt="<%= recipe.name %> ">
                         </a>
                         <div class="product_description">
-                            <h2><%= course.name %></h2>
-                            <span><%= course.discount %>  % OFF</span>
-                            <p>$ <%= toThousand(course.price - (course.price * course.discount / 100)) %> </p>
+                            <h2><%= recipe.name %></h2>
+                            <p><%= recipe.description %> </p>
                         </div>
                         <a href="#" class="see_more"><b>VER MÁS</b></a>                
                       </article>

@@ -3,50 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
     <script src="https://kit.fontawesome.com/5376d63d7e.js" crossorigin="anonymous"></script>
-    
     <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
     <title>Digital Drinks</title>
 </head>
 <body>
-<div class="central_container">
-    <header class="header_container">
-        <div class="always_visible">
-            <img src="/images/header/logoAzul.svg" alt="Digital Drinks Logo" class="logo">
-           <!-- <a href="#" class="toggle_nav">
-                <span class="fa fa-bars"></span>
-            </a>  -->
-        </div>  
-        <nav class="navigation_bar">
-            <ul>
-                <div class="sign_button">
-                    <li>
-                        <a href="/login" class="sign_up_button"><b>Ingresar</b></a>
-                    </li>
-                     <li>
-                         <a href="/register" class="sign_in_button"><b>Crear Cuenta</b></a>  
-                    </li>
-                </div>
-                <div class="options">
-                    <li><a href="#"><img src=" " alt="">Mi cuenta</a></li>
-                    <li><a href="/products/productsCart"><img src=" " alt="">Carrito</a></li>
-                    <li><a href="/"><img src=" " alt="">Home</a></li>
-                    <li><a href="/products"><img src=" " alt="">Productos</a></li>
-                    <li><a href="/courses"><img src=" " alt="">Cursos</a></li>
-                    <li><a href="/recepies"><img src=" " alt="">Recetas</a></li>
-                    <div class="not_visible">
-                        <li ><a href="#"><img src=" " alt="" >Contacto</a></li>
-                        <li><a href="#"><img src=" " alt="">Quienes somos</a></li>
-                    </div>  
-                </div>
-            </ul>
-        </nav>
-    </header>
+<div class="central_container"> <!-- contenedor central-->
+    <!--header/partial-->
+    <%- include('partials/header', {title: 'Digital Drinks'}) %>
+    <!--fin header/partial-->
+    <!--Slider/partial (posibilidad de manejarlo con codigo en controller)-->
     <div class="contenedor">
         <section class="slider-contenedor">
             <article class="contenido-slider fade">
-                <img src="/images/products/strainers.jpg" alt="">
+                <img src="./images/products/herramientas/strainers.jpg" alt="">
                 <div class="offer_style"> 
                     <h2>Strainers</h2>
                     <p>Oferta especial!</p>
@@ -54,7 +25,7 @@
                 </div>
             </article>
             <article class="contenido-slider fade">
-                <img src="/images/products/spoons.jpg" alt="">
+                <img src="./images/products/herramientas/spoons.jpg" alt="">
                 <div class="offer_style">
                     <h2>Spoons</h2>
                     <p>Oferta especial!</p>
@@ -62,7 +33,7 @@
                 </div>
             </article>
             <article class="contenido-slider fade">
-                <img src="/images/products/cocktail-shakers.jpg" alt="">
+                <img src="./images/products/herramientas/cocktail-shakers.jpg" alt="">
                 <div class="offer_style">
                     <h2>Cocktail Shakers</h2>
                     <p>Oferta especial!</p>
@@ -70,7 +41,7 @@
                 </div>
             </article>
             <article class="contenido-slider fade">
-                <img src="/images/products/Bar-Set-Cocktail-Shaker.png" alt="">
+                <img src="./images/products/herramientas/Bar-Set-Cocktail-Shaker.png" alt="">
                 <div class="offer_style">
                     <h2>Bar Kit</h2>
                     <p>Oferta especial!</p>
@@ -79,58 +50,41 @@
             </article>
         </section>
     </div>
-        <main class="main_container">
-            <section class="item_container">
-                <article class="item">
-                    <img src="/images/home/productos.jpg" alt="">
-                    <div class="item_description">
-                        <h4>Productos</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vitae.</p>
-                        <a href="/products" class="see_more">Ver más</a>
-                    </div>
-                </article>
-                <article class="item">
-                    <img src="/images/home/cursos.jpg" alt="">
-                    <div class="item_description">
-                        <h4>Cursos</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vita.</p>
-                        <a href="/courses" class="see_more">Ver más</a>
-                    </div>
-                </article>
-                <article class="item">
-                    <img src="/images/home/recetas.jpg" alt="">
-                    <div class="item_description">
-                        <h4>Recetas</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vita.</p>
-                        <a href="/recepies" class="see_more">Ver más</a>
-                    </div>
-                </article>
-            </section>
-        </main>
-        <footer class="footer_container">
-            <article class="contact">
-                <a href="#"><img src=" " alt="">Quienes somos</a>
-                <a href="#"><img src=" " alt="">Contacto</a>                
-            </article>
-            <article>
-                <p>Seguinos en nuestras redes sociales:</p>
-                <div class="social_media">
-                    <a href="#">
-                        <img src="/images/footer/facebook.svg" alt="Facebook">
-                    </a>
-                    <a href="">
-                        <img src="/images/footer/instagram.svg" alt="Instagram">
-                    </a>
-                    <a href="">
-                        <img src="/images/footer/twitter.svg" alt="Twitter">
-                    </a>
+    <!--fin de Slider/partial-->
+    <!--visual de home/ posible partial-->
+    <main class="main_container">
+        <section class="item_container">
+            <article class="item">
+                <img src="./images/home/productos.jpg" alt="">
+                <div class="item_description">
+                    <h4>Productos</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vitae.</p>
+                    <a href="/products.ejs" class="see_more">Ver más</a>
                 </div>
             </article>
-            <article class="copyright">
-                <p>Copyright © Todos los derechos reservados</p>
+            <article class="item">
+                <img src="./images/home/cursos.jpg" alt="">
+                <div class="item_description">
+                    <h4>Cursos</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vita.</p>
+                    <a href="courses.html" class="see_more">Ver más</a>
+                </div>
             </article>
-        </footer>
-    </div>
-    <script src="/js/slider.js"></script>
+            <article class="item">
+                <img src="./images/home/recetas.jpg" alt="">
+                <div class="item_description">
+                    <h4>Recetas</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vita.</p>
+                    <a href="recipes.html" class="see_more">Ver más</a>
+                </div>
+            </article>
+        </section>
+    </main>   
+    <!--final visual de home/ posible partial-->
+    <!--footer/partial-->
+    <%- include('partials/footer') %>
+    <!--final footer/partial-->
+</div>
+    <script src="./javascripts/slider.js"></script>
 </body>
 </html>

@@ -8,48 +8,37 @@
 }
 /*--------------------------------------------------------*/
 /*caracteristicas dadas al body por cambio de fuente y uso de imagen de fondo*/
-
-body{
-    background-image: url(/img/home/fondo.jpg); /*Imagen de fondo del site*/
+/*--------------------------------------------------------*/
+body {
+    background-image: url(/images/home/fondo.jpg); /*Imagen de fondo del site*/
     font-family: Verdana, sans-serif; /*Cambio de tipo de fuente para todo el texto escrito dentro del body*/
-    background-repeat: no-repeat; /*No repite la imagen de fondo para rellenar*/
+    background-repeat: repeat; /*No repite la imagen de fondo para rellenar*/
     background-attachment: fixed; /*Fija la imagen que aparece en el fondo y queda estatica*/
 }
-/*--------------------------------------------------------*/
-/*Fuente agregada para Digital Drinks*/
-/*--------------------------------------------------------*/
-/* @font-face {
-    font-family: 'crunchyregular';
-    src: url(../font/crunchy.woff2);
-} */
 /*--------------------------------------------------------*/
 /*Caja creada para dar estilos y centrados al cuerpo del site Y NO TOCAR EL BODY*/
 /*--------------------------------------------------------*/
 .central_container { 
     width: 100%; /*Indica que va a ocupar el 100% del ancho*/
-   
 }
 /*--------------------------------------------------------*/
 /*Inicio de los stilos del header*/
 /*--------------------------------------------------------*/
-.header_container { /*Da propiedad flex a todos los elementos del header*/
+.header_container { /*ubica los elementos del header*/
+    display: block;
+    text-align: center;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-/*Organiza los elementos del header que siempre se ven en cualquier resolucion*/
-.always_visible { 
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-around;
 }
 /*Redimension del logo para poder centrarlo*/
 .logo {
-    width: 60%;
-    margin-left: 20%;
+    width: 200px;
 }
-/* Posición de toggle_nav
+.navigation_bar a {/*quita la linea debajo de los vinculos*/
+    text-decoration: none;
+} 
+/*boton de navegacion*/
 .toggle_nav {
+    position: absolute;
     text-align: center;
     margin: 10px;
     width: 50px;
@@ -60,69 +49,55 @@ body{
     font-size: 30px;
     text-decoration: none;
     border-radius: 5px;
-
 }
 .toggle_nav:hover {
     background-color: #FF6600;
-} */
-
-/*Estilos de la barra de navegación. Oculta para mobile*/
-.navigation_bar { /*Oculta el menu de opciones para versión mobile*/
-    /* display: none;  */
 }
-/*Estilo y dimensiones de la lista*/
-.navigation_bar ul li { 
-    display: inline-block; /*Hace mas facil manejar los elementos dentro de la lista*/
-    width: 100%; /*Ocupa el 100% del ancho de la pantalla usada*/
-    list-style: none; /*Saca el punto negro de la lista*/
-}
-/*Caja base de dimensiones de los botones de login y registro*/
+/*botones de login y registro*/
 .sign_button {
     display: flex;
-    text-decoration: none; /*Quita el subrayado de los hipervinculos*/
-    width: 100%;
+    justify-content: space-around;
+    margin: 30px;
+    list-style: none;    
 }
-.sign_button a {
-    text-decoration: none;
-    color: white;
-}
-/*Estilos individuales de botones de registro y login*/
-.sign_up_button, .sign_in_button { /*Si...dos clases compartiendo estilos*/
-    display: flex;
+.sign_in_button, .sign_up_button {
     justify-content: center;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     margin: 10px;
+    color: white;
 }
-.sign_up_button {
+.sign_up_button, .sign_in_button:hover {
     background-color:#483D8B ;
 } 
-.sign_in_button {
+.sign_in_button, .sign_up_button:hover {
     background-color: #FF6600;
 }
-.sign_up_button:hover {
-    background-color:#FF6600 ;
-} 
-.sign_in_button:hover {
-    background-color: #483D8B;
+/*botones de opciones de navegacion para el usuario*/
+.options {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
 }
-/*Estilos de etiqueta a dentro de nav*/
-.options a { 
-    display: block; /*Cancela la propiedad flex para colocar los items uno debajo del otro*/
-    text-decoration: none; /*Quita el subrayado de los hipervinculos*/
-    border: solid 1px white;
-    padding: 10px 0px 10px 20px;
+.options li a{
+    display: block;
+    list-style: none;
+    background-color: #483D8B;
+    margin: 1px 0px;
+    padding: 15px 0px 15px 15px;
     color: white;
-    background-color: #483D8B;
+    font-size: 20px;
+    text-align: left;
 }
-/*Estilos al pasar el cursor por arriba de los hipervinculos*/
-.options a:hover { 
-    background-color: #FF6600;
+.options li a:hover {
+    background-color: #FF6600;   
 }
-/*Dimensiones del icono y distancia de texto */
-.options img { 
-    width: 30px; /*Redimencion del icono*/
-    margin-right: 15px; /*Distancia de texto*/
+/*activacion del boton */
+.navigation_bar { /*Oculta el menu de opciones para versión mobile*/
+    display: none; 
+}
+.navigation_bar.active {/*Activa el menu haciendoloo visible cuando se hace click sobre el toggle nav.*/
+    display: block;
 }
 /*--------------------------------------------------------*/
 /*Slider*/
@@ -130,10 +105,6 @@ body{
 .contenedor {
     width: 100%;
     overflow: hidden;
-}
-.slider-contenedor {
-    width: 100%;
-    display: flex;
 }
 .offer_style {
     position: absolute;
@@ -144,21 +115,21 @@ body{
     background-color: #ff660049;
 }
 .offer_style p, .offer_style h2 {
-    margin: 5px;
+    margin: 15px 15px 5px 100px;
 }
 .offer_style a {
-    margin: 10px;
+    margin: 15px 15px 5px 100px;
 }
 .contenido-slider {
     width: 100%;
-    height: 40vh;
+    height: 36vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-shrink: 0;
 }
 .contenido-slider img {
-    width: 75%;
+    width: 100%;
     height: auto;
 }
 .contenido-slider a {
@@ -235,7 +206,9 @@ body{
 .item_description p {
     margin: 0px 10px;
 }
+/*--------------------------------------------------------*/
 /* Barra de busqueda */
+/*--------------------------------------------------------*/
 .search_container{
     display: flex;
     justify-content: center;
@@ -248,7 +221,6 @@ body{
     width: 300px;
 }
 /* CSS products */
-
 .product{
     display: flex;
     flex-wrap: wrap;
@@ -275,13 +247,10 @@ body{
 .product_description h2{
     text-align: center;
 } 
-
 /* Aside */
-
 .categories_container{
     display: none;
 }
-
 /*Botones de ver mas*/
 .see_more {
     color: white;
@@ -294,30 +263,22 @@ body{
 .see_more:hover {
     background-color: #FF6600;
 }
-
-
-
 /* estilo productCart */
-
 .cart{
     width: 100%;
     box-sizing: border-box;
 }
-
 .cart2 {
-
     box-sizing: border-box;
     margin: auto;
     width: 90%;
 }
 .cart_header{
-  
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 15px;
     border-bottom: solid 1px darkslateblue;
-
 }
 .cart_header img{
     width: 20%;
@@ -336,19 +297,13 @@ body{
     display: flex;
     flex-direction: column;
 }
-/* t_description input{
-    width: 30px;.car
-} */
 .cart_total{
-   
     margin-top: 20px;
     border-top: solid 2px darkslateblue;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-
 }
-
 .cart_final{
     align-self: flex-end;
 }
@@ -376,8 +331,31 @@ body{
 .footer_container p {
     margin-bottom: 15px;
 }
+.contact {
+    display: none;
+    float: left;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 30px 0px;
+    margin-left: 8%;
+}
+.contact a {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    justify-content: center;
+}
+.contact a img {
+    width: 25px;
+    margin-right: 10px;
+    justify-content: center;
+}
+.contact a:hover {
+    color: #FF6600;
+}
 .social_media {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-left: 30%;
     width: 40%;
@@ -388,27 +366,85 @@ body{
     margin: 10px 5px;
     font-size: 12px;
 }
-
-@media (min-width:600px) {
+/*--------------------------------------------------------*/
+/*responsive*/
+/*--------------------------------------------------------*/
+@media (min-width:480px) {
     .logo {
-        width: 40%;
-        margin-left: 8%;
-    }
-    .toggle_nav {
-        margin-top: 15px;
-        margin-right: 12%;
+        width: 300px;
     }
 }
-@media (min-width:700px) {
-    .logo {
-        width: 30%;
-        margin: 0px;
-    }
-    .navigation_bar img, .not_visible, .toggle_nav{
+@media (min-width:780px) {
+    .toggle_nav, .not_visible {
         display: none;
     }
     .navigation_bar {
         display: flex;
+    }
+    .header_container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        display: flex;
+        width: 150%;
+    }
+    .sign_button {
+        justify-content: right;
+        margin-top: 60px;
+    }
+    .options {
+        flex-direction: row;
+    }
+    .options li a {
+        background-color: transparent;
+        color: #483D8B;
+        border-left: solid 2px #483D8B;
+        padding: 8px;
+        margin: 10px 0px;
+        font-size: 18px;
+    }
+    .options li a:hover {
+        background-color: #ff66006e;
+    }
+    /*slider*/
+    .contenedor {
+        margin: 70px 0px;
+    }
+    /*footer*/
+    .footer_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #473d8b34;
+        margin-top: 100px;
+    }
+    .contact {
+        display: flex;
+    }
+    .social_media {
+        float: right;
+        flex-direction: column;
+        margin: 30px 0px;
+    }
+    .social_media a {
+        padding: 10px;
+    }
+    .social_media a img {
+        width: 45px;
+    }
+    .copyright {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+@media (min-width:900px) {
+    .item {
+        flex-wrap: wrap;
+        width: 25%;
+        margin: 20px;
+        justify-content: space-around;
     }
 }
 

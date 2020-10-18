@@ -10,39 +10,9 @@
 </head>
 <body>
     <div class="central_container">
-        <header class="header_container">
-            <div class="always_visible">
-                <img src="/images/header/logoAzul.svg" alt="Digital Drinks Logo" class="logo">
-                <!-- <a href="#" class="toggle_nav">
-                    <span class="fa fa-bars"></span>
-                </a> -->
-            </div>  
-            <nav class="navigation_bar">
-                <ul>
-                    <div class="sign_button">
-                        <li>
-                            <a href="" class="sign_up_button"><b>Ingresar</b></a>
-                        </li>
-                         <li>
-                             <a href="" class="sign_in_button"><b>Crear Cuenta</b></a>  
-                        </li>
-                    </div>
-                    <div class="options">
-                        <li><a href="#"><img src="" alt="">Mi cuenta</a></li>
-                        <li><a href="#"><img src="" alt="">Carrito</a></li>
-                        <li><a href="#"><img src="" alt="">Home</a></li>
-                        <li><a href="#"><img src="" alt="">Productos</a></li>
-                        <li><a href="#"><img src="" alt="">Cursos</a></li>
-                        <li><a href="#"><img src="" alt="">Recetas</a></li>
-                        <div class="not_visible">
-                            <li ><a href="#"><img src="" alt="" >Contacto</a></li>
-                            <li><a href="#"><img src="" alt="">Quienes somos</a></li>
-                        </div>  
-                    </div>
-				</ul>
-            </nav>
-        </header>
-
+    <!--header/partial-->
+    <%- include('../partials/header') %>
+    <!--fin header/partial-->
 <!-- COntenido carrito -->
         <main class="cart">
 
@@ -54,12 +24,8 @@
                 <article class="cart_item">
                     <img src="/images/products/cocktail-french-tins-shaker.jpg" alt="">
                     <div class="cart_description">
-                    <p>$
-
-                      </p>
-                    <p>
-                     Nombre Producto
-                    </p>
+                    <p>$</p>
+                    <p>Nombre Producto</p>
                 </div>
                 <div>
                     <label for="cantidad">Cantidad</label>
@@ -67,21 +33,13 @@
                     <label for="precio_total">Subtotal</label>
                     <input type="number">
                 </div>
-                    <button>
-                        <a href="">Eliminar</a>
-                    </button>
-
+                    <button><a href="">Eliminar</a></button>
                 </article>
-
                 <article class="cart_item">
                     <img src="/images/products/cocktail-shaker-boston.jpg" alt="">
                 <div class="cart_description">
-                    <p>$
-
-                      </p>
-                    <p>
-                    Nombre Producto
-                    </p>
+                    <p>$</p>
+                    <p>Nombre Producto</p>
                 </div>
                 <div>
                     <label for="cantidad">Cantidad</label>
@@ -89,21 +47,13 @@
                     <label for="precio_total">Subtotal</label>
                     <input type="number">
                 </div>
-                    <button>
-                        <a href="">Eliminar</a>
-                    </button>
-
+                    <button><a href="">Eliminar</a></button>
                 </article>
-
                 <article class="cart_item">
                     <img src="/images/products/cocktail-shaker-cobbler.jpg" alt="">
                     <div class="cart_description">
-                    <p>$
-
-                      </p>
-                    <p>
-                     Nombre Producto
-                    </p>
+                    <p>$</p>
+                    <p>Nombre Producto</p>
                 </div>
                 <div>
                     <label for="cantidad">Cantidad</label>
@@ -111,21 +61,13 @@
                     <label for="precio_total">Subtotal</label>
                     <input type="number">
                 </div>
-                    <button>
-                        <a href="">Eliminar</a>
-                    </button>
-
+                    <button><a href="">Eliminar</a></button>
                 </article>
-
                 <article class="cart_item">
                     <img src="/images/products/cocktail-shaker-boston.jpg" alt="">
                     <div class="cart_description">
-                    <p>$
-
-                      </p>
-                    <p>
-                        Nombre Producto
-                    </p>
+                    <p>$</p>
+                    <p>Nombre Producto</p>
                 </div>
                 <div>
                     <label for="cantidad">Cantidad</label>
@@ -133,21 +75,13 @@
                     <label for="precio_total">Subtotal</label>
                     <input type="number">
                 </div>
-                    <button>
-                        <a href="">Eliminar</a>
-                    </button>
-
+                    <button><a href="">Eliminar</a></button>
                 </article>
-
                 <article class="cart_item">
                     <img src="/images/products/cocktail-shaker-boston.jpg" alt="">
                     <div class="cart_description">
-                    <p>$
-
-                      </p>
-                    <p>
-                        Nombre Producto
-                    </p>
+                    <p>$</p>
+                    <p>Nombre Producto</p>
                 </div>
                     <div>
                     <label for="cantidad">Cantidad</label>
@@ -155,57 +89,22 @@
                     <label for="precio_total">Subtotal</label>
                     <input type="number">
                 </div>
-                    <button>
-                        <a href="">Eliminar</a>
-                    </button>
-
+                    <button><a href="">Eliminar</a></button>
                 </article>
-               
                 <article class="cart_total">
                     <div class="cart_final">
                     <label for="precio_total">Total</label>
                     <input type="number">
                     </div>
                     <!-- Como completar el monto total -->
-                    <button type="submit" class="btn">
-                        Comprar
-                    </button>
-                    <button type="reset" class="btn">
-                      Vaciar carrito
-                    </button>
+                    <button type="submit" class="btn">Comprar</button>
+                    <button type="reset" class="btn">Vaciar carrito</button>
                 </article>
-    
-            </div>
-
-            
+            </div>            
         </main>
-
-
-
-
-
-        <footer class="footer_container">
-            <article class="contact">
-                <a href="#"><img src="images/carrito.png" alt="">Quienes somos</a>
-                <a href="#"><img src="images/carrito.png" alt="">Contacto</a>                
-            </article>
-            <article>
-                <p>Seguinos en nuestras redes sociales:</p>
-                <div class="social_media">
-                    <a href="#">
-                        <img src="/img/footer/facebook.svg" alt="Facebook">
-                    </a>
-                    <a href="">
-                        <img src="/img/footer/instagram.svg" alt="Instagram">
-                    </a>
-                    <a href="">
-                        <img src="/img/footer/twitter.svg" alt="Twitter">
-                    </a>
-                </div>
-            </article>
-            <article class="copyright">
-                <p>Copyright © Todos los derechos reservados</p>
-            </article>
-        </footer>
+    <!--footer/partial-->
+    <%- include('../partials/footer') %>
+    <!--final footer/partial-->
+    <script src="./javascripts/slider.js"></script>
 </body>
 </html>

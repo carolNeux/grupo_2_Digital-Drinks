@@ -9,114 +9,43 @@
     <title>Detalle de Producto | Digital Drinks </title>
 </head>
 <body>
-   
-    <header class="header_container">
-        <div class="always_visible">
-            <img src="/images/header/logoAzul.svg" alt="Digital Drinks Logo" class="logo">
-           <!-- <a href="#" class="toggle_nav">
-                <span class="fa fa-bars"></span>
-            </a>  -->
-        </div>  
-        <nav class="navigation_bar">
-            <ul>
-                <div class="sign_button">
-                    <li>
-                        <a href="/login" class="sign_up_button"><b>Ingresar</b></a>
-                    </li>
-                     <li>
-                         <a href="/register" class="sign_in_button"><b>Crear Cuenta</b></a>  
-                    </li>
-                </div>
-                <div class="options">
-                    <li><a href="#"><img src=" " alt="">Mi cuenta</a></li>
-                    <li><a href="/products/productsCart"><img src=" " alt="">Carrito</a></li>
-                    <li><a href="/"><img src=" " alt="">Home</a></li>
-                    <li><a href="/products"><img src=" " alt="">Productos</a></li>
-                    <li><a href="/courses"><img src=" " alt="">Cursos</a></li>
-                    <li><a href="/recepies"><img src=" " alt="">Recetas</a></li>
-                    <div class="not_visible">
-                        <li ><a href="#"><img src=" " alt="" >Contacto</a></li>
-                        <li><a href="#"><img src=" " alt="">Quienes somos</a></li>
-                    </div>  
-                </div>
-            </ul>
-        </nav>
-    </header>
-
-    
+        <!--header/partial-->
+        <%- include('../partials/header') %>
+        <!--fin header/partial--> 
         <div class="contenedor">
-            
             <div class="elemento prod-descr">
                 <h3><%= productDetail.name %> </h3>
             </div>
-            
             <div class="elemento imagen"> 
                 <img src="/images/products/<%= productDetail.image %> " alt="<%= productDetail.name %> ">
-
             </div>
             <div class="elemento precio"> 
-                
                 <% if(productDetail.discount !== 0) { %>
-                        <p> <%= productDetail.discount %> % OFF</p>
-                    <p>
-                        $<%= toThousand(productDetail.price - (productDetail.price * productDetail.discount / 100)) %> 
-                    </p>              
-                    <% } else{  %> 
-                        
-                        <p>
-                            $<%= toThousand(productDetail.price) %> 
-                        </p>
-                        <% } %> 
+                    <p> <%= productDetail.discount %> % OFF</p>
+                    <p>$<%= toThousand(productDetail.price - (productDetail.price * productDetail.discount / 100)) %> </p>              
+                <% } else{  %> 
+                    <p>$<%= toThousand(productDetail.price) %> </p>
+                <% } %> 
              </div>
                 <p><%= productDetail.description %> </p>
             <div class="elemento cantidad"> 
                 <label for="unidades">Cantidad</label>
                 <input type="unidades" placeholder="Cuantos queres ?">
             </div>
-
-           
-            
             <div class="elemento buy">    
-          
                 <button type="submit">Comprar ahora</button>
             </div>
-            
             <div class="elemento add">  
                 <button> Agregar al carrito</button>
-       
             </div>
             <div class="elemento buy">    
-          
                 <button type="submit">Editar Producto</button>
             </div>
             
-        </div>
-
-        <footer class="footer_container">
-            <article class="contact">
-                <a href="#"><img src=" " alt="">Quienes somos</a>
-                <a href="#"><img src=" " alt="">Contacto</a>                
-            </article>
-            <article>
-                <p>Seguinos en nuestras redes sociales:</p>
-                <div class="social_media">
-                    <a href="#">
-                        <img src="/images/footer/facebook.svg" alt="Facebook">
-                    </a>
-                    <a href="">
-                        <img src="/images/footer/instagram.svg" alt="Instagram">
-                    </a>
-                    <a href="">
-                        <img src="/images/footer/twitter.svg" alt="Twitter">
-                    </a>
-                </div>
-            </article>
-            <article class="copyright">
-                <p>Copyright © Todos los derechos reservados</p>
-            </article>
-        </footer>        
-
-
-
+        </div>    
+        <!--footer/partial-->
+        <%- include('../partials/footer') %>
+        <!--final footer/partial-->
+        <script src="./javascripts/slider.js"></script>       
     </body>
 </html>

@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Registro |Digital Drinks</title>
-    <link rel="stylesheet" href="../stylesheets/style_reg.css">
+    <link rel="stylesheet" href="./stylesheets/style_reg.css">
     <script src="https://kit.fontawesome.com/5376d63d7e.js" crossorigin="anonymous"></script>
     <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
 </head>
 <body>
-    <div class="reg-box">
-        <a href="/"><img class="logo"  src="/images/header/logoAzul.svg" alt="Logo de DD"></a>
-        
-        <h2> Registrate aquí</h2>
-        <form action="validar" method="POST">
-        <div class="reg-fill">  
+    <div class="centrado">
+        <div class="reg-box">
+            <a href="/"><img class="logo"  src="/images/header/logoAzul.svg" alt="Logo de DD"></a>
+            <h2> Registrate aquí</h2>
+            <form action="validar" method="POST">
+            <div class="reg-fill">  
                 <label for="name">Nombre y Apellido</label>
                 <input type="text" placeholder="Alfonsina Storni">
             
@@ -28,8 +28,6 @@
 
                 <label for="birthday">Fecha de Nacimiento</label>
                 <input type="date" id="birthday" name="birthday">
-
-
                 <label for="">Pais</label>
                 <select name="pais" id="pais"> 
                     <option value="arg"> Argentina</option>
@@ -42,17 +40,12 @@
                 </select>
                 <label for="password">Password</label> 
                 <input type="password" placeholder="Password">
-
                 <label for="password">Confirma tu Password</label>
                 <input type="password" placeholder="Confirma tu Password">
-        
+            </div>
+            <a href="/" class="reg-button">Enviar</a>
+            </form>
         </div>
-        <a href="#" class="reg-button">Enviar</a>
-    </form>
-    </div>
-
-
-
-    
+    </div>    
 </body>
 </html>

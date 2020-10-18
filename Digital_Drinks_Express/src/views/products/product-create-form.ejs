@@ -10,9 +10,10 @@
     <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
 </head>
 <body>
-    <!-- Aca va el Header -->
-    <div class="reg-box">
-        
+    <!--header/partial-->
+    <%- include('../partials/header') %>
+    <!--fin header/partial-->
+    <div class="reg-box"> 
         <h2> Crea tu Producto</h2>
         <form action="validar" method="POST">
         <div class="reg-fill">  
@@ -42,9 +43,9 @@
         </div>
     </form>
     </div>
-
-
-<!-- Aca va el Footer -->
+    <!--footer/partial-->
+    <%- include('../partials/footer') %>
+    <!--final footer/partial-->
     
 </body>
 </html>
