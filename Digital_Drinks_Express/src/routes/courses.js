@@ -21,7 +21,15 @@ var upload = multer({ storage: storage });
 
 // ******* Routes ***********
 
+//Todos los cursos//
 router.get('/', coursesController.index);
+
+//Detalle del curso//
+router.get('/coursesDetail/:id', coursesController.detail);
+
+//Consulta del curso//
+router.get('/coursesContact', coursesController.consult);
+router.post('/coursesContact', coursesController.redireccion)
 
 
 module.exports = router; 

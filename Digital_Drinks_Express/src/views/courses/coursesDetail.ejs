@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--head/partial-->
+    <%- include('../partials/head') %>
+    <!--fin head/partial-->
+<body>
+    <!--header/partial-->
+    <%- include('../partials/header') %>
+    <!--fin header/partial--> 
+    <div class="courses_detail_container">
+            <img src="/images/courses/<%= coursesDetail.image %>" alt="<%= coursesDetail.name %>" >
+        <div class="detail_description">
+            <div class="course_name">
+                <h3><%= coursesDetail.name %> </h3>
+            </div>
+            <div class="product_description">
+                <div class="prices">
+                    <% if(coursesDetail.discount !== 0) { %>
+                        <h2>Precio: $<%= toThousand(coursesDetail.price - (coursesDetail.price * coursesDetail.discount / 100)) %> </h2> 
+                        <h4 class="discount"><%= coursesDetail.discount %> % OFF</h4>             
+                    <% } else{  %> 
+                        <h2> Precio: $<%= toThousand(coursesDetail.price) %> </h2>
+                    <% } %> 
+                </div>
+                <h3>Descripcion: </h3>
+                <p><%= coursesDetail.description %> </p>
+            </div>
+            <div class="product_quantity">
+                <a href="/courses/coursesContact">Solicitar mas información</a>
+            </div>
+            <div class="edition_button_recipes">
+                <a href="/">Editar</a>
+                <form action="./product-edit-form/<%= coursesDetail.id %>?_method=DELETE" method="POST">
+                    <a href="/">Eliminar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div>
+    <div class="return_to_list">
+        <a href="/courses" >Todos nuestros cursos</a>
+    </div>
+        
+    </div>
+    <!--footer/partial-->
+    <%- include('../partials/footer') %>
+    <!--final footer/partial-->        
+</body>
+</html>

@@ -23,13 +23,10 @@
           </form>
         </div>
         <!--Inicio de courses-->
-
         <main class="">
             <% courses.forEach(course => { %>
-             
                 <section class="item_container">
                     <article class="product">
-                        <a href="/courses/courseDetail/<%= course.id %> ">
                         <img src= /images/courses<%= course.image %>  alt="<%= course.name %> ">
                         </a>
                         <div class="product_description">
@@ -37,34 +34,10 @@
                             <span><%= course.discount %>  % OFF</span>
                             <p>$ <%= toThousand(course.price - (course.price * course.discount / 100)) %> </p>
                         </div>
-                        <a href="#" class="see_more"><b>VER MÁS</b></a>                
+                        <a href="/courses/coursesDetail/<%= course.id %>" class="see_more"><b>VER MÁS</b></a>                
                       </article>
                 </section>
             <% }) %>
-
-            <!--Inicio de los aside-->
-            <section class="categories_container">
-                <aside class="categories">
-                    <h2>Categorias/h2>
-                    <ul>
-                        <li> 
-                            <a href="">Articulo de interes</a> 
-                        </li>
-                        <li>
-                            <a href="">Articulo de interes</a>
-                        </li>
-                        <li>
-                            <a href="">Articulo de interes</a> 
-                        </li>
-                        <li>
-                            <a href="">Articulo de interes</a> 
-                        </li>
-                        <li>
-                            <a href="">Articulo de interes</a> 
-                        </li>
-                    </ul>
-                </aside>
-            </section>
         </main>
     <!--footer/partial-->
     <%- include('../partials/footer') %>
