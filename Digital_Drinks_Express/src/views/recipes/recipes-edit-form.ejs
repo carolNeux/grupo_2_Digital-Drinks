@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Editar recetas |Digital Drinks</title>
-    <link rel="stylesheet" href="/stylesheets/style_create-edit.css" >
+    <link rel="stylesheet" href="/public/stylesheets/style_create-edit.css" >
     <!-- href="/styles/style_reg.css"> -->
     <script src="https://kit.fontawesome.com/5376d63d7e.js" crossorigin="anonymous"></script>
     <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
@@ -13,7 +13,7 @@
     <!-- Aca va el Header -->
     <div class="reg-box">
         
-        <h2> Edita tu producto</h2>
+        <h2> Edita tu Receta</h2>
         <form action="validar" method="POST">
         <div class="reg-fill">  
 
@@ -23,23 +23,31 @@
                 <option value="coursesDB">Cursos</option>
                 <option value="recepiesDB">Recetas</option>
              </select>
+
              <!-- Edicion de recetas -->
              
-
-                <label for="name">Nombre</label>
-                <input type="text" placeholder="Nombre del trago">
+              <div class= " ">
+                <form action="" method="POST">   </form>
+                 <label for="name">Nombre</label>
+                 <input type="text" placeholder="Nombre del trago">
             
-                <label for="ingredients" >Ingredientes:</label>
-                <input type="text" id="ingreients" name="ingredients" placeholder=" Que lleva ?" >
+                 <label for="ingredients" >Ingredientes:</label>
+                 <input type="text" id="ingredients" name="ingredients" placeholder=" Que lleva tu receta?" >
 
-                <label for="method">Metodo de preparacion:</label>
-                <input type="text" id="method" name="method" placeholder="Como preparar el trago" >
+                 <label for="method">Metodo de preparacion:</label>
+                 <input type="text" id="method" name="method" placeholder="Como preparar el trago" >
 
                  <label for="garnish" class="">Decoración:</label>
-                 <textarea name="description" id="description" class="form-input"></textarea>
+                 <textarea name="text" id="description" class="form-input"></textarea>
+
+                 <label for="file" name= "images"> Subir imagen</label>
+                 <input type="file" name="images">
                  <br>
 
                  <button type="submit">Guardar Producto</button>
+
+              </div>
+
         </div>
     </form>
     </div>

@@ -20,7 +20,7 @@ module.exports = {
         res.render('./product-create-form') // decidir si se crea un formulario ????
     },
     edit:  (req,res) => {
-        res.send('vamos por ahi') // decidir si se crea un formulario ?????
+        res.render('./recipes/recipes-edit-form.ejs') // decidir si se crea un formulario ?????
     },
     update: (req, res, next) => {
         res.send('vamos por ahi')
