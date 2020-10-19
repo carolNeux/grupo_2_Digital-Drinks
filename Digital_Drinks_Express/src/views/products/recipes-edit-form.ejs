@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Editar recetas |Digital Drinks</title>
+    <link rel="stylesheet" href="/stylesheets/style_create-edit.css" >
+    <!-- href="/styles/style_reg.css"> -->
+    <script src="https://kit.fontawesome.com/5376d63d7e.js" crossorigin="anonymous"></script>
+    <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
+</head>
+<body>
+    <!-- Aca va el Header -->
+    <div class="reg-box">
+        
+        <h2> Edita tu producto</h2>
+        <form action="validar" method="POST">
+        <div class="reg-fill">  
+
+              <label for="category">Categoría:</label>
+              <select name="category" id="category">
+                <option value="productsDB">Productos</option>
+                <option value="coursesDB">Cursos</option>
+                <option value="recepiesDB">Recetas</option>
+             </select>
+             <!-- Edicion de recetas -->
+             
+
+                <label for="name">Nombre</label>
+                <input type="text" placeholder="Nombre del trago">
+            
+                <label for="ingredients" >Ingredientes:</label>
+                <input type="text" id="ingreients" name="ingredients" placeholder=" Que lleva ?" >
+
+                <label for="method">Metodo de preparacion:</label>
+                <input type="text" id="method" name="method" placeholder="Como preparar el trago" >
+
+                 <label for="garnish" class="">Decoración:</label>
+                 <textarea name="description" id="description" class="form-input"></textarea>
+                 <br>
+
+                 <button type="submit">Guardar Producto</button>
+        </div>
+    </form>
+    </div>
+
+
+<!-- Aca va el Footer -->
+    
+</body>
+</html>
