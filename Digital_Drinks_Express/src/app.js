@@ -9,12 +9,21 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 // ************ express() ************
 const app = express();
 
-// view engine setup
+// ************ Middlewares - (don't touch) ************
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, '../public')));
+app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+
+// ************ Template Engine - (don't touch) ************
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// ************ Route System require and use() ************
 
+// ************ WRITE YOUR CODE FROM HERE ************
+// ************ Route System require and use() ************
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
@@ -25,15 +34,6 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/courses', coursesRouter);
 app.use('/recipes', recipesRouter);
-
-// ************ Middlewares ************
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../public')));
-app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

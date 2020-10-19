@@ -1,47 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/prod_detail.css">
-    <script src="https://kit.fontawesome.com/5376d63d7e.js" crossorigin="anonymous"></script>
-    <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
-    <title>Detalle de Producto | Digital Drinks </title>
-</head>
+    <!--head/partial-->
+    <%- include('../partials/head') %>
+    <!--fin head/partial-->
 <body>
         <!--header/partial-->
         <%- include('../partials/header') %>
         <!--fin header/partial--> 
-        <div class="contenedor">
-            <div class="elemento prod-descr">
-                <h3><%= productDetail.name %> </h3>
-            </div>
-            <div class="elemento imagen"> 
+        <div class="product_detail_container">
                 <img src="/images/products/<%= productDetail.image %> " alt="<%= productDetail.name %> ">
-            </div>
-            <div class="elemento precio"> 
-                <% if(productDetail.discount !== 0) { %>
-                    <p> <%= productDetail.discount %> % OFF</p>
-                    <p>$<%= toThousand(productDetail.price - (productDetail.price * productDetail.discount / 100)) %> </p>              
-                <% } else{  %> 
-                    <p>$<%= toThousand(productDetail.price) %> </p>
-                <% } %> 
-             </div>
-                <p><%= productDetail.description %> </p>
-            <div class="elemento cantidad"> 
-                <label for="unidades">Cantidad</label>
-                <input type="unidades" placeholder="Cuantos queres ?">
-            </div>
-            <div class="elemento buy">    
-                <button type="submit">Comprar ahora</button>
-            </div>
-            <div class="elemento add">  
-                <button> Agregar al carrito</button>
-            </div>
-            <div class="elemento buy">    
-                <button type="submit">Editar Producto</button>
-            </div>
-            
+            <div class="detail_description">
+                <div class="detail_name">
+                    <h3><%= productDetail.name %></h3>
+                </div>
+                <div class="product_description"> 
+                    <div class="prices">
+                        <% if(productDetail.discount !== 0) { %>
+                            <h2>Precio: $<%= toThousand(productDetail.price - (productDetail.price * productDetail.discount / 100)) %> </h2> 
+                            <h4 class="discount"><%= productDetail.discount %> % OFF</h4>             
+                        <% } else{  %> 
+                            <h2> Precio: $<%= toThousand(productDetail.price) %> </h2>
+                        <% } %> 
+                    </div>
+                    <h3>Descripcion: </h3>
+                    <p><%= productDetail.description %> </p>
+                </div>
+                <form action="/" method="POST" class="product_quantity">
+                    <label for="unidades">Cantidad   </label>
+                    <input type="unidades" placeholder="Cuantos queres ?">
+                    <a href="/">Agregar al carrito</a>
+                </form>
+                <div class="products_detail_buttons">
+                    <a href="/">Editar producto</a>
+                    <a href="/">Eliminar</a>
+                </div>
+            </div>  
+        </div>
+        <div class="return_to_list">
+            <a href="/products" >Todos nuestros productos</a>
         </div>    
         <!--footer/partial-->
         <%- include('../partials/footer') %>

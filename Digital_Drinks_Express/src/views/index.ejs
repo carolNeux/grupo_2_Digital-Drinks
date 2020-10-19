@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <script src="https://kit.fontawesome.com/5376d63d7e.js" crossorigin="anonymous"></script>
-    <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
-    <title>Digital Drinks</title>
-</head>
+    <!--head/partial-->
+    <%- include('partials/head', {title: 'Digital Drinks'}) %>
+    <!--fin head/partial-->
 <body>
 <div class="central_container"> <!-- contenedor central-->
     <!--header/partial-->
@@ -59,7 +54,7 @@
                 <div class="item_description">
                     <h4>Productos</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vitae.</p>
-                    <a href="/products.ejs" class="see_more">Ver más</a>
+                    <a href="/products" class="see_more">Ver más</a>
                 </div>
             </article>
             <article class="item">
@@ -67,7 +62,7 @@
                 <div class="item_description">
                     <h4>Cursos</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vita.</p>
-                    <a href="courses.html" class="see_more">Ver más</a>
+                    <a href="/courses" class="see_more">Ver más</a>
                 </div>
             </article>
             <article class="item">
@@ -75,16 +70,15 @@
                 <div class="item_description">
                     <h4>Recetas</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vita.</p>
-                    <a href="recipes.html" class="see_more">Ver más</a>
+                    <a href="/recipes" class="see_more">Ver más</a>
                 </div>
             </article>
         </section>
     </main>   
     <!--final visual de home/ posible partial-->
+    </div>
     <!--footer/partial-->
     <%- include('partials/footer') %>
     <!--final footer/partial-->
-</div>
-    <script src="./javascripts/slider.js"></script>
 </body>
 </html>

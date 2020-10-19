@@ -1,21 +1,31 @@
 const fs = require('fs');
 const path = require('path');
+const {update} = require('./productsController');
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const recipesFilePath = path.join(__dirname, '../data/recipesDB.json');
-const leerJson = ()=> JSON.parse(fs.readFileSync(recipesFilePath, 'utf-8'));
+const recipes = JSON.parse(fs.readFileSync(recipesFilePath, {encoding: 'utf-8'}));
 
 module.exports = {
     index : (req,res) => {
-        let recipes = leerJson();
         res.render('./recipes/recipes', {recipes})
     },
     detail: (req,res) => {
-        res.render('./recipes/recipesDetail') // crear recepiesDetail
+        let idDetail = req.params.id;
+		let recipeDetail = recipes.find(recipe=> 
+			recipe.id == idDetail); 
+        res.render('./recipes/recipesDetail', {'recipeDetail': recipeDetail, toThousand});
     },
     create:  (req,res) => {
-        res.render('./products/product-create-form') // decidir si se crea un formulario ????
+        res.render('./product-create-form') // decidir si se crea un formulario ????
     },
     edit:  (req,res) => {
-        res.render('./products/product-edit-form') // decidir si se crea un formulario ?????
+        res.send('vamos por ahi') // decidir si se crea un formulario ?????
+    },
+    update: (req, res, next) => {
+        res.send('vamos por ahi')
+    },
+    delete: (req, res, next) => {
+        res.send('salio!!!!')
     }
 }

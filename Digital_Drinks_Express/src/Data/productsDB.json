@@ -33,7 +33,7 @@
   "Origen":"Reino Unido",
   "Volumen": "750ml",
   "ABV": "47,3%",
-"image": "/bebidas/tanqueray.png"
+"image": "/bebidas/tanguerey.png"
  },
  {
   "id": 4,
@@ -45,7 +45,7 @@
   "Origen":"Reino Unido",
   "Volumen": "750ml",
   "ABV": "40%",
-  "image": "/bebidas/beefeter.png"
+  "image": "/bebidas/beefeater.png"
  },
   {
   "id": 5,
@@ -154,7 +154,7 @@
   "Origen":"Suecia",
   "Volumen": "750ml",
   "ABV": "40%",
-  "image": "/bebidas/absolutMango.png"
+  "image": "/bebidas/absoluteMangp.png"
  },
   {
   "id": 14,

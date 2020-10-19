@@ -23,7 +23,22 @@ var upload = multer({ storage: storage });
 
 //Todos los productos//
 router.get('/', productsController.index);
+
 //Detalle de producto//
 router.get('/productDetail/:id', productsController.detail);
+
+//product car//
+router.get('/productsCart', productsController.cart);
+
+//creacion de producto//
+router.get('/create', productsController.create);
+router.post('/create', productsController.store);
+
+//edicion de un producto//
+router.get('/edit/:id', productsController.edit);
+router.put('/edit/:id', productsController.update);
+
+//eliminar un producto//
+router.delete('/delete/:id', productsController.delete);
 
 module.exports = router; 

@@ -3,10 +3,10 @@ module.exports = {
         res.render('index', { title: 'Express' });
       },
     showLogin: (req,res) => {
-        res.render('login');
+        res.render('./users/login');
     },
     showRegister: (req,res) => {
-        res.render('register');
+        res.render('./users/register');
     },
     
 }

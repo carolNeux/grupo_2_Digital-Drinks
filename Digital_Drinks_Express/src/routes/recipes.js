@@ -20,8 +20,17 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 // ******* Routes ***********
-
 router.get('/', recipesController.index);
+
+//Detalle de receta//
+router.get('/recipesDetail/:id', recipesController.detail);
+
+//edicion de una receta//
+router.get('/edit/:id', recipesController.edit);
+router.put('/edit/:id', recipesController.update);
+
+//eliminar una receta//
+router.delete('/delete/:id', recipesController.delete);
 
 
 module.exports = router; 

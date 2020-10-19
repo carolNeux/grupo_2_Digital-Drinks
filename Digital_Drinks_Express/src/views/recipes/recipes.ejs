@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <script src="https://kit.fontawesome.com/5376d63d7e.js" crossorigin="anonymous"></script>
-    <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
-    <title>Recetas|Digital Drinks</title>
+    <!--head/partial-->
+    <%- include('../partials/head') %>
+    <!--fin head/partial-->
 </head>
 <body>
     <div class="central_container">
@@ -22,10 +19,8 @@
           </form>
         </div>
         <!--Inicio de Recetas-->
-
         <main class="">
             <% recipes.forEach(recipe => { %>
-             
                 <section class="item_container">
                     <article class="product">
                         <a href="/recipes/recepieDetail/<%= recipe.id %> ">
@@ -35,11 +30,10 @@
                             <h2><%= recipe.name %></h2>
                             <p><%= recipe.description %> </p>
                         </div>
-                        <a href="#" class="see_more"><b>VER MÁS</b></a>                
+                        <a href="./recipes/recipesDetail/<%= recipe.id %> " class="see_more"><b>VER MÁS</b></a>                
                       </article>
                 </section>
             <% }) %>
-
             <!--Inicio de los aside-->
             <section class="categories_container">
                 <aside class="categories">
@@ -64,10 +58,10 @@
                 </aside>
             </section>
         </main>
+
+    </div>
     <!--footer/partial-->
     <%- include('../partials/footer') %>
     <!--final footer/partial-->
-    </div>
-    <script src="./javascripts/slider.js"></script>
 </body>
 </html>

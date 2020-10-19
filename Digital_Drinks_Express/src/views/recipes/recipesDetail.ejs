@@ -1,106 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/prod_detail.css">
-    <script src="https://kit.fontawesome.com/5376d63d7e.js" crossorigin="anonymous"></script>
-    <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
-    <title>Detalle de Producto | Digital Drinks </title>
-</head>
+    <!--head/partial-->
+    <%- include('../partials/head') %>
+    <!--fin head/partial-->
 <body>
-   
-    <header class="header_container">
-        <div class="always_visible">
-            <img src="/img/header/logoAzul.svg" alt="Digital Drinks Logo" class="logo">
-           <!-- <a href="#" class="toggle_nav">
-                <span class="fa fa-bars"></span>
-            </a>  -->
-        </div>  
-        <nav class="navigation_bar">
-            <ul>
-                <div class="sign_button">
-                    <li>
-                        <a href="login" class="sign_up_button"><b>Ingresar</b></a>
-                    </li>
-                     <li>
-                         <a href="registro" class="sign_in_button"><b>Crear Cuenta</b></a>  
-                    </li>
-                </div>
-                <div class="options">
-                    <li><a href="miCuenta"><img src=" " alt="">Mi cuenta</a></li>
-                    <li><a href="carrito"><img src=" " alt="">Carrito</a></li>
-                    <li><a href="/"><img src=" " alt="">Home</a></li>
-                    <li><a href="productos"><img src=" " alt="">Productos</a></li>
-                    <li><a href="cursos"><img src=" " alt="">Cursos</a></li>
-                    <li><a href="recetas"><img src=" " alt="">Recetas</a></li>
-                    <div class="not_visible">
-                        <li ><a href="#"><img src=" " alt="" >Contacto</a></li>
-                        <li><a href="#"><img src=" " alt="">Quienes somos</a></li>
-                    </div>  
-                </div>
-            </ul>
-        </nav>
-    </header>
-
-    
-        <div class="contenedor">
-            
-            <div class="elemento prod-descr">
-                <h3>Nombre Producto</h3>
+    <!--header/partial-->
+    <%- include('../partials/header') %>
+    <!--fin header/partial--> 
+    <div class="detail_container">
+            <img src="/images/recipes/<%= recipeDetail.image %>" alt="<%= recipeDetail.name %>" >
+        <div class="detail_description">
+            <div class="detail_name">
+                <h3><%= recipeDetail.name %> </h3>
             </div>
-            
-            <div class="elemento imagen"> 
-                <img src="/img/recepies/manhattan.jpg" alt="cocktail-shakers">
-
+            <div class="recipe_description">
+                <h4>Ingredientes:</h4>
+                <p><%= recipeDetail.ingredients %></p>
+                <h4>Metodo de preparación:</h4>
+                <p><%= recipeDetail.method %></p>
+                <h4>Decoración:</h4>
+                <p><%= recipeDetail.garnish %></p>
             </div>
-            
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, ullam.</p>
-            </div>
-            
-            <div class="elemento cantidad"> 
-                <label for="unidades">Cantidad</label>
-                <input type="unidades" placeholder="Cuantos queres ?">
-            </div>
-
-           
-            
-            <div class="elemento buy">    
-          
-                <button type="submit">Comprar ahora</button>
-            </div>
-            
-            <div class="elemento add">  
-                <button> Agregar al carrito</button>
-       
+            <div class="edition_button_recipes">
+                <a href="/">Editar producto</a>
+                <form action="./product-edit-form/<%= recipeDetail.id %>?_method=DELETE" method="POST">
+                    <a href="/">Eliminar</a>
+                </form>
             </div>
         </div>
-
-        <footer class="footer_container">
-            <article class="contact">
-                <a href="#"><img src=" " alt="">Quienes somos</a>
-                <a href="#"><img src=" " alt="">Contacto</a>                
-            </article>
-            <article>
-                <p>Seguinos en nuestras redes sociales:</p>
-                <div class="social_media">
-                    <a href="#">
-                        <img src="/img/footer/facebook.svg" alt="Facebook">
-                    </a>
-                    <a href="">
-                        <img src="/img/footer/instagram.svg" alt="Instagram">
-                    </a>
-                    <a href="">
-                        <img src="/img/footer/twitter.svg" alt="Twitter">
-                    </a>
-                </div>
-            </article>
-            <article class="copyright">
-                <p>Copyright © Todos los derechos reservados</p>
-            </article>
-        </footer>        
-
-
-
-    </body>
+    </div>
+    <div>
+    <div class="return_to_list">
+        <a href="/recipes" >Todas nuestras recetas</a>
+    </div>
+        
+    </div>
+    <!--footer/partial-->
+    <%- include('../partials/footer') %>
+    <!--final footer/partial-->        
+</body>
 </html>
