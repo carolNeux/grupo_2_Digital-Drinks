@@ -17,9 +17,9 @@ module.exports = {
     detail: (req,res) => {
 		let idProduct = req.params.id;
 		let productDetail = products.find(product=> 
-			product.id == idProduct	) 
+			product.id == idProduct	);
 		
-		res.render('./products/productDetail', {'productDetail': productDetail, toThousand})
+		res.render('./products/productDetail', {'productDetail': productDetail, toThousand});
     },
     create:  (req,res) => {
         res.render('./products/product-create-form')
@@ -28,7 +28,10 @@ module.exports = {
 		res.redirect('/products');
     },
     edit:  (req,res) => {
-        res.render('./products/product-edit-form')
+        let idProduct = req.params.id;
+		let productDetail = products.find(product=> 
+			product.id == idProduct	) 
+        res.render('./products/product-edit-form', {'productDetail': productDetail, toThousand});
     },
     update: (req, res, next) => {
         res.redirect('/products');
