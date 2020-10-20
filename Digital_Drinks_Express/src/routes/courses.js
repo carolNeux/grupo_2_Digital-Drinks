@@ -27,9 +27,12 @@ router.get('/', coursesController.index);
 //Detalle del curso//
 router.get('/coursesDetail/:id', coursesController.detail);
 
-//crear producto//
+//crear curso//
 router.get('/create', coursesController.create);
 router.post('/create', coursesController.store);
 
+//editar un curso//
+router.get('/edit/:id', coursesController.edit);
+router.put('/edit/:id', coursesController.update);
 
 module.exports = router; 

@@ -29,9 +29,9 @@
                 <a href="/courses">Solicitar mas información</a>
             </div>
             <div class="edition_button_recipes">
-                <a href="/courses">Editar</a>
-                <form action="./product-edit-form/<%= coursesDetail.id %>?_method=DELETE" method="POST">
-                    <a href="/courses">Eliminar</a>
+                <a href="/courses/edit/<%= coursesDetail.id %>">Editar</a>
+                <form action="/product-edit-form/<%= coursesDetail.id %>?_method=DELETE" method="POST">
+                    <a href="">Eliminar</a>
                 </form>
             </div>
         </div>

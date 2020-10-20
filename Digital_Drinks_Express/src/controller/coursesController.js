@@ -25,6 +25,14 @@ module.exports = {
         res.redirect('/courses');
     },
     edit:  (req,res) => {
-        res.render('./courses/courses-edit-form') //decidir si se crea un formulario ?????
+		let coursesDetail = courses.find(course=> 
+			course.id == req.params.id) 
+        res.render('./courses/courses-edit-form', {'coursesDetail': coursesDetail, toThousand});
+    },
+    update: (req, res, next) => {
+        res.redirect('/courses');
+    },
+    delete: (req, res, next) => {
+        res.redirect('/courses')
     }
 };

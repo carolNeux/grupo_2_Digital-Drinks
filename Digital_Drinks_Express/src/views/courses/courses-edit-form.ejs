@@ -14,15 +14,10 @@
     <div class="reg-box">
         
         <h2> Edita tu producto</h2>
-        <form action="validar" method="POST">
+        <form action="/courses/edit/<%= coursesDetail.id %>?_method=PUT" method="POST">
         <div class="reg-fill">  
 
               <label for="category">Categoría:</label>
-              <select name="category" id="category">
-                <option value="productsDB">Productos</option>
-                <option value="coursesDB">Cursos</option>
-                <option value="recepiesDB">Recetas</option>
-             </select>
              <!-- Armamos uno general o por categoria cursos, recetas etc -->
 
                 <label for="name">Nombre</label>
