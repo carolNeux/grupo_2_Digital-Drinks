@@ -23,23 +23,21 @@
                 <option value="coursesDB">Cursos</option>
                 <option value="recepiesDB">Recetas</option>
              </select>
-             <!-- Creacion de cursos para llenarnos de dinero !! Yes !-->
+             <!-- Desde aqui todo lo que queremos crear en un curso -->
 
-                <label for="name">Nombre</label>
-                <input type="text" placeholder="Nombre del trago">
+                <label for="name">Nombre del Curso</label>
+                <input type="text" placeholder="Vodka">
             
-                <label for="ingredients" >Ingredientes :</label>
-                <input type="text" id="ingredients" name="ingredients" placeholder="$ 18540" >
+                <label for="price" >Precio :</label>
+                <input type="text" id="price" name="price" placeholder="$ 18540" >
 
-                <label for="method">Metodo de preparacion:</label>
-                <input type="text" id="method" name="method" placeholder="Como preparar el trago" >
+                <label for="discount">Descuento:</label>
+                <input type="text" id="discount" name="discount" placeholder="15%" >
 
-                 <label for="garnish" class="form-input">Descripción:</label>
-                 <textarea name="text" id="garnish" ></textarea>
-
-                 <label for="file" name= "images"> Agregar imagen</label>
-                 <input type="file" name="images">
-                 
+                 <label for="description" class="">Descripción:</label>
+                 <textarea name="description" id="description" class="form-input"></textarea>
+                 <p>Agregar imagen</p>
+                 <input type="file" name="image">
                  <br>
                  <button type="submit">Guardar curso</button>
         </div>
