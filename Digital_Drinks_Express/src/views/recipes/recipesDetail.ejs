@@ -22,9 +22,9 @@
                 <p><%= recipeDetail.garnish %></p>
             </div>
             <div class="edition_button_recipes">
-                <a href="/recipes/edit/<%= recipeDetail.id %> ">Editar Receta</a>
-                <form action="recipes-edit-form"<%= recipeDetail.id %>?_method="DELETE" method="POST">
-                    <a href="/">Eliminar</a>
+                <a href="/recipes/edit/<%= recipeDetail.id %> ">Editar</a>
+                <form action="/delete/<%= recipeDetail.id %>?_method=DELETE" method="POST">
+                    <a href="/recipes">Eliminar</a>
                 </form>
             </div>
         </div>

@@ -38,7 +38,5 @@ router.post('/create', productsController.store);
 router.get('/edit/:id', productsController.edit);
 router.put('/edit/:id', productsController.update);
 
-//eliminar un producto//
-router.delete('/delete/:id', productsController.delete);
 
 module.exports = router; 

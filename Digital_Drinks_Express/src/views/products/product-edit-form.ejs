@@ -14,7 +14,7 @@
     <div class="reg-box">
         
         <h2> Edita tu producto</h2>
-        <form action="/products" method="GET">
+        <form action="/products/edit/<%= productDetail.id %>?_method=PUT" method="POST">
         <div class="reg-fill">  
              <!-- Armamos uno general o por categoria cursos, recetas etc -->
 
@@ -29,6 +29,9 @@
 
                  <label for="description" class="">Descripción:</label>
                  <textarea name="description" id="description" class="form-input"> "</textarea>
+                 <br>
+                 <p>Agregar imagen</p>
+                 <input type="file" name="image">
                  <br>
 
                  <button type="submit">Guardar Producto</button>

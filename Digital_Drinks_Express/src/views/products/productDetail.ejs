@@ -32,7 +32,9 @@
                 </form>
                 <div class="products_detail_buttons">
                     <a href="/products/edit/<%= productDetail.id %> ">Editar</a>
-                    <a href="/products">Eliminar</a>
+                    <form action="/delete/<%= productDetail.id %>?_method=DELETE" method="POST">
+                        <a href="/products">Eliminar</a>
+                    </form>
                 </div>
             </div>  
         </div>

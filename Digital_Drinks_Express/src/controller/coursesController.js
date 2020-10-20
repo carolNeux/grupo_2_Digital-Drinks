@@ -31,8 +31,5 @@ module.exports = {
     },
     update: (req, res, next) => {
         res.redirect('/courses');
-    },
-    delete: (req, res, next) => {
-        res.redirect('/courses')
     }
 };

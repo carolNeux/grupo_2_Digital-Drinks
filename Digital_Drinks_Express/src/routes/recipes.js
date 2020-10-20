@@ -33,8 +33,5 @@ router.post('/create', recipesController.store);
 router.get('/edit/:id', recipesController.edit);
 router.put('/edit/:id', recipesController.update);
 
-//eliminar una receta//
-router.delete('/delete/:id', recipesController.delete);
-
 
 module.exports = router; 

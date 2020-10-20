@@ -29,9 +29,6 @@ module.exports = {
         res.render('./recipes/recipes-edit-form.ejs', {'recipeDetail': recipeDetail, toThousand}) // Buscar y enviar el producto a editar a la vista
     },
     update: (req, res, next) => {
-        res.send('vamos por ahi')
-    },
-    delete: (req, res, next) => {
-        res.send('salio!!!!')
+        res.render('/recipes')
     }
 }

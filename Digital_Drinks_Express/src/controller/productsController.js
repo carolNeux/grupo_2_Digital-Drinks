@@ -30,13 +30,10 @@ module.exports = {
     edit:  (req,res) => {
         let idProduct = req.params.id;
 		let productDetail = products.find(product=> 
-			product.id == idProduct	) 
+			product.id == idProduct	);
         res.render('./products/product-edit-form', {'productDetail': productDetail, toThousand});
     },
     update: (req, res, next) => {
         res.redirect('/products');
-    },
-    delete: (req, res) => {
-        res.redirect('/products')
     }
 }
