@@ -1,11 +1,13 @@
 body{
-    background-color: white;
     margin: 0;
-    padding: 0;
-    font-family: sans-serif;  
+    padding: 0;  
     box-sizing: border-box; 
     display: flex;
     justify-content: center;
+    background-image: url(/images/home/fondo.jpg); /*Imagen de fondo del site*/
+    font-family: Verdana, sans-serif; /*Cambio de tipo de fuente para todo el texto escrito dentro del body*/
+    background-repeat: repeat; /*No repite la imagen de fondo para rellenar*/
+    background-attachment: fixed; /*Fija la imagen que aparece en el fondo y queda estatica*/
 
 }
 
