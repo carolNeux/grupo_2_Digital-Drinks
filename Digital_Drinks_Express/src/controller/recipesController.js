@@ -17,13 +17,13 @@ module.exports = {
         res.render('./recipes/recipesDetail', {'recipeDetail': recipeDetail, toThousand});
     },
     create:  (req,res) => {
-        res.render('./recipes/recipes-create-form') // decidir si se crea un formulario ????
+        res.render('./product-create-form') // decidir si se crea un formulario ????
     },
     edit:  (req,res) => {
         let idDetail = req.params.id;
 		let recipeDetail = recipes.find(recipe=> 
-			recipe.id == idDetail);
-        res.render('./recipes/recipes-edit-form', {recipeDetail}) // decidir si se crea un formulario ?????
+			recipe.id == idDetail); 
+        res.render('./recipes/recipes-edit-form.ejs', {'recipeDetail': recipeDetail, toThousand}) // Buscar y enviar el producto a editar a la vista
     },
     update: (req, res, next) => {
         res.send('vamos por ahi')
