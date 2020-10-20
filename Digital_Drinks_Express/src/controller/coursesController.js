@@ -23,11 +23,5 @@ module.exports = {
     },
     edit:  (req,res) => {
         res.render('./products/product-edit-form') //decidir si se crea un formulario ?????
-    },
-    consult: (req, res) => {
-        res.render('./courses/coursesContact');
-    },
-    redireccion: (req, res) => {
-        res.render('./courses/coursesRedirect');
     }
-}
+};

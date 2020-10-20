@@ -92,6 +92,7 @@ body {
 .options li a:hover {
     background-color: #FF6600;   
 }
+
 /*activacion del boton */
 .navigation_bar { /*Oculta el menu de opciones para versión mobile*/
     display: none; 
@@ -432,9 +433,8 @@ body {
     font-size: 20px;
 }
 .product_quantity input {
-    border-radius: 15px;
+    border-radius: 5px;
     border: #483D8B 1px solid;
-    padding: 5px 15px;
 }
 .product_quantity a {
     text-decoration: none;
