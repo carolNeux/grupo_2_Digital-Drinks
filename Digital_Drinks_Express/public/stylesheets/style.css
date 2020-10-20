@@ -100,6 +100,16 @@ body {
 .navigation_bar.active {/*Activa el menu haciendoloo visible cuando se hace click sobre el toggle nav.*/
     display: block;
 }
+/*botones admin*/
+.admin_link {
+    list-style: none;
+}
+.options>li>ul{
+    display: none;
+  }
+.options>li:hover>ul {
+    display:block;
+  }
 /*--------------------------------------------------------*/
 /*Slider*/
 /*--------------------------------------------------------*/

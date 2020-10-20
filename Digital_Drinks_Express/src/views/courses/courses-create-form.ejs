@@ -9,20 +9,10 @@
     <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
 </head>
 <body>
-    <!--header/partial-->
-    <%- include('../partials/header') %>
-    <!--fin header/partial-->
     <div class="reg-box"> 
         <h2> Creador de Cursos</h2>
         <form action="/courses/create" method="POST">
         <div class="reg-fill">  
-
-              <label for="category">Categoría:</label>
-              <select name="category" id="category">
-                <option value="productsDB">Productos</option>
-                <option value="coursesDB">Cursos</option>
-                <option value="recepiesDB">Recetas</option>
-             </select>
              <!-- Desde aqui todo lo que queremos crear en un curso -->
 
                 <label for="name">Nombre del Curso</label>
@@ -42,10 +32,6 @@
                  <button type="submit">Guardar curso</button>
         </div>
     </form>
-    </div>
-    <!--footer/partial-->
-    <%- include('../partials/footer') %>
-    <!--final footer/partial-->
-    
+    </div> 
 </body>
 </html>

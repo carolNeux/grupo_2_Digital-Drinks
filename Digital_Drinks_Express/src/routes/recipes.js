@@ -25,6 +25,10 @@ router.get('/', recipesController.index);
 //Detalle de receta//
 router.get('/recipesDetail/:id', recipesController.detail);
 
+//crear producto//
+router.get('/create', recipesController.create);
+router.post('/create', recipesController.store);
+
 //edicion de una receta//
 router.get('/edit/:id', recipesController.edit);
 router.put('/edit/:id', recipesController.update);

@@ -17,7 +17,10 @@ module.exports = {
         res.render('./recipes/recipesDetail', {'recipeDetail': recipeDetail, toThousand});
     },
     create:  (req,res) => {
-        res.render('./product-create-form') // decidir si se crea un formulario ????
+        res.render('./recipes/recipes-create-form') // decidir si se crea un formulario ????
+    },
+    store: (req, res, next) => {
+        res.redirect('/recipes');
     },
     edit:  (req,res) => {
         let idDetail = req.params.id;
