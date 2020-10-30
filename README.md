@@ -19,7 +19,7 @@ Manual de uso:
 
 4-Abrir una terminal de comandos en " Terminal > Nueva terminal ".
 
-5-Escribir el comando " npm install ". Esto instalar todas las dependencias utilizadas en el proyecto.
+5-Escribir el comando " npm install ". Esto instalará todas las dependencias utilizadas en el proyecto.
 
 6-Para iniciar el servidor, utilizar el comando " npm start "
 
