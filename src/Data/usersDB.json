@@ -1,0 +1,57 @@
+ [
+    {
+        "id": 1,
+        "username":"RobertRondon",
+        "firstName": "Robert",
+        "lastName": "Rondon",
+        "email": "robrondon11@gmail.com",
+        "password": "Robert_1 ",
+        "category": "admin"
+    },
+    {
+        "id": 2,
+        "username": "CarolNeumeyer",
+        "firstName": "Carol",
+        "lastName": "Neumeyer",
+        "email": "carolneumeyer@gmail.com",
+        "password": "Carol_2 ",
+        "category": "admin"
+    },
+    {
+        "id": 3,
+        "username": "XimenaCamacho",
+        "firstName": "Ximena",
+        "lastName": "Camacho Vadela",
+        "email": "xayjo.xecv@gmail.com",
+        "password": "Ximena_3 ",
+        "category": "admin"
+    },
+    {
+        "id": 4,
+        "username": "CarlosLoffreda",
+        "firstName": "Carlos",
+        "lastName": "Loffreda",
+        "email": "carlosloffmil987@gmail.com ",
+        "password": "Carlos_4 ",
+        "category": "admin"
+    },
+    {
+        "id": 5,
+        "username": "JulioChavez",
+        "firstName": "Julio",
+        "lastName": "Chavez",
+        "email": "Julio-Chavez@gmail.com ",
+        "password": "Julio_5 ",
+        "category": "user"
+    },
+    {
+        "id": 6,
+        "username":"EmmaWatson",
+        "firstName": "Emma",
+        "lastName": "Watson",
+        "email": "Emmawatson@gamil.com ",
+        "password": "Emma_6 ",
+        "category": "user"
+    }
+
+]
