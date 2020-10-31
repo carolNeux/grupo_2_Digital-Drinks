@@ -6,6 +6,25 @@ Nuestro e-commers está orientado a bartenders profesionales y a quienes deseen 
 Queremos que nuestros clientes tengan una agradable experiencia a la hora de visitar nuestro sitio y puedan encontrar en el, los recursos necesarios para aprender, crecer profesionalmente o probar nuevas cosas. Por este motivo, añadiremos una sección donde los usuarios registrados puedan compartir sus recetas, métodos y secretos con vista al público en general.
 Dentro de los cursos, ofreceremos distintas especialidades como barista, mixologia, bartender, enología y más, ampliando nuestra cartera de productos conjuntamente.
 
+Manual de uso:
+
+1-Abrir una terminal para poder realizar la "descarga" de la carpeta del proyecto:
+    -Terminal de VSCode (Terminal > Nuevo terminal).
+    -PowerShell (tecla Windows + R, aparecera una ventana y escribir "powershell").
+    -CMD (simboplo de sistema) en windows (tecla Windows + R, aparecera una ventana y escribir "CMD").
+
+2-Una vez abierta la terminal, utilizar el comando " git clone https://github.com/robrondon/grupo_2_Digital-Drinks.git. 
+
+3-Abrir en VSCode la carpeta grupo_2_Digital-Drinks que se generará en el lugar seleccionado.
+
+4-Abrir una terminal de comandos en " Terminal > Nueva terminal ".
+
+5-Escribir el comando " npm install ". Esto instalará todas las dependencias utilizadas en el proyecto.
+
+6-Para iniciar el servidor, utilizar el comando " npm start "
+
+7-Para visualizar nuestro e-commerce, abrir un navegaor y en la barra de direcciones escribir " localhost:3000 " y presionar enter.
+
 
 
            Participantes. 
