@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
     <!--head/partial-->
     <%- include('partials/head', {title: 'Digital Drinks'}) %>
     <!--fin head/partial-->
+    <link rel="stylesheet" href="/stylesheets/slider.css">
+    <link rel="stylesheet" href="/stylesheets/index_items.css">
+</head>
 <body>
-<div class="central_container"> <!-- contenedor central-->
     <!--header/partial-->
     <%- include('partials/header', {title: 'Digital Drinks'}) %>
     <!--fin header/partial-->
     <!--Slider/partial (posibilidad de manejarlo con codigo en controller)-->
-    <div class="contenedor">
-        <section class="slider-contenedor">
-            <article class="contenido-slider fade">
+    <div class="big_slider_container">
+        <section class="slider_container">
+            <article class="slider_content fade">
                 <img src="./images/products/herramientas/strainers.jpg" alt="">
-                <div class="offer_style"> 
+                <div class="offer_button_slider_style"> 
                     <h2>Strainers</h2>
                     <p>Oferta especial!</p>
                     <a href="#"> Ver mas</a>
                 </div>
             </article>
-            <article class="contenido-slider fade">
+            <article class="slider_content fade">
                 <img src="./images/products/herramientas/spoons.jpg" alt="">
-                <div class="offer_style">
+                <div class="offer_button_slider_style">
                     <h2>Spoons</h2>
                     <p>Oferta especial!</p>
                     <a href="#"> Ver mas</a>
                 </div>
             </article>
-            <article class="contenido-slider fade">
+            <article class="slider_content fade">
                 <img src="./images/products/herramientas/cocktail-shakers.jpg" alt="">
-                <div class="offer_style">
+                <div class="offer_button_slider_style">
                     <h2>Cocktail Shakers</h2>
                     <p>Oferta especial!</p>
                     <a href="#"> Ver mas</a>
                 </div>
             </article>
-            <article class="contenido-slider fade">
+            <article class="slider_content fade">
                 <img src="./images/products/herramientas/Bar-Set-Cocktail-Shaker.png" alt="">
-                <div class="offer_style">
+                <div class="offer_button_slider_style">
                     <h2>Bar Kit</h2>
                     <p>Oferta especial!</p>
                     <a href="#"> Ver mas</a>
@@ -47,27 +50,27 @@
     </div>
     <!--fin de Slider/partial-->
     <!--visual de home/ posible partial-->
-    <main class="main_container">
-        <section class="item_container">
-            <article class="item">
+    <main class="index_main_container">
+        <section class="index_item_container">
+            <article class="index_item">
                 <img src="./images/home/productos.jpg" alt="">
-                <div class="item_description">
+                <div class="index_item_description">
                     <h4>Productos</h4>
                     <p>En Dígital Drinks contamos un una gran variedad de productos, te invitamos a conocerlos.</p>
                     <a href="/products" class="see_more">Ver más</a>
                 </div>
             </article>
-            <article class="item">
+            <article class="index_item">
                 <img src="./images/home/cursos.jpg" alt="">
-                <div class="item_description">
+                <div class="index_item_description">
                     <h4>Cursos</h4>
                     <p>Te ofrecemos cursos de mixología, flair, técnicas de manipulación entre otros.</p>
                     <a href="/courses" class="see_more">Ver más</a>
                 </div>
             </article>
-            <article class="item">
+            <article class="index_item">
                 <img src="./images/home/recetas.jpg" alt="">
-                <div class="item_description">
+                <div class="index_item_description">
                     <h4>Recetas</h4>
                     <p>Existe un Cocktail para cada ocasión.  ¿Te animás a prepararlos?.</p>
                     <a href="/recipes" class="see_more">Ver más</a>
@@ -76,7 +79,6 @@
         </section>
     </main>   
     <!--final visual de home/ posible partial-->
-    </div>
     <!--footer/partial-->
     <%- include('partials/footer') %>
     <!--final footer/partial-->

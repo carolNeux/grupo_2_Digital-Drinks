@@ -11,7 +11,7 @@ showSlides();
 //slider
 function showSlides() {
   let i;
-  let slides = document.getElementsByClassName("contenido-slider");
+  let slides = document.getElementsByClassName("slider_content");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
