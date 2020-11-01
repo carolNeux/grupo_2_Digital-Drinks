@@ -22,18 +22,18 @@
         <!--Inicio de Recetas-->
         <main class="product_detail_description">
             <% recipes.forEach(recipe => { %>
-                <section class="item_container">
-                    <article class="product">
+                <article class="product">
+                    <div class="product_img_container">
                         <a href="/recipes/recepieDetail/<%= recipe.id %> ">
-                        <img src= /images/recipes<%= recipe.image %>  alt="<%= recipe.name %> ">
+                            <img src= /images/recipes<%= recipe.image %>  alt="<%= recipe.name %>" class="recipe_img">
                         </a>
-                        <div class="product_description">
-                            <h2><%= recipe.name %></h2>
-                            <p><%= recipe.description %> </p>
-                        </div>
-                        <a href="./recipes/recipesDetail/<%= recipe.id %> " class="see_more"><b>VER MÁS</b></a>                
-                      </article>
-                </section>
+                    </div>
+                    <div class="product_description">
+                        <h2><%= recipe.name %></h2>
+                        <p><%= recipe.description %> </p>
+                    </div>
+                    <a href="./recipes/recipesDetail/<%= recipe.id %> " class="see_more"><b>VER MÁS</b></a>                
+                </article>
             <% }) %>
             <!--Inicio de los aside-->
             <section class="categories_container">

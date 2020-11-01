@@ -14,9 +14,9 @@
     <div class="reg-box">
         
         <h2> Edita tu Receta</h2>
-        <form action="/recipes" method="GET"> <!-- Pongo Get para redireccionar a recipes -->
+        <form action="/recipes/edit/<%= recipeDetail.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
         <div class="reg-fill">  
-             <!-- Edicion de recetas -->
+     
               <div class= " ">
                 <form action="" method="POST">   </form>
                  <label for="name">Nombre</label>

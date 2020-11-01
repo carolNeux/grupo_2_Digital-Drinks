@@ -28,11 +28,11 @@ router.get('/', coursesController.index);
 router.get('/coursesDetail/:id', coursesController.detail);
 
 //crear curso//
-router.get('/create', coursesController.create);
-router.post('/create', coursesController.store);
+router.get('/new', coursesController.new);
+router.post('/create', upload.single("image"), coursesController.create);
 
 //editar un curso//
 router.get('/edit/:id', coursesController.edit);
-router.put('/edit/:id', coursesController.update);
+router.put('/edit/:id', upload.single("image"), coursesController.update);
 
 module.exports = router; 

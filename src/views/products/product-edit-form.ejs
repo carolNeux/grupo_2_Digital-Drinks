@@ -14,9 +14,8 @@
     <div class="reg-box">
         
         <h2> Edita tu producto</h2>
-        <form action="/products/edit/<%= productDetail.id %>?_method=PUT" method="POST">
+        <form action="/products/edit/<%= productDetail.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="reg-fill">  
-             <!-- Armamos uno general o por categoria cursos, recetas etc -->
 
                 <label for="name">Nombre del Producto</label>
                 <input type="text" value="<%= productDetail.name %> ">
@@ -27,14 +26,16 @@
                 <label for="discount">Descuento:</label>
                 <input type="text" id="discount" name="discount" value="<%= productDetail.discount %> ">
 
-                 <label for="description" class="">Descripción:</label>
-                 <textarea name="description" id="description" class="form-input"> <%= productDetail.description %> </textarea>
-                 <br>
-                 <p>Agregar imagen</p>
-                 <input type="file" name="image">
-                 <br>
+                <label for="description" class="">Descripción:</label>
+                <textarea name="description" id="description" class="form-input"> <%= productDetail.description %> </textarea>
+                <br>
+                <p>Agregar imagen</p>
+                
+                <input type="file" name="image" value="<%= productDetail.image %> ">
+                <br>
+                <img src="/images/products<%= productDetail.image %>" alt="<%= productDetail.name %>" class="product_img">
 
-                 <button type="submit">Guardar Producto</button>
+                <button type="submit">Guardar Producto</button>
         </div>
     </form>
     </div>

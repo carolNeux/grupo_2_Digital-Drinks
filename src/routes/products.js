@@ -31,12 +31,12 @@ router.get('/productDetail/:id', productsController.detail);
 router.get('/productsCart', productsController.cart);
 
 //creacion de producto//
-router.get('/create', productsController.create);
-router.post('/create', productsController.store);
+router.get('/new', productsController.new);
+router.post('/create', upload.single("image"), productsController.create);
 
 //edicion de un producto//
 router.get('/edit/:id', productsController.edit);
-router.put('/edit/:id', productsController.update);
+router.put('/edit/:id', upload.single("image"), productsController.update);
 
 
 module.exports = router; 

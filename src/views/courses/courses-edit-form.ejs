@@ -14,7 +14,7 @@
     <div class="reg-box">
         
         <h2> Edita tu Curso</h2>
-        <form action="/courses/edit/<%= coursesDetail.id %>?_method=PUT" method="POST">
+        <form action="/courses/edit/<%= coursesDetail.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="reg-fill">  
 
               <label for="category">Categoría:</label>

@@ -18,10 +18,10 @@ module.exports = {
             course.id == req.params.id	);
 		res.render('./courses/coursesDetail', {'coursesDetail': coursesDetail, toThousand})
     },
-    create:  (req,res) => {
+    new:  (req,res) => {
         res.render('./courses/courses-create-form')  //decidir si se crea un formulario ?????
     },
-    store: (req, res, next) => {
+    create: (req, res, next) => {
         res.redirect('/courses');
     },
     edit:  (req,res) => {

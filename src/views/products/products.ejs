@@ -22,22 +22,23 @@
         <!--Inicio de productos-->
         <main class="product_detail_description">
             <% products.forEach(product => { %>
-                <section class="item_container">
-                    <article class="product">
-                        <a href="/products/productDetail/<%= product.id %> ">
-                        <img src= /images/products<%= product.image %>  alt="<%= product.name %> "></a>
-                        <div class="product_description">
-                            <h2><%= product.name %></h2>
-                        <% if (product.discount !== 0) { %>
-                            <p><%= product.discount %>  % OFF</p>
-                            <p>$ <%= toThousand(product.price - (product.price * product.discount / 100)) %></p>
-                        <% } else { %>
-                        <p>$<%= toThousand(product.price) %></p>
-                        <% } %>
-                        </div>
-                        <a href="/products/productDetail/<%= product.id %> " class="see_more"><b>VER MÁS</b></a>                
-                      </article>
-                </section>
+                <article class="product">
+                    <div class="product_img_container">
+                        <a href="/products/productDetail/<%= product.id %>">
+                            <img src="/images/products/<%= product.image %>" alt="<%= product.name %>" class= "product_img">
+                        </a>
+                    </div>
+                    <div class="product_description">
+                        <h2><%= product.name %></h2>
+                    <% if (product.discount !== 0) { %>
+                        <p><%= product.discount %>  % OFF</p>
+                        <p>$ <%= toThousand(product.price - (product.price * product.discount / 100)) %></p>
+                    <% } else { %>
+                    <p>$<%= toThousand(product.price) %></p>
+                    <% } %>
+                    </div>
+                    <a href="/products/productDetail/<%= product.id %> " class="see_more"><b>VER MÁS</b></a>                
+                </article>
             <% }) %>
         </main>
     <!--footer/partial-->

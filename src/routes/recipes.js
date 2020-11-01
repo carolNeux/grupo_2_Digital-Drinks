@@ -26,12 +26,12 @@ router.get('/', recipesController.index);
 router.get('/recipesDetail/:id', recipesController.detail);
 
 //crear producto//
-router.get('/create', recipesController.create);
-router.post('/create', recipesController.store);
+router.get('/new', recipesController.new);
+router.post('/create', upload.single("image"), recipesController.create);
 
 //edicion de una receta//
 router.get('/edit/:id', recipesController.edit);
-router.put('/edit/:id', recipesController.update);
+router.put('/edit/:id', upload.single("image"), recipesController.update);
 
 
 module.exports = router; 

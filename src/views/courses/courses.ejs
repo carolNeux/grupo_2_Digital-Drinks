@@ -23,18 +23,21 @@
         <!--Inicio de courses-->
         <main class="product_detail_description">
             <% courses.forEach(course => { %>
-                <section class="item_container">
-                    <article class="product">
-                        <img src= /images/courses<%= course.image %>  alt="<%= course.name %> ">
+                <article class="product">
+                    <div class="product_img_container">
+                        <a>
+                            <img src="/images/courses<%= course.image %>"  alt="<%= course.name %>" class = "course_img">
                         </a>
-                        <div class="product_description">
-                            <h2><%= course.name %></h2>
-                            <span><%= course.discount %>  % OFF</span>
-                            <p>$ <%= toThousand(course.price - (course.price * course.discount / 100)) %> </p>
-                        </div>
-                        <a href="/courses/coursesDetail/<%= course.id %>" class="see_more"><b>VER MÁS</b></a>                
-                      </article>
-                </section>
+                    </div>
+                    <div class="product_description">
+                        <h2><%= course.name %></h2>
+                        <% if (course.discount !== 0) { %>
+                            <p><%= course.discount %>  % OFF</p>
+                        <% } %> 
+                        <p>$ <%= toThousand(course.price - (course.price * course.discount / 100)) %></p>
+                    </div>
+                    <a href="/courses/coursesDetail/<%= course.id %>" class="see_more"><b>VER MÁS</b></a>                
+                </article>
             <% }) %>
         </main>
     <!--footer/partial-->
