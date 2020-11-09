@@ -27,6 +27,10 @@ router.get('/', coursesController.index);
 //Detalle del curso//
 router.get('/coursesDetail/:id', coursesController.detail);
 
+//Consulta de curso//
+router.get('/coursesContact', coursesController.consult);
+router.post('/coursesContact', coursesController.redireccion)
+
 //crear curso//
 router.get('/new', coursesController.new);
 router.post('/create', upload.single("image"), coursesController.create);

@@ -18,6 +18,12 @@ module.exports = {
             course.id == req.params.id	);
 		res.render('./courses/coursesDetail', {'coursesDetail': coursesDetail, toThousand})
     },
+    consult: (req, res) => { 
+        res.render('./courses/coursesContact');
+    },
+    redireccion: (req, res) => {
+        res.render('./courses/coursesRedirect');
+    },
     new:  (req,res) => {
         res.render('./courses/courses-create-form')  //decidir si se crea un formulario ?????
     },
