@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--head/partial-->
+    <%- include('../partials/head') %>
+    <!--fin head/partial-->
+    <link rel="stylesheet" href="/stylesheets/redirection.css">
+</head>
+<body>
+    <!--header/partial-->
+    <%- include('../partials/header') %>
+    <!--fin header/partial--> 
+    <div class="lifeguard_container">
+        <div class="fix_1">
+            <h2>¡Bienvenid@ de vuelta <%= loginUser %> !</h2>
+            <h3>Mirá nuestras nuevas ofertas</h3>
+        </div>
+    </div>
+
+    <!--footer/partial-->
+    <%- include('../partials/footer') %>
+    <!--final footer/partial--> 
+    <script>
+        function redirect() {
+            location.href="/";
+        }
+        setTimeout("redirect()", 4000);
+    </script>       
+</body>
+</html>

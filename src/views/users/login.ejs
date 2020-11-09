@@ -13,16 +13,15 @@
         <div class="login-box"> 
             <a href="/"><img class="logo"  src="/images/header/logoAzul.svg" alt="Logo de DD"></a>
             <h2>Login Here</h2>
-            <form action="/" method="POST"> 
+            <form action="/users/login" method="POST"> 
                 <label for="username"> Usuario</label>
-                <input type="text" placeholder="Nombre de Usuario">
-            
+                <input type="text" name="username" placeholder="Nombre de Usuario">
                 <label for="password">Password</label> 
-                <input type="password" placeholder="Password">
+                <input type="password" name="password" placeholder="Password">
                 <div class="login-button">
-                    <a href="/" >Enviar</a>
+                <input type="submit" value="Enviar">
+                    <!-- <a href="" >Enviar</a> -->
                 </div>
-                
                 <br>
                 <br>
                 <input type="checkbox" value="checkbox">

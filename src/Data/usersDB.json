@@ -1,57 +1,61 @@
- [
-    {
-        "id": 1,
-        "username":"RobertRondon",
-        "firstName": "Robert",
-        "lastName": "Rondon",
-        "email": "robrondon11@gmail.com",
-        "password": "Robert_1 ",
-        "category": "admin"
-    },
-    {
-        "id": 2,
-        "username": "CarolNeumeyer",
-        "firstName": "Carol",
-        "lastName": "Neumeyer",
-        "email": "carolneumeyer@gmail.com",
-        "password": "Carol_2 ",
-        "category": "admin"
-    },
-    {
-        "id": 3,
-        "username": "XimenaCamacho",
-        "firstName": "Ximena",
-        "lastName": "Camacho Vadela",
-        "email": "xayjo.xecv@gmail.com",
-        "password": "Ximena_3 ",
-        "category": "admin"
-    },
-    {
-        "id": 4,
-        "username": "CarlosLoffreda",
-        "firstName": "Carlos",
-        "lastName": "Loffreda",
-        "email": "carlosloffmil987@gmail.com ",
-        "password": "Carlos_4 ",
-        "category": "admin"
-    },
-    {
-        "id": 5,
-        "username": "JulioChavez",
-        "firstName": "Julio",
-        "lastName": "Chavez",
-        "email": "Julio-Chavez@gmail.com ",
-        "password": "Julio_5 ",
-        "category": "user"
-    },
-    {
-        "id": 6,
-        "username":"EmmaWatson",
-        "firstName": "Emma",
-        "lastName": "Watson",
-        "email": "Emmawatson@gamil.com ",
-        "password": "Emma_6 ",
-        "category": "user"
-    }
-
+[
+ {
+  "id": 1,
+  "firstName": "Carol",
+  "lastName": "Neumeyer",
+  "username": "carol",
+  "birthday": "2000-01-01",
+  "email": "carol@digitaldrinks.com",
+  "password": "$2a$10$wlEAI6qDV65tlF00PXtZ.umw1ifrxcb.j1dwMFnGbrkNM77NezQg2",
+  "category": "admin"
+ },
+ {
+  "id": 2,
+  "firstName": "Ximena",
+  "lastName": "Camacho",
+  "username": "ximena",
+  "birthday": "1981-10-07",
+  "email": "ximena@digitaldrinks.com",
+  "password": "$2a$10$mWh5TRFw.hLKMwETN8HXs.FLBEaodRc/s7qM/OTnioJxpCjCt.kbS",
+  "category": "admin"
+ },
+ {
+  "id": 3,
+  "firstName": "Robert",
+  "lastName": "Rondon",
+  "username": "robert",
+  "birthday": "2000-01-01",
+  "email": "robert@digitaldrinks.com",
+  "password": "$2a$10$UIyPECj2tJm77CiX1EMDz.Or.Feqr7SGtkLn6fUw4xbKolWtc8KuW",
+  "category": "admin"
+ },
+ {
+  "id": 4,
+  "firstName": "Carlos",
+  "lastName": "Loffreda",
+  "username": "carlos",
+  "birthday": "2000-01-01",
+  "email": "carlos@digitaldrinks.com",
+  "password": "$2a$10$9y4TnGsNe7UKz4ys6QDF5u4JO49xBArWDoAcVVT74O67pHQ8pXXhm",
+  "category": "admin"
+ },
+ {
+  "id": 5,
+  "firstName": "Piñon",
+  "lastName": "Fijo",
+  "username": "piñon",
+  "birthday": "2000-01-01",
+  "email": "pinion@gmail.com",
+  "password": "$2a$10$rwMiD/3hX6doICt8ypBYWOtKK2tqdOtQWKdcE5XRpte3wSNCNDiqK",
+  "category": "user"
+ },
+ {
+  "id": 6,
+  "firstName": "carpincho",
+  "lastName": "carpincho",
+  "username": "carpincho",
+  "email": "carpincho@gmail.com",
+  "birthday": "1600-08-03",
+  "category": "user"
+ }
 ]

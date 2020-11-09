@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--head/partial-->
+    <%- include('../partials/head') %>
+    <!--fin head/partial-->
+    <link rel="stylesheet" href="/stylesheets/users_edit.css">
+</head>
+<body>
+    <!--header/partial-->
+    <%- include('../partials/header') %>
+    <!--fin header/partial--> 
+    <section class="user_main_container">
+        <form action="/users/edit/<%= editUser.id %>?_method=PUT " method="POST">
+            <h2>Editar usuario:</h2>
+            <article class="user_list_container">
+                <div class="input_data"><h4>Nombre: </h4><input type="text" name="firstName" placeholder="<%= editUser.firstName %>"></div>
+                <div class="input_data"><h4>Apellido: </h4><input type="text" name="lastName" placeholder="<%= editUser.lastName %>"></div>
+                <div class="input_data"><h4>Nombre de Usuario: </h4><input type="text" name="username" placeholder="<%= editUser.username %>"></div>
+                <div class="input_data"><h4>Email:</h4><input type="email" name="email" placeholder="<%= editUser.firstName %>"></div>
+                <div class="input_data"><h4>Fecha de nacimiento: </h4><input type="date" name="birthday" placeholder="<%= editUser.birthday %>"></div>
+                <div class="input_data"><h4>Categoria: </h4><input type="text" name="category" placeholder="<%= editUser.category %>"></div>
+                <div class="user_buttons_container">
+                    <input type="submit" value="Editar">
+                </div>
+            </article>
+        </form>
+    </section>
+    <!--footer/partial-->
+    <%- include('../partials/footer') %>
+    <!--final footer/partial-->        
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Registro |Digital Drinks</title>
-    <link rel="stylesheet" href="./stylesheets/style_reg.css">
+    <link rel="stylesheet" href="../stylesheets/style_reg.css">
     <script src="https://kit.fontawesome.com/5376d63d7e.js" crossorigin="anonymous"></script>
     <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
 </head>
@@ -13,37 +13,29 @@
         <div class="reg-box">
             <a href="/"><img class="logo"  src="/images/header/logoAzul.svg" alt="Logo de DD"></a>
             <h2> Registrate aquí</h2>
-            <form action="validar" method="POST">
+            <form action="/users/register" method="POST">
             <div class="reg-fill">  
-                <label for="name">Nombre y Apellido</label>
-                <input type="text" placeholder="Alfonsina Storni">
-            
-                <label for="email"> Correo electrónico </label>
-                <input type="email" id="email" name="email" value= "" required autofocus
-                placeholder="AlfonsinaStorni@gmail.com">
-            
-                <label for="email"> Confirmar correo electrónico </label>
-                <input type="email" id="email" name="email" value= "" required autofocus
-                placeholder="AlfonsinaStorni@gmail.com">
+                <label for="firstName">Nombre</label>
+                <input type="text" name="firstName" placeholder="Alfonsina Storni">
+
+                <label for="lastName">Apellido</label>
+                <input type="text" name="lastName" placeholder="Alfonsina Storni">
+
+                <label for="username"> Nombre de Usuario </label>
+                <input type="text"  name="username" >
 
                 <label for="birthday">Fecha de Nacimiento</label>
-                <input type="date" id="birthday" name="birthday">
-                <label for="">Pais</label>
-                <select name="pais" id="pais"> 
-                    <option value="arg"> Argentina</option>
-                    <option value="chl">Chile</option>
-                    <option value="ury">Uruguay</option>
-                    <option value="pry">Paraguay</option>
-                    <option value="bra">Brasil</option>
-                    <option value="bol">Bolivia</option>
-                    <option value="otros">Otros</option>
-                </select>
+                <input type="date" name="birthday">
+
+                <label for="email"> Correo electrónico </label>
+                <input type="email"  name="email" 
+                placeholder="AlfonsinaStorni@gmail.com">
+
                 <label for="password">Password</label> 
-                <input type="password" placeholder="Password">
-                <label for="password">Confirma tu Password</label>
-                <input type="password" placeholder="Confirma tu Password">
+                <input type="password" name="password" placeholder="Password">
             </div>
-            <a href="/" class="reg-button">Enviar</a>
+            <input type="submit" value="Enviar" class="reg-button">
+            <!-- <a href="/" class="reg-button">Enviar</a> -->
             </form>
         </div>
     </div>    

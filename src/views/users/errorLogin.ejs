@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--head/partial-->
+    <%- include('../partials/head') %>
+    <!--fin head/partial-->
+    <link rel="stylesheet" href="/stylesheets/redirection.css">
+</head>
+<body>
+    <!--header/partial-->
+    <%- include('../partials/header') %>
+    <!--fin header/partial--> 
+    <div class="lifeguard_container">
+        <div class="fix_1">
+            <h2>Usuario y contraseña incorrectos!</h2>
+            <h3>Vuelve a ingresar tus datos</h3>
+        </div>
+    </div>
+
+    <!--footer/partial-->
+    <%- include('../partials/footer') %>
+    <!--final footer/partial--> 
+    <script>
+        function redirect() {
+            location.href="/users/login";
+        }
+        setTimeout("redirect()", 4000);
+    </script>       
+</body>
+</html>
