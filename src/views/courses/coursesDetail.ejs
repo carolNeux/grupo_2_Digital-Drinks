@@ -33,8 +33,8 @@
             </div>
             <div class="edition_button_recipes">
                 <a href="/courses/edit/<%= coursesDetail.id %>">Editar</a>
-                <form action="/delete/<%= coursesDetail.id %>?_method=DELETE" method="POST">
-                    <a href="/courses">Eliminar</a>
+                <form action="/courses/delete/<%= coursesDetail.id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Eliminar">
                 </form>
             </div>
         </div>
