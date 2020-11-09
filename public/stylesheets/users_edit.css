@@ -30,7 +30,7 @@
     .input_data {
        padding: 7px 0px;
     }
-    .input_data input {
+    .input_data input, .input_data select {
         border: 1px solid #473d8b63;
         border-radius: 5px;
         padding: 2px 15px;
