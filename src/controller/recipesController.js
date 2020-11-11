@@ -20,7 +20,7 @@ module.exports = {
     },
     new:  (req,res) => {
         let recipes = getRecipes();
-        res.render('./recipes/recipes-create-form')
+        res.render('./recipes/recipesCreateForm')
     },
     create: (req, res, next) => {
         let recipes = getRecipes();
@@ -40,10 +40,27 @@ module.exports = {
         let idDetail = req.params.id;
 		let recipeDetail = recipes.find(recipe=> 
 			recipe.id == idDetail); 
-        res.render('./recipes/recipes-edit-form.ejs', {'recipeDetail': recipeDetail, toThousand}) // Buscar y enviar el producto a editar a la vista
+        res.render('./recipes/recipesEditForm.ejs', {'recipeDetail': recipeDetail, toThousand}) // Buscar y enviar el producto a editar a la vista
     },
+    /* Recibe el formulario de edicion actualiza la base de datos y lista las recetas actualizados */
     update: (req, res, next) => {
         let recipes = getRecipes();
-        res.render('/recipes')
+        let id = parseInt(req.params.id);
+        let recipe = recipes.find(recipe => recipe.id === id);
+        updatedrecipe = { 
+            ...recipe, 
+            ...req.body, 
+            id, 
+            image: req.file.filename
+         }
+        res.redirect('/recipes');
+    },
+    /* Elimina una receta actualiza la base de datos y redirecciona a la lista de recetas actualizada */
+    delete: (req, res) => {
+        let recipes = getRecipes();
+        let newDb = recipes.filter(recipe => recipe.id != req.params.id)
+        newDbJson = JSON.stringify(newDb, null, ' ');
+        fs.writeFileSync(recipesFilePath, newDbJson);
+        res.redirect('/recipes');
     }
 }

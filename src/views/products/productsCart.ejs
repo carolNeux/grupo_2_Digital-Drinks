@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <!--head/partial-->
     <%- include('../partials/head', {title: 'Carrito| Digital Drinks'}) %>
     <!--fin head/partial-->
-    <link rel="stylesheet" href="/stylesheets/productCart.css">
-</head>
 <body>
     <div class="central_container">
     <!--header/partial-->
@@ -17,79 +14,121 @@
             <div class="cart2">
                 <div class="cart_header">
                     <h3>Mi Carrito</h3>
-                    <img class= "carrito" src="/images/header/carrito.png" alt="">
+                    
                 </div>
+                
                 <!-- Aqui comienza lo que lleva el carrito,  -->
 
-                <article class="cart_item">
-                    <img src="" alt="foto">
-                <div class="cart_description">
-                    <p>$ </p><br>
-                    <p>Nombre Producto</p>
-                </div>
-                <div >
-                    <label for="cantidad">Cantidad</label>
-                    <input type="number">
-                    <label for="precio_total">Subtotal</label>
-                    <input type="number">
-                </div>
-                    <button><a href="">Eliminar</a></button>
-                </article>
+                <article class="carrito_item">
+                    
+                    <div class="fo"> 
+                    <img src="/images/products/absolut.png" alt="foto">
+                    </div>    
+
+                    <div class="a">
+                        <p>Absolut</p> 
+                    </div>   
+ 
+                    
+                       <div class="b">
+                        <p>$______ </p>
+                        </div>     
+                
+                        <div class="c">
+                        <label for="cantidad">Cantidad</label>
+                        <input type="number">
+                        </div>
+
+                        <div class="d">
+                        <label for="precio_total">$  subtotal</label>    
+                       </div>
+                   
+
+                   <div class="eli">
+                    <button class="delete_button"><a href="">Eliminar</a></button>
+                   </div>
+               
+                </article>   
+               
+                 <!-- Aqui terminael primer art,  -->
+                  <!-- Aqui segundo art,  -->
+                  <article class="carrito_item">
+                    
+                    <div class="fo"> 
+                    <img src="/images/products/aperol.png" alt="foto">
+                    </div>    
+
+                    <div class="a">
+                        <p>Aperol</p> 
+                    </div>   
+ 
+                    
+                       <div class="b">
+                        <p>$______ </p>
+                        </div>     
+                
+                        <div class="c">
+                        <label for="cantidad">Cantidad</label>
+                        <input type="number">
+                        </div>
+
+                        <div class="d">
+                        <label for="precio_total">$  subtotal</label>    
+                       </div>
+                   
+
+                   <div class="eli">
+                    <button class="delete_button"><a href="">Eliminar</a></button>
+                   </div>
+               
+                </article>   
+
+                  <!-- Aqui terminael segundo art,  -->
+                   <!-- Aqui tercer art,  -->
+                   <article class="carrito_item">
+                    
+                    <div class="fo"> 
+                    <img src="/images/products/glenlivet.png" alt="foto">
+                    </div>    
+
+                    <div class="a">
+                        <p>Glenlivet</p> 
+                    </div>   
+ 
+                    
+                       <div class="b">
+                        <p>$______ </p>
+                        </div>     
+                
+                        <div class="c">
+                        <label for="cantidad">Cantidad</label>
+                        <input type="number">
+                        </div>
+
+                        <div class="d">
+                        <label for="precio_total">$  subtotal</label>    
+                       </div>
+                   
+
+                   <div class="eli">
+                    <button class="delete_button"><a href="">Eliminar</a></button>
+                   </div>
+               
+                </article>   
+
+                  <!-- Aqui terminael tercer art,  -->
+
+ <!-- button de pagar y agrego una pagina checkOut gracias por tu compra  -->
+
+            <div class="return_to_list">
+             <a href="/" >Pagar</a>
+            </div>
 
 
-                 <!-- Aqui terminael primercarrito,  -->
 
-                <article class="cart_item">
-                    <img src="" alt="foto">
-                    <div class="cart_description">
-                    <p>$ _____________</p>
-                    <p>Nombre Producto</p>
-                </div>
-                <div>
-                    <label for="cantidad">Cantidad</label>
-                    <input type="number">
-                    <label for="precio_total">Subtotal</label>
-                    <input type="number">
-                </div>
-                    <button><a href="">Eliminar</a></button>
-                </article>
-                <article class="cart_item">
-                    <img src="" alt="foto">
-                    <div class="cart_description">
-                    <p>$ _____________</p>
-                    <p>Nombre Producto</p>
-                </div>
-                <div>
-                    <label for="cantidad">Cantidad</label>
-                    <input type="number">
-                    <label for="precio_total">Subtotal</label>
-                    <input type="number">
-                </div>
-                    <button><a href="">Eliminar</a></button>
-                </article>
-                <article class="cart_item">
-                    <img src="" alt="foto">
-                    <div class="cart_description">
-                    <p>$ _____________</p>
-                    <p>Nombre Producto</p>
-                </div>
-                    <div>
-                    <label for="cantidad">Cantidad</label>
-                    <input type="number">
-                    <label for="precio_total">Subtotal</label>
-                    <input type="number">
-                </div>
-                    <button><a href="">Eliminar</a></button>
-                </article>
-                <article class="cart_total">
-                    <div class="cart_final">
-                    <label for="precio_total">Total</label>
-                    <input type="number">
-                    </div>
-                    <!-- Como completar el monto total -->
-                    <button type="submit" class="btn">Comprar</button>
-                    <button type="reset" class="btn">Vaciar carrito</button>
-                </article>
+
+
+                
             </div>            
         </main>
     <!--footer/partial-->

@@ -4,7 +4,7 @@
     <!--head/partial-->
     <%- include('../partials/head') %>
     <!--fin head/partial-->
-    <link rel="stylesheet" href="/stylesheets/detail_pages.css">
+    <link rel="stylesheet" href="/stylesheets/detailPages.css">
 </head>
 <body>
     <!--header/partial-->
@@ -26,8 +26,8 @@
             </div>
             <div class="edition_button_recipes">
                 <a href="/recipes/edit/<%= recipeDetail.id %> ">Editar</a>
-                <form action="/delete/<%= recipeDetail.id %>?_method=DELETE" method="POST">
-                    <a href="/recipes">Eliminar</a>
+                <form action="/recipes/delete/<%= recipeDetail.id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Eliminar">
                 </form>
             </div>
         </div>

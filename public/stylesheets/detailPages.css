@@ -116,7 +116,7 @@
 .edition_button_recipes {
     margin-top: 15%;
 }
-.edition_button_recipes a, .products_detail_buttons a, .edition_button_recipes input {
+.edition_button_recipes a, .products_detail_buttons a, .edition_button_recipes input, .products_detail_buttons input {
     text-decoration: none;
     color: white;
     padding: 7px 30px;
@@ -125,13 +125,14 @@
     font-weight: bold;
     margin-left: 15px;
 }
-.edition_button_recipes a, .products_detail_buttons a, .product_quantity a:hover, .edition_button_recipes input {
+.edition_button_recipes a, .products_detail_buttons a, .product_quantity a:hover, .edition_button_recipes input,.products_detail_buttons input {
     background-color: #483D8B;
 }
-.edition_button_recipes a:hover,  .products_detail_buttons a:hover, .product_quantity a, .edition_button_recipes input:hover {
+.edition_button_recipes a:hover,  .products_detail_buttons a:hover, .product_quantity a, .edition_button_recipes input:hover,
+.products_detail_buttons input:hover {
     background-color: #FF6600;
 }
-.edition_button_recipes input {
+.edition_button_recipes input, .products_detail_buttons input{
     border: none;
     cursor: pointer;
 }

@@ -33,7 +33,7 @@ module.exports = {
     },
     /*creacion de un curso*/
     new:  (req,res) => {
-        res.render('./courses/courses-create-form')  //decidir si se crea un formulario ?????
+        res.render('./courses/coursesCreateForm')  //decidir si se crea un formulario ?????
     },
     create: (req, res, next) => {
         let courses = coursesjson();
@@ -59,7 +59,7 @@ module.exports = {
         let courses = coursesjson();
 		let coursesDetail = courses.find(course=> 
 			course.id == req.params.id) 
-        res.render('./courses/courses-edit-form', {'coursesDetail': coursesDetail, toThousand});
+        res.render('./courses/coursesEditForm', {'coursesDetail': coursesDetail, toThousand});
     },
     /*se vuelve a mostrar la informacion del curso a editar y luego se almacenan los cambios realizados en el formulario */
     update: (req, res) => {
