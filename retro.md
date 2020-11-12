@@ -51,3 +51,38 @@ LESS OF:
 STOP DOING:
 
 - Dejarnos estar
+
+               SPRINT 3
+
+
+      RETROSPECTIVA ESTRELLA
+
+   START DOING:
+
+* Por un lado dividir mas las tareas
+* comunicarnos mas para unir las mismas.
+* Comentar la lógica del codigo SIEMPRE !!!
+* Comentar la lógica del CSS SIEMPRE !!!
+* Ponernos fecha limite individuales y grupales.
+
+   MORE OF:
+
+* Nos comunicamos bien por whatssapp.
+* Para visualizar mejor los avances y mostrar archivos seria bueno acostumbrarnos al Trello.
+* Trabajar online los 4 juntos, si no se puede como se sugirio en la reunion hacerlo de a pares.
+* Reuniones 2 veces por semana grupales
+* Tocar mas el Trello
+* Pedir mas ayudo docentes, (Especialmente con la division del css)
+
+   KEEP DOING:
+
+* WhatssApp
+* Meetings
+* Trabajo en equipo apoyandonos
+* Vida en equipo apoyandonos tambien
+
+   LESS OF:
+
+* Procrastinación
+STOP DOING:
+* Dejarnos estar
