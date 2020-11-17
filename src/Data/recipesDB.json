@@ -119,10 +119,9 @@
  {
   "id": 15,
   "name": "Black Russian",
-  "category": "recipes",
   "ingredients": "350 ml Vodka,20 ml Licor de Cafe",
   "method": "Verter los ingredientes en un vaso old fashioned lleno de hielo. Revolver gentilmente. Para el WHITE RUSSIAN – colocar crema de leche fresca sobre el cocktail y revolver suavemente.",
-  "garnish": "N/A",
-  "image": "/blackRussian.png"
+  "garnish": "",
+  "image": "/image-1605648294094.png"
  }
 ]

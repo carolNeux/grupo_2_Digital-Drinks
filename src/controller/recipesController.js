@@ -27,7 +27,7 @@ module.exports = {
         let newRecipe = {
             id: recipes[recipes.length -1].id + 1,
             ...req.body,
-            image: req.file.filename,
+            image: "/" + req.file.filename,
         };
         let newDb = JSON.stringify(
             [...recipes, newRecipe], null, 2
@@ -44,15 +44,21 @@ module.exports = {
     },
     /* Recibe el formulario de edicion actualiza la base de datos y lista las recetas actualizados */
     update: (req, res, next) => {
+
         let recipes = getRecipes();
-        let id = parseInt(req.params.id);
-        let recipe = recipes.find(recipe => recipe.id === id);
-        updatedrecipe = { 
-            ...recipe, 
-            ...req.body, 
-            id, 
-            image: req.file.filename
-         }
+        for (i = 0; i<recipes.length; i++) {
+            if (recipes[i].id == req.params.id) {
+                 let recipe = {
+                    id: recipes[i].id,
+                    ...req.body,
+                    image: "/" + req.file.filename 
+                }
+                recipes[i]=recipe;
+            };
+        };
+        let newArray = [...recipes];
+        newArrayJSON = JSON.stringify(newArray, null, ' ');
+        fs.writeFileSync(recipesFilePath, newArrayJSON);
         res.redirect('/recipes');
     },
     /* Elimina una receta actualiza la base de datos y redirecciona a la lista de recetas actualizada */

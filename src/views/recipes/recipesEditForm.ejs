@@ -20,7 +20,7 @@
               <div class= " ">
                 <form action="" method="POST">   </form>
                  <label for="name">Nombre</label>
-                 <input type="text" placeholder="Nombre del Cocktail" value= "<%= recipeDetail.name %>" >
+                 <input type="text" placeholder="Nombre del Cocktail" value= "<%= recipeDetail.name %>" name="name" >
             
                  <label for="ingredients" >Ingredientes:</label>
                  <textarea name="ingredients" id="ingredients" class="form-input" ><%= recipeDetail.ingredients %></textarea>
@@ -31,8 +31,8 @@
                  <label for="garnish" class="">Decoración:</label>
                  <textarea name="garnish" id="description" class="form-input"><%= recipeDetail.garnish %></textarea>
 
-                 <label for="file" name= "images"> Subir imagen</label>
-                 <input type="file" name="images">
+                 <label for="file" name= "image"> Subir imagen</label>
+                 <input type="file" name="image">
                  <br>
 
                  <button type="submit">Guardar Producto</button>

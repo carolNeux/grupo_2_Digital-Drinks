@@ -136,6 +136,20 @@
     border: none;
     cursor: pointer;
 }
+.products_detail_buttons button {
+    border: none;
+    background-color: #483D8B;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 7px 30px;
+    border-radius: 15px;
+    margin-left: 15px;
+}
+.products_detail_buttons button:hover {
+    background-color: #FF6600;  
+}
 /*--------------------------------------------------------*/
 /*Estilos de detalle de cursos*/
 /*--------------------------------------------------------*/

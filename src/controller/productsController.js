@@ -56,15 +56,20 @@ module.exports = {
     /* Recibe el formulario de edicion actualiza la base de datos y lista los productos actualizados */
     update: (req, res, next) => {
         let products = getProducts();
-        let id = parseInt(req.params.id);
-        let product = products.find(product => product.id === id);
-        updatedProduct = { 
-            ...product, 
-            ...req.body, 
-            id, 
-            image: req.file.filename
-         }
-        res.redirect('/products');
+        for (i = 0; i<products.length; i++) {
+            if (products[i].id == req.params.id) {
+                 let product = {
+                    id: products[i].id,
+                    ...req.body,
+                    image: req.file.filename
+                }
+                products[i]=product;
+            };
+        };
+        let newProduct = [...products];
+        let newProductJSON = JSON.stringify(newProduct, null, 2);
+        fs.writeFileSync(productsFilePath, newProductJSON);
+        res.redirect('/products')
     },
     /* Elimina un producto actualiza la base de datos y redirecciona a la lista de productos actualizada */
     delete: (req, res) => {
