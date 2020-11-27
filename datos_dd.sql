@@ -36,6 +36,25 @@ INSERT INTO `recipes` VALUES
 (14, 'Black Russian', '350 ml Vodka,20 ml Licor de Cafe', 'Verter los ingredientes en un vaso old fashioned lleno de hielo. Revolver gentilmente. Para el WHITE RUSSIAN – colocar crema de leche fresca sobre el cocktail y revolver suavemente.', 'No hay decoracion', 'image-1605648294094.png', NULL, NULL, NULL);
 /*!40000 ALTER TABLE `recipes` ENABLE KEYS */;
 UNLOCK TABLES;
+
 --
 --
---
+LOCK TABLES `courses` WRITE;
+/*!40000 ALTER TABLE `courses` DISABLE KEYS */;
+INSERT INTO `courses` VALUES 
+-- (id, name, price, discount, description, image, created_at, updated_at, deleted_at)
+(2, 'Bar Manager', '15500', '0', 'Destinado a que desarrolles una capacidad de análisis crítico, con el objetivo de poder crear y resolver de una forma óptima cada situación en Bares, Restaurantes, Clubes u Hoteles. Descubrirás en nuestro programa una forma nueva de desempeñarte tras una barra, de una manera efectiva con relación al trabajo en equipo, preparación de cocteles, rentabilidad de producto, organización de espacio de trabajo y recepción de clientes.    Basado en la experiencia de nuestro Director Académico, recorrerás', 'bar-manager.png', NULL, NULL, NULL);
+
+/*!40000 ALTER TABLE `courses` ENABLE KEYS */;
+UNLOCK TABLES;
+
+LOCK TABLES `products` WRITE;
+/*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO `products` VALUES 
+-- (id, name, price, discount, description, image, category_id, created_at, updated_at, deleted_at)
+(2, 'Whisky Jameson Black Barrel', '2810', '5','Jameson Black Barrel es de cuerpo medio, muy suave y sedoso. Empieza especiado, destacando las notas del whisky pot-still con un toque picante en la punta de la lengua. Le siguen notas dulces de azúcar panela, caramelo y vainilla, acompañadas del lado más frutal.', 'jamesonBlackBarrel.png', 1, NULL, NULL, NULL),
+(3,'Tanqueray','1650', '25', 'Balance perfecto de sus cuatro botanicos. La misma seleccion de ingredientes utilizada por Charles Tanqueray. La ginebra favorita de los bartenders para el gin tonic perfecto.', 'tanquerey.png', 1, NULL, NULL, NULL),
+(4,'Beefeater', '1550', '10', 'La Ginebra Beefeater es fabricada usando alcohol neutro de grano, en el cual son macerados durante 24 horas los ingredientes vegetales que le dan su sabor y aroma. (Bayas de enebro, junto a cáscara de naranja amarga y limón, almendras, raíz de lirio, semillas de cilantro, raíz y semillas de Angelica y regaliz). Después de este proceso la mezcla es destilada durante 7 horas, conservándose solo el producto intermedio de la misma, conocido como el corazón.','beefeater.png', 1, NULL, NULL, NULL);
+
+/*!40000 ALTER TABLE `products` ENABLE KEYS */;
+UNLOCK TABLES;
