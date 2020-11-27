@@ -105,13 +105,13 @@ CREATE TABLE `products` (
 `discount` int(100) unsigned NOT NULL,
 `description`varchar(6500) COLLATE utf8mb4_unicode_ci NOT NULL,
 `image`varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-`categories_id` int(10) unsigned NOT NULL,
+`category_id` int(10) unsigned NOT NULL,
 `created_at` timestamp NULL DEFAULT NULL,
 `updated_at` timestamp NULL DEFAULT NULL,
 `deleted_at` timestamp NULL DEFAULT NULL,
 PRIMARY KEY (`id`),
-KEY `products_categories_id_foreign` (`categories_id`),
-CONSTRAINT `products_categories_id_foreing` FOREIGN KEY (`categories_id`) REFERENCES `categories` (`id`)
+KEY `products_category_id_foreign` (`category_id`),
+CONSTRAINT `products_category_id_foreing` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT= 2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 --

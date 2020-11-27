@@ -37,4 +37,7 @@ router.put('/edit/:id', upload.single("image"), recipesController.update);
 //eliminar un producto
 router.delete('/delete/:id', recipesController.delete)
 
+//search un producto
+router.get('/search', recipesController.search)
+
 module.exports = router; 
