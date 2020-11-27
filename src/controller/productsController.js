@@ -1,17 +1,28 @@
-const fs = require('fs');
-const path = require('path');
+const {Product, Category} = require('../database/models');
+const {Op} = require('sequelize');
+// const fs = require('fs');
+// const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/productsDB.json');
+// const productsFilePath = path.join(__dirname, '../data/productsDB.json');
 /* Funcion que lee la base de datos */
-const getProducts = () => JSON.parse(fs.readFileSync(productsFilePath, {encoding: 'utf-8'}));
+// const getProducts = () => JSON.parse(fs.readFileSync(productsFilePath, {encoding: 'utf-8'}));
 /* Funcion que agrega un . para separar miles */
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
     /* Muestra todos los productos */
-    index : (req,res) => {
-        let products = getProducts()
-        res.render('./products/products', { products, toThousand })
+    index : async (req,res) => {
+        try{
+            const products = await Product.findAll(
+                {include: ['Categories']}
+            );
+            res.json(products);
+            // let products = getProducts()
+            // res.render('./products/products', { products, toThousand })
+        } catch(error){
+            res.json(error);
+            console.log(error);
+        }
     },
       /* Muestra el carrito */
     cart : (req,res) => {
