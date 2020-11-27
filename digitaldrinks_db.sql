@@ -33,7 +33,7 @@ PRIMARY KEY (`id`)
 --
 LOCK TABLES `user_category` WRITE;
 /*!40000 ALTER TABLE `user_category` DISABLE KEYS */;
-INSERT INTO `user_category` VALUES (1,'administrador', NULL, NULL, NULL), (2, 'usuario', NULL, NULL, NULL); 
+INSERT INTO `user_category` VALUES (1,'Administrador', NULL, NULL, NULL), (2, 'Usuario', NULL, NULL, NULL); 
 /*!40000 ALTER TABLE `user_category` ENABLE KEYS */;
 UNLOCK TABLES;
 --
@@ -55,7 +55,7 @@ PRIMARY KEY (`id`)
 --
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'drinks', NULL, NULL, NULL), (2, 'tools', NULL, NULL, NULL); 
+INSERT INTO `categories` VALUES (1,'Bebidas', NULL, NULL, NULL), (2, 'Herramientas', NULL, NULL, NULL); 
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 --
@@ -105,13 +105,13 @@ CREATE TABLE `products` (
 `discount` int(100) unsigned NOT NULL,
 `description`varchar(6500) COLLATE utf8mb4_unicode_ci NOT NULL,
 `image`varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-`categories_id` int(10) unsigned NOT NULL,
+`category_id` int(10) unsigned NOT NULL,
 `created_at` timestamp NULL DEFAULT NULL,
 `updated_at` timestamp NULL DEFAULT NULL,
 `deleted_at` timestamp NULL DEFAULT NULL,
 PRIMARY KEY (`id`),
-KEY `products_categories_id_foreign` (`categories_id`),
-CONSTRAINT `products_categories_id_foreing` FOREIGN KEY (`categories_id`) REFERENCES `categories` (`id`)
+KEY `products_category_id_foreign` (`category_id`),
+CONSTRAINT `products_category_id_foreing` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT= 2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 --

@@ -24,9 +24,16 @@
                 <label for="discount">Descuento:</label>
                 <input type="text" id="discount" name="discount" placeholder="15%" >
 
-                 <label for="description" class="">Descripción:</label>
-                 <textarea name="description" id="description" class="form-input"></textarea>
-                 <p>Sube una imagen de tu producto</p>
+                <label for="description" class="">Descripción:</label>
+                <textarea name="description" id="description" class="form-input"></textarea>
+
+                <label for="category_id"> Categoria </label>
+                    <select name="category_id">
+                     <% categories.forEach(category => { %>         
+                         <option value="<%= category.id %>"> <%= category.name %> </option>
+                     <% }) %>
+                    </select>
+                <p>Sube una imagen de tu producto</p>
                  <input type="file" name="image">
                  <br>
                  <button type="submit">Guardar producto</button>
