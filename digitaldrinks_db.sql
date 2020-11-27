@@ -33,7 +33,7 @@ PRIMARY KEY (`id`)
 --
 LOCK TABLES `user_category` WRITE;
 /*!40000 ALTER TABLE `user_category` DISABLE KEYS */;
-INSERT INTO `user_category` VALUES (1,'administrador', NULL, NULL, NULL), (2, 'usuario', NULL, NULL, NULL); 
+INSERT INTO `user_category` VALUES (1,'Administrador', NULL, NULL, NULL), (2, 'Usuario', NULL, NULL, NULL); 
 /*!40000 ALTER TABLE `user_category` ENABLE KEYS */;
 UNLOCK TABLES;
 --
@@ -55,7 +55,7 @@ PRIMARY KEY (`id`)
 --
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'drinks', NULL, NULL, NULL), (2, 'tools', NULL, NULL, NULL); 
+INSERT INTO `categories` VALUES (1,'Bebidas', NULL, NULL, NULL), (2, 'Herramientas', NULL, NULL, NULL); 
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 --

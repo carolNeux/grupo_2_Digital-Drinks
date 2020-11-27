@@ -22,14 +22,16 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        categories_id: { 
+        category_id: { 
             type: DataTypes.INTEGER.UNSIGNED,
             allowNull: false
         }
     })
     
     Product.associate = (models => {
-        Product.belongsTo(models.Category)
+        Product.belongsTo(models.Category, {
+            as: "Category"
+        })
     })
 
     return Product;

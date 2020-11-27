@@ -29,8 +29,17 @@
                 <label for="description" class="">Descripción:</label>
                 <textarea name="description" id="description" class="form-input"> <%= productDetail.description %> </textarea>
                 <br>
+                <label for="category_id"> Categoria </label>
+                    <select name="category_id">
+                        <% categories.forEach(category => { %>
+                        <% if (productDetail.CategoryId === category.id) { %>          
+                            <option value="<%= category.id %>" selected> <%= category.name %> </option>
+                        <% } else { %>
+                            <option value="<%= category.id %>"> <%= category.name %> </option>
+                        <% }}) %>
+                    </select>
                 <p>Agregar imagen</p>
-                
+                <img src="/images/products/<%= productDetail.image %>" alt="<%= productDetail.name %>">
                 <input type="file" name="image" value="<%= productDetail.image %> ">
                 <br>
 

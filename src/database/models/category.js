@@ -6,6 +6,9 @@ module.exports = (sequelize, Datatypes) => {
             type: Datatypes.STRING,
             allowNull: false
         }
+    }, {
+        tableName: "categories",
+        timestamps: false
     })
     Category.associate = (models => {
         Category.hasMany(models.Product,{
