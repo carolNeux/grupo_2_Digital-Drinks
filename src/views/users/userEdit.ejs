@@ -20,9 +20,15 @@
                 <div class="input_data"><h4>Email:</h4><input type="email" name="email" value="<%= editUser.email%>"></div>
                 <div class="input_data"><h4>Fecha de nacimiento: </h4><input type="date" name="birthday" value="<%= editUser.birthday %>"></div>
                 <div class="input_data"><h4>Categoria: </h4>
-                <select name="category" >
-                    <option value="user">user</option>
-                    <option value="admin">admin</option>
+                <select name="user_category_id" >
+                    <% category.forEach(oneCategory => { %>
+                        <% if (oneCategory.id === editUser.user_category_id) { %>
+                        <option value="<%= oneCategory.id %>" selected><%= oneCategory.name %> </option>
+                        <% } else { %>
+                            <option value="<%= oneCategory.id %>"> <%= oneCategory.name %> </option> 
+                        <% } %> 
+                    <% }) %>
+                   
                 </select></div>
                 <div class="user_buttons_container">
                     <input type="submit" value="Editar">

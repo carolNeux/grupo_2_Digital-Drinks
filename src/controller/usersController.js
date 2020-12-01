@@ -87,8 +87,9 @@ module.exports = {
     },
     edit: async (req, res) => {
         try {
-            let editUser = await User.findByPk(req.params.id);
-            res.render ('./users/userEdit', {editUser}) 
+            let editUser = await User.findByPk(req.params.id, {include: { all:true}});
+            let category = await userCategory.findAll()
+            res.render ('./users/userEdit', {editUser, category}) 
         } catch (error) {
             console.log(error)
         }
