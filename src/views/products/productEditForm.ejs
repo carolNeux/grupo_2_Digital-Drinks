@@ -13,13 +13,17 @@
     <!-- Aca va el Header -->
     <div class="reg-box">
         
+        <a href="/products/"> <img src="/images/header/logoAzul.svg" alt=""> </a>
+   
+       
+
         <h2> Edita tu producto</h2>
         <form action="/products/edit/<%= productDetail.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="reg-fill">  
 
                 <label for="name">Nombre del Producto</label>
                 <input type="text" name="name" value="<%= productDetail.name %> ">
-            
+
                 <label for="price" >Precio del producto:</label>
                 <input type="text" id="price" name="price" value="<%= productDetail.price %> ">
 
