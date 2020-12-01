@@ -14,14 +14,21 @@
         <form action="/users/edit/<%= editUser.id %>?_method=PUT " method="POST">
             <h2>Editar usuario:</h2>
             <article class="user_list_container">
-                <div class="input_data"><h4>Nombre: </h4><input type="text" name="firstName" placeholder="<%= editUser.firstName %>"></div>
-                <div class="input_data"><h4>Apellido: </h4><input type="text" name="lastName" placeholder="<%= editUser.lastName %>"></div>
-                <div class="input_data"><h4>Nombre de Usuario: </h4><input type="text" name="username" placeholder="<%= editUser.username %>"></div>
-                <div class="input_data"><h4>Email:</h4><input type="email" name="email" placeholder="<%= editUser.firstName %>"></div>
-                <div class="input_data"><h4>Fecha de nacimiento: </h4><input type="date" name="birthday" placeholder="<%= editUser.birthday %>"></div>
-                <div class="input_data"><h4>Categoria: </h4><select name="category" id="">
-                    <option value="user">user</option>
-                    <option value="admin">admin</option>
+                <div class="input_data"><h4>Nombre: </h4><input type="text" name="first_name" value="<%= editUser.first_name %>"></div>
+                <div class="input_data"><h4>Apellido: </h4><input type="text" name="last_name" value="<%= editUser.last_name %>"></div>
+                <div class="input_data"><h4>Nombre de Usuario: </h4><input type="text" name="username" value="<%= editUser.username %>"></div>
+                <div class="input_data"><h4>Email:</h4><input type="email" name="email" value="<%= editUser.email%>"></div>
+                <div class="input_data"><h4>Fecha de nacimiento: </h4><input type="date" name="birthday" value="<%= editUser.birthday %>"></div>
+                <div class="input_data"><h4>Categoria: </h4>
+                <select name="user_category_id" >
+                    <% category.forEach(oneCategory => { %>
+                        <% if (oneCategory.id === editUser.user_category_id) { %>
+                        <option value="<%= oneCategory.id %>" selected><%= oneCategory.name %> </option>
+                        <% } else { %>
+                            <option value="<%= oneCategory.id %>"> <%= oneCategory.name %> </option> 
+                        <% } %> 
+                    <% }) %>
+                   
                 </select></div>
                 <div class="user_buttons_container">
                     <input type="submit" value="Editar">
