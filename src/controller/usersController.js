@@ -94,28 +94,25 @@ module.exports = {
             console.log(error)
         }
     },
-    editStorage: (req, res) => {
-        let users = leerjson();
-        for (i = 0; i<users.length; i++) {
-            if (users[i].id == req.params.id) {
-                 let user = {
-                    id: users[i].id,
-                    ...req.body
-                }
-                users[i]=user;
-            };
+    editStorage: async (req, res) => {
+        try {
+            let idUser = req.params.id;
+            editUsers = await User.findByPk(idUser);
+            await editUsers.update(req.body);
+             res.render ('./users/editRedirect')
+        } catch (error) {
+            console.log(error);
         };
-        let newArray = [...users];
-        newArrayJSON = JSON.stringify(newArray, null, ' ');
-        fs.writeFileSync(usersFilePath, newArrayJSON);
-        res.render ('./users/editRedirect')
     },
     /*borrado de un usuario con redireccion */
-    delete: (req, res) => {
-        let users = leerjson();
-        let newArray = users.filter(user => user.id != req.params.id)
-        newArrayJSON = JSON.stringify(newArray, null, ' ');
-        fs.writeFileSync(usersFilePath, newArrayJSON);
-        res.render('./users/destroyRedirect')
+    delete: async (req, res) => {
+        try {
+          let idUser = req.params.id;
+          let deleteUsers = await User.findByPk(idUser);
+          await deleteUsers.destroy();
+          res.render('./users/destroyRedirect');
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
