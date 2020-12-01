@@ -43,7 +43,9 @@ LOCK TABLES `courses` WRITE;
 /*!40000 ALTER TABLE `courses` DISABLE KEYS */;
 INSERT INTO `courses` VALUES 
 -- (id, name, price, discount, description, image, created_at, updated_at, deleted_at)
-(2, 'Bar Manager', '15500', '0', 'Destinado a que desarrolles una capacidad de análisis crítico, con el objetivo de poder crear y resolver de una forma óptima cada situación en Bares, Restaurantes, Clubes u Hoteles. Descubrirás en nuestro programa una forma nueva de desempeñarte tras una barra, de una manera efectiva con relación al trabajo en equipo, preparación de cocteles, rentabilidad de producto, organización de espacio de trabajo y recepción de clientes.    Basado en la experiencia de nuestro Director Académico, recorrerás', 'bar-manager.png', NULL, NULL, NULL);
+(2, 'Bar Manager', '15500', '0', 'Destinado a que desarrolles una capacidad de análisis crítico, con el objetivo de poder crear y resolver de una forma óptima cada situación en Bares, Restaurantes, Clubes u Hoteles. Descubrirás en nuestro programa una forma nueva de desempeñarte tras una barra, de una manera efectiva con relación al trabajo en equipo, preparación de cocteles, rentabilidad de producto, organización de espacio de trabajo y recepción de clientes.    Basado en la experiencia de nuestro Director Académico, recorrerás', 'bar-manager.png', NULL, NULL, NULL),
+(3, 'Barista', '11500', '5', 'Destinado a toda persona que quiera profundizar y perfeccionar las bases del servicio de café y Arte Latte. Dibujo en la espuma del café, formas y figuras, distintos tipos de arte. Todas las técnicas y todas las formas de preparación del café y todo sobre el servicio, maquinarias y herramientas. Aprenderás todos los aspectos desde la planta de café hasta la taza. Todos los pasos y sugerencias, tips y detalles del negocio y empresas de café como así también pautas a tener en cuenta para futuros dueños de cafeterías.  En todas las clases el alumno realiza las técnicas mencionadas, hace uso de las maquinarias y herramientas y se realizaran las catas correspondientes a cada clase.', 'barista.jpg', NULL, NULL, NULL),
+(4, 'Flair Bartending', '11500', '20', 'Este curso es dirigido a aquellas personas a las que le interesa sumar un plus a su estilo de trabajo, resaltar en las barras utilizando herramientas para entretener al público realizando movimientos acrobáticos con las mismas a la hora de realizar un coctel.  Cada clase está diseñada para que de manera fácil y sencilla se pueda aprender movimientos aplicables a cualquier estilo de barra y de esta manera el alumno se va ambientando en el mundo de la cocteleria tomando dinámica, precisión y velocidad en el trabajo..', 'flair-bartending.jpg', NULL, NULL, NULL);
 
 /*!40000 ALTER TABLE `courses` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -68,3 +70,8 @@ INSERT INTO `products` VALUES
 
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
+
+
+
+
+
