@@ -20,12 +20,17 @@ module.exports = {
             console.log(error);
         }
     },
-    detail: (req,res) => {
-        let courses = coursesjson();
-		let coursesDetail = courses.find(course=> 
+    detail:async (req,res) => {
+        try {
+        let courses = await Course.findAll();
+		let coursesDetail = await courses.find(course=> 
             course.id == req.params.id	);
 		res.render('./courses/coursesDetail', {'coursesDetail': coursesDetail, toThousand})
-    },
+    } catch (erorr){
+        console.log(error);
+    }
+},
+
     /*pagina para envio de una consulta sobre un curso, que deberia enviarse a la casilla del mail de quien lo dicta */
     consult: (req, res) => { 
         res.render('./courses/coursesContact');
