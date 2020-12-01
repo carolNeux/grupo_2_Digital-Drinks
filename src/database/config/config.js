@@ -8,8 +8,7 @@ module.exports = {
     define: {
       underscored: true,
       paranoid: true
-    },
-    "port": "8889"
+    }
   },
   "test": {
     "username": "root",
