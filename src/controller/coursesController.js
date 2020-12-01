@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const {Course} = require("../database/models");
+const{Op} = require("sequelize");
 
 const coursesFilePath = path.join(__dirname, '../data/coursesDB.json');
 const coursesjson = () => {
@@ -10,12 +12,13 @@ const coursesjson = () => {
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
 
 module.exports = {
-    index : (req,res) => {
-        let courses = coursesjson();
+    index :async (req,res) => {
+        try {
+        let courses = await Course.findAll();
         res.render('./courses/courses', {courses, toThousand});
-    },
-    cart : (req,res) => {
-        res.render('./products/productCart') // decidir si se usa el mismo carrito
+        } catch (error){
+            console.log(error);
+        }
     },
     detail: (req,res) => {
         let courses = coursesjson();
