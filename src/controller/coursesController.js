@@ -63,12 +63,16 @@ module.exports = {
         res.redirect('/courses');
     },
     /*se busca y se muestra un curso para editar dentro de la base de datos */
-    edit:  (req,res) => {
-        let courses = coursesjson();
-		let coursesDetail = courses.find(course=> 
+    edit: async (req,res) => {
+        try {
+        let courses = await Course.findAll();
+		let coursesDetail = await courses.find(course=> 
 			course.id == req.params.id) 
         res.render('./courses/coursesEditForm', {'coursesDetail': coursesDetail, toThousand});
-    },
+    } catch (error){
+        console.log(error);
+    }
+},
     /*se vuelve a mostrar la informacion del curso a editar y luego se almacenan los cambios realizados en el formulario */
     update: (req, res) => {
         let courses = coursesjson();
