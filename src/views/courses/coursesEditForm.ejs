@@ -32,8 +32,8 @@
                  <label for="description" class="">Descripción:</label>
                  <textarea name="description" id="description" class="form-input"><%= coursesDetail.description %>"</textarea>
                  
-                 <p>Agregar imagen</p>
-                 <img src="/images/courses/<%= coursesDetail.image %>" alt="<%= coursesDetail.name %>">
+                 <label for="image"> Agregar imagen</label>
+                 <img class="img"   src="/images/courses/<%= coursesDetail.image %>" alt="<%= coursesDetail.name %>">
                  <input type="file" name="image">
                  <br>
                  
