@@ -39,7 +39,10 @@ router.post('/create', upload.single("image"), coursesController.create);
 router.get('/edit/:id', coursesController.edit);
 router.put('/edit/:id', upload.single("image"), coursesController.update);
 
+/*buscar un curso */
+router.get('/search', coursesController.search);
 /*borrar un curso */
 router.delete('/delete/:id', coursesController.destroy)
+
 
 module.exports = router; 

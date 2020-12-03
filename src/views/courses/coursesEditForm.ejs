@@ -12,8 +12,7 @@
 <body>
     <!-- Aca va el Header -->
     <div class="reg-box">
-       
-
+        <a href="/courses/"> <img src="/images/header/logoAzul.svg" alt=""> </a>
         <h2> Edita tu Curso</h2>
         <form action="/courses/edit/<%= coursesDetail.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="reg-fill">  
@@ -34,6 +33,7 @@
                  <textarea name="description" id="description" class="form-input"><%= coursesDetail.description %>"</textarea>
                  
                  <p>Agregar imagen</p>
+                 <img src="/images/courses/<%= coursesDetail.image %>" alt="<%= coursesDetail.name %>">
                  <input type="file" name="image">
                  <br>
                  

@@ -1,13 +1,6 @@
-const fs = require('fs');
-const path = require('path');
 const {Course} = require("../database/models");
 const{Op} = require("sequelize");
 
-const coursesFilePath = path.join(__dirname, '../data/coursesDB.json');
-const coursesjson = () => {
-    let jsonCourses = fs.readFileSync(coursesFilePath, 'utf-8');
-    return JSON.parse(jsonCourses);
-};
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
 
@@ -43,24 +36,16 @@ module.exports = {
     new:  (req,res) => {
         res.render('./courses/coursesCreateForm')  //decidir si se crea un formulario ?????
     },
-    create: (req, res, next) => {
-        let courses = coursesjson();
-        /*determina el id mayor en la base de datos, lo almacena y luego lo utiliza para evitar que se repita */
-        let maxId = 0;
-        for (let i=0; i<courses.length; i++) {
-			if (maxId<courses[i].id) {
-				maxId= courses[i].id;
-            };
-        };
-        let newCourse = {
-            id: (maxId + 1),
-            ...req.body,
-            image: "/" + req.file.filename
-        };
-        let newArray = [...courses, newCourse];
-        newCourseJSON = JSON.stringify(newArray, null, ' ');
-        fs.writeFileSync(coursesFilePath, newCourseJSON);
-        res.redirect('/courses');
+    create: async (req,res) => {
+        try {
+            await Course.create({
+                ...req.body,
+                image: req.file.filename
+            })
+            res.redirect('/courses');
+        } catch (error) {
+            console.log(error);
+        }
     },
     /*se busca y se muestra un curso para editar dentro de la base de datos */
     edit: async (req,res) => {
@@ -71,32 +56,49 @@ module.exports = {
         res.render('./courses/coursesEditForm', {'coursesDetail': coursesDetail, toThousand});
     } catch (error){
         console.log(error);
-    }
+    } 
 },
     /*se vuelve a mostrar la informacion del curso a editar y luego se almacenan los cambios realizados en el formulario */
-    update: (req, res) => {
-        let courses = coursesjson();
-        for (i = 0; i<courses.length; i++) {
-            if (courses[i].id == req.params.id) {
-                 let course = {
-                    id: courses[i].id,
-                    ...req.body,
-                    image: "/" + req.file.filename 
+    update: async (req, res) =>{
+        try {
+            let id = req.params.id;
+            let course = await Course.findByPk(id);
+            await course.update({
+                ...req.body,
+                image : req.file.filename
+            })
+            res.redirect('/courses');
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }, 
+    search : async (req,res) => {
+        try {
+            let search = req.query.search;  
+            let courses = await Course.findAll({
+                where: {
+                    name: {
+                        [Op.like]: '%' + search + '%'
+                    }
                 }
-                courses[i]=course;
-            };
-        };
-        let newArray = [...courses];
-        newArrayJSON = JSON.stringify(newArray, null, ' ');
-        fs.writeFileSync(coursesFilePath, newArrayJSON);
-        res.redirect('/courses');
+            });
+            res.render('./courses/coursesSearch', {courses, toThousand});
+        } catch (error) {
+            console.log(error);
+        }
     },
+
     /*borrado de un curso NO BORRA LA IMAGEN  */
-    destroy: (req, res) => {
-        let courses = coursesjson();
-        let newArray = courses.filter(course => course.id != req.params.id)
-        newArrayJSON = JSON.stringify(newArray, null, ' ');
-        fs.writeFileSync(coursesFilePath, newArrayJSON);
-        res.redirect('/courses');
+    destroy: async (req,res) => {
+        try {
+            let id = req.params.id;
+            let course = await Course.findByPk(id);
+            await course.destroy();
+            res.redirect('/courses');          
+        } catch (error) {
+            console.log(error);
+            
+        }
     }
 };
