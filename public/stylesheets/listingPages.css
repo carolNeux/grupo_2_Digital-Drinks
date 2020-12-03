@@ -13,7 +13,7 @@
     border: solid 2px #473d8bc2;
     padding: 5px;
     border-radius: 10px;
-    width: 300px;
+    width: 400px;
     height: 35px;
 }
 .button_search {
@@ -23,9 +23,8 @@
     color: white; 
     font-weight: bold;
     cursor: pointer;
-    padding: 7px 30px;
+    padding: 6px 30px;
     border-radius: 10px;
-
 }
 .button_search:hover {
     background-color: #483D8B;
