@@ -32,8 +32,9 @@
                  <label for="garnish" class="">Decoración:</label>
                  <textarea name="garnish" id="description" class="form-input"><%= recipeDetail.garnish %></textarea>
 
+                 
                  <label for="image">Imagen:</label>
-                 <img class="img" src ="/images/recipes/<%=recipeDetail.image%>" alt="<%= recipeDetail.name %>">
+                 <div class="foto"> <img class="img" src ="/images/recipes/<%=recipeDetail.image%>" alt="<%= recipeDetail.name %>"> </div> 
                  <label for="file" name= "image"> Subir imagen</label>
                  <input type="file" name="image">
                  <br>

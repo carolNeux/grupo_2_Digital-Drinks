@@ -81,7 +81,13 @@ body {
 .product_img {
   max-width: 85px;
 }
-.img image {
-  width: 150;
-  height: 300px;
+.img {
+  width: 250px;
+  height: auto;
+}
+
+.foto {
+  width: auto;
+  display: flex;
+  justify-content: center;
 }

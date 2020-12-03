@@ -42,8 +42,9 @@
                             <option value="<%= category.id %>"> <%= category.name %> </option>
                         <% }}) %>
                     </select>
-                <p>Agregar imagen</p>
-                <img src="/images/products/<%= productDetail.image %>" alt="<%= productDetail.name %>">
+                
+                <label for="imagen" class="">Agregar imagen:</label>
+                <div class="foto"> <img class="img" src="/images/products/<%= productDetail.image %>" alt="<%= productDetail.name %>"></div> 
                 <input type="file" name="image" value="<%= productDetail.image %> ">
                 <br>
 
