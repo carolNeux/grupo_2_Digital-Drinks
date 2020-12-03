@@ -16,7 +16,7 @@
             <form action="/recipes/search" method="GET">
             <label for="products_search"></label>
             <input type="search" id="products_search" name="search" placeholder="Busqueda de Recetas">
-            <button type="submit" value="search">Buscar</button>
+            <button type="submit" value="search" class="button_search">Buscar</button>
           </form>
         </div>
         <!--Inicio de Recetas-->
@@ -24,42 +24,17 @@
             <% recipes.forEach(recipe => { %>
                 <article class="product">
                     <div class="product_img_container">
-                        <a href="/recipes/recipeDetail/<%= recipe.id %> ">
-                            <img src= /images/recipes/<%= recipe.image %>  alt="<%= recipe.name %>" class="recipe_img">
+                        <a href="/recipes/recipesDetail/<%= recipe.id %>">
+                            <img src= "/images/recipes/<%= recipe.image %>"  alt="<%= recipe.name %>" class="recipe_img">
                         </a>
                     </div>
                     <div class="product_description">
                         <h2><%= recipe.name %></h2>
                         <p><%= recipe.description %> </p>
                     </div>
-                    <a href="./recipes/recipesDetail/<%= recipe.id %> " class="see_more"><b>VER MÁS</b></a>                
+                    <a href="/recipes/recipesDetail/<%= recipe.id %> " class="see_more"><b>VER MÁS</b></a>                
                 </article>
             <% }) %>
-            <!--Inicio de los aside-->
-            <section class="categories_container">
-                <aside class="categories">
-                    <h2>Categorias/h2>
-                    <ul>
-                        <li> 
-                            <a href="">Articulo de interes</a> 
-                        </li>
-                        <li>
-                            <a href="">Articulo de interes</a>
-                        </li>
-                        <li>
-                            <a href="">Articulo de interes</a> 
-                        </li>
-                        <li>
-                            <a href="">Articulo de interes</a> 
-                        </li>
-                        <li>
-                            <a href="">Articulo de interes</a> 
-                        </li>
-                    </ul>
-                </aside>
-            </section>
-        </main>
-
     </div>
     <!--footer/partial-->
     <%- include('../partials/footer') %>

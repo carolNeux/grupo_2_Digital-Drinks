@@ -89,21 +89,31 @@ module.exports = {
     },
     /* Recibe el formulario de edicion actualiza la base de datos y lista los productos actualizados */
     update: async (req, res, next) => {
-        try {
-            const {id} = req.params;
-            const product = await Product.findByPk(id, {
-                include: ['Category']
-            });
-            await product.update({
-                ...req.body,
-                image: req.file.filename
-            })
-            res.redirect('/products')
-            
-        } catch (error) {
-            res.render(error);
-            console.log(error);
-        }
+            try {
+                const {id} = req.params;
+                const product = await Product.findByPk(id, {
+                    include: ['Category']
+                });
+                if (req.body.image == undefined) {
+                    //si viene indefinido el campo de imagen, almacena la misma imagen que ya tenia
+                    await product.update({
+                        ...req.body,
+                        image: product.image
+                    })
+                    res.redirect('/products')                    
+                } else {
+                    //si viene una nueva imagen en la edicion, se almacena la nueva imagen
+                    await product.update({
+                        ...req.body,
+                        image: req.file.filename
+                    })
+                    res.redirect('/products')
+                }
+                
+            } catch (error) {
+                res.render(error);
+                console.log(error);
+            }
     },
     /* Elimina un producto actualiza la base de datos y redirecciona a la lista de productos actualizada */
     delete: async (req, res) => {

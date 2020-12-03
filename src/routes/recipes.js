@@ -24,7 +24,7 @@ var upload = multer({ storage: storage });
 router.get('/', recipesController.index);
 
 //Detalle de receta//
-router.get('/recipeDetail/:id', recipesController.detail);
+router.get('/recipesDetail/:id', recipesController.detail);
 
 //crear receta//
 router.get('/new', recipesController.new);
