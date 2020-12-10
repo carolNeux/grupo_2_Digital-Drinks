@@ -29,11 +29,19 @@ const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const coursesRouter = require('./routes/courses');
 const recipesRouter = require('./routes/recipes');
+// ************ WRITE API ************
+const apiProductsRouter = require('./routes/api/apiProducts')
+const apiCoursesRouter = require('./routes/api/apiCourses')
+const apiRecipesRouter = require('./routes/api/apiRecipes')
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/courses', coursesRouter);
 app.use('/recipes', recipesRouter);
+app.use('/api/products', apiProductsRouter);
+app.use('/api/courses', apiCoursesRouter);
+app.use('/api/recipes', apiRecipesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
