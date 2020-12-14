@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Registro |Digital Drinks</title>
     <link rel="stylesheet" href="../stylesheets/register.css">
+    <script src="../javascripts/form.js" defer></script>
     <script src="https://kit.fontawesome.com/5376d63d7e.js" crossorigin="anonymous"></script>
     <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
 </head>
@@ -16,23 +17,23 @@
             <form action="/users/register" method="POST">
             <div class="reg-fill">  
                 <label for="first_name">Nombre</label>
-                <input type="text" name="first_name" placeholder="Alfonsina">
+                <input class="first_name" type="text" name="first_name" placeholder="Alfonsina">
 
                 <label for="last_name">Apellido</label>
-                <input type="text" name="last_name" placeholder="Storni">
+                <input class="last_name" type="text" name="last_name" placeholder="Storni">
 
                 <label for="username"> Nombre de Usuario </label>
-                <input type="text"  name="username" placeholder="Alf">
+                <input class="username" type="text"  name="username" placeholder="Alf">
 
                 <label for="birthday">Fecha de Nacimiento</label>
-                <input type="date" name="birthday">
+                <input class="date" type="date" name="birthday">
 
                 <label for="email"> Correo electrónico </label>
-                <input type="email"  name="email" 
+                <input class="email" type="email"  name="email" 
                 placeholder="AlfonsinaStorni@gmail.com">
 
                 <label for="password">Password</label> 
-                <input type="password" name="password" placeholder="Password">
+                <input class="password" type="password" name="password" placeholder="Password">
             </div>
             <input type="submit" value="Enviar" class="reg-button">
             <!-- <a href="/" class="reg-button">Enviar</a> -->
@@ -41,4 +42,4 @@
     </div>    
     <script src="../javascrpits/aa.js" defer></script>
 </body>
-</html>
+</html> 
