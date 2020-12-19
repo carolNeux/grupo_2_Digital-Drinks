@@ -48,43 +48,9 @@ module.exports = {
                 password: bcrypt.hashSync(req.body.password, 10),
                 user_category_id: 2,
             });
-            //Para determinar si existen ya el usuario y el email a registrar
-            //   let userCount = 0;
-            //   let newId = 0;
-            //   let users = await User.findAll();
-            //   for (let i = 0; i < users.length; i++) {
-            //     if (
-            //       req.body.username == users[i].dataValues.username ||
-            //       req.body.email == users[i].dataValues.email
-            //     ) {
-            //       userCount = +1;
-            //     }
-            //     if (newId < users[i].dataValues.id) {
-            //       newId = users[i].dataValues.id;
-            //     }
-            //   }
-            //para guardar el usuario en el json si no existe uno igual con email o username
-            //   if (userCount == 0) {
-            //     let newUser = {
-            //       id: newId + 1,
-            //       username: req.body.username,
-            //       first_name: req.body.first_name,
-            //       last_name: req.body.last_name,
-            //       email: req.body.email,
-            //       password: bcrypt.hashSync(req.body.password, 10),
-            //       birthday: req.body.birthday,
-            //       user_category_id: 2,
-            //     };
-            //     let userData = newUser.username;
-            //     await User.create(newUser);
-            //     //redireccion a la bienvenida
             res.render("./users/registerRedirect", {
                 user
             });
-            //   } else {
-            //     //redireccion a error de creacion de usuario
-            //     res.render("./users/errorRegister");
-            //   }
         } catch (error) {
             console.log(error);
             res.render("./users/errorRegister");
