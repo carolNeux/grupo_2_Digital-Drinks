@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form | Digital Drinks </title>
-    <link rel="stylesheet" href="../stylesheets/styleLogin.css">
-    <script src="https://kit.fontawesome.com/5376d63d7e.js" crossorigin="anonymous"></script>
-    <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form | Digital Drinks</title>
+    <link rel="stylesheet" href="../stylesheets/styleLogin.css" />
+    <script
+      src="https://kit.fontawesome.com/5376d63d7e.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta
+      name="description"
+      content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria"
+    />
+  </head>
+  <body>
     <div class="centry">
-        <div class="login-box"> 
-            <a href="/"><img class="logo"  src="/images/header/logoAzul.svg" alt="Logo de DD"></a>
-            <h2>Login Here</h2>
-            <form action="/users/login" method="POST"> 
-                <label for="username"> Usuario</label>
-                <input type="text" name="username" placeholder="Nombre de Usuario">
-                <label for="password">Password</label> 
-                <input type="password" name="password" placeholder="Password">
-                <div class="login-button">
-                <input type="submit" value="Enviar">
-                    <!-- <a href="" >Enviar</a> -->
-                </div>
-                <br>
-                <br>
-                <input type="checkbox" value="checkbox">
-                <label>Recordame</label>
-                <a href="#">Perdiste la contraseña ?</a> <br>
-                <a href="#">No tenes cuenta ?</a>
-            </form>
-        </div>
+      <div class="login-box">
+        <a href="/"
+          ><img class="logo" src="/images/header/logoAzul.svg" alt="Logo de DD"
+        /></a>
+        <h2>Login Here</h2>
+        <form action="/users/login" method="POST">
+          <label for="username"> Usuario</label>
+          <input type="text" name="username" placeholder="Nombre de Usuario" />
+          <label for="password">Password</label>
+          <input type="password" name="password" placeholder="Password" />
+          <div class="login-button">
+            <input type="submit" value="Enviar" />
+            <!-- <a href="" >Enviar</a> -->
+          </div>
+          <input type="checkbox" value="checkbox" />
+          <label>Recordame</label>
+          <a href="#">Perdiste la contraseña ?</a> <br />
+          <a href="#">No tenes cuenta ?</a>
+        </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>

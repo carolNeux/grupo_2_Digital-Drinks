@@ -66,7 +66,7 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-`username`varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+`username`varchar(100) unique COLLATE utf8_unicode_ci NOT NULL,
 `first_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
 `last_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
 `email`varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
