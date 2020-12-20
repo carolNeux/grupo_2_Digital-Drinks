@@ -24,12 +24,14 @@
                 <h4>Decoración:</h4>
                 <p><%= recipeDetail.garnish %></p>
             </div>
+            <% if (userCategory === 1) { %>   
             <div class="edition_button_recipes">
                 <a href="/recipes/edit/<%= recipeDetail.id %> ">Editar</a>
                 <form action="/recipes/delete/<%= recipeDetail.id %>?_method=DELETE" method="POST">
                     <input type="submit" value="Eliminar">
                 </form>
             </div>
+        <% } %>
         </div>
     </div>
     <div>

@@ -73,7 +73,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-.options li a{
+.options li a, .login_user{
     display: block;
     list-style: none;
     background-color: #483D8B;
@@ -84,6 +84,9 @@ body {
     text-align: left;
 }
 .options li a:hover {
+    background-color: #FF6600;   
+}
+.options li .login_user:hover {
     background-color: #FF6600;   
 }
 /*activacion del boton */
@@ -219,7 +222,7 @@ body {
     .options {
         flex-direction: row;
     }
-    .options li a {
+    .options li a, .login_user {
         background-color: transparent;
         color: #483D8B;
         border-left: solid 2px #483D8B;
@@ -228,6 +231,9 @@ body {
         font-size: 18px;
     }
     .options li a:hover {
+        background-color: #ff66006e;
+    }
+    .login_user:hover {
         background-color: #ff66006e;
     }
 }

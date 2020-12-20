@@ -11,6 +11,8 @@ const app = express();
 
 // ************ session() ************
 const session = require('express-session');
+const middSession = require('./middlewares/application/session')
+const log = require('./middlewares/application/log')
 
 // ************ Middlewares - (don't touch) ************
 app.use(logger('dev'));
@@ -19,8 +21,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
-app.use(express({secret:'Solo para nuestros ojos'}));
-
+app.use(express({ secret: 'Solo para nuestros ojos' }));
+app.use(session({
+  secret: 'digital drinks',
+  resave: true,
+  saveUninitialized: true
+}));
+app.use(middSession);
+app.use(log);
 
 // ************ Template Engine - (don't touch) ************
 app.set('views', path.join(__dirname, 'views'));

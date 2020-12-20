@@ -13,7 +13,11 @@ router.post("/register", usersController.usersRegister);
 
 /* login*/
 router.get("/login", usersController.showLogin);
-router.post("/login",usersController.userLogin);
+router.post("/login", usersController.userLogin);
+
+/* logout */
+router.get("/logout", usersController.logout)
+// router.post("/logout", usersController.logout)
 
 /*edicion de un usuario */
 router.get("/edit/:id", usersController.edit);

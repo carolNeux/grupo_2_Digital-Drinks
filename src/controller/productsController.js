@@ -48,8 +48,17 @@ module.exports = {
       /* Muestra el formulario para crear un producto */
     new: async (req,res) => {
         try {
-            const categories = await Category.findAll();
-            res.render('./products/productCreateForm', {categories});          
+            if (req.session.userCategory === 1) {
+                
+                const categories = await Category.findAll();
+                res.render('./products/productCreateForm', {categories});          
+
+            } else if (req.session.userCategory === 2) {
+                res.render('./users/forbidden');
+            }
+            else {
+                res.redirect('/users/login');
+            }
         } catch (error) {
             res.render(error);
             console.log(error);
@@ -73,14 +82,21 @@ module.exports = {
      /* Muestra el formulario de edicion con los valores que ya trae el producto */
     edit: async (req,res) => {
         try {
-            const {id} = req.params;
-            const productDetail = await Product.findByPk(id, {
-                include: ['Category']
-            });
-            const categories = await Category.findAll();
-            res.render('./products/productEditForm', {productDetail, toThousand, categories});
-            // console.log(categories);
-            // res.json(categories);
+            if (req.session.userCategory === 1) {
+                
+                const {id} = req.params;
+                const productDetail = await Product.findByPk(id, {
+                    include: ['Category']
+                });
+                const categories = await Category.findAll();
+                res.render('./products/productEditForm', {productDetail, toThousand, categories});
+
+            } else if (req.session.userCategory === 2) {
+                res.render('./users/forbidden');
+            }
+            else {
+                res.redirect('/users/login');
+            }
             
         } catch (error) {
             res.render(error);
@@ -118,10 +134,19 @@ module.exports = {
     /* Elimina un producto actualiza la base de datos y redirecciona a la lista de productos actualizada */
     delete: async (req, res) => {
         try {
-            const {id} = req.params;
-            const product = await Product.findByPk(id);
-            await product.destroy();
-            res.redirect('/products');
+            if (req.session.userCategory === 1) {
+                
+                const {id} = req.params;
+                const product = await Product.findByPk(id);
+                await product.destroy();
+                res.redirect('/products');
+
+            } else if (req.session.userCategory === 2) {
+                res.render('./users/forbidden');
+            }
+            else {
+                res.redirect('/users/login');
+            }
         } catch (error) {
             res.render(error);
             console.log(error); 

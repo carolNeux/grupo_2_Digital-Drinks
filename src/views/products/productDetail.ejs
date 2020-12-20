@@ -33,12 +33,14 @@
                     <input type="unidades" placeholder="Cuantos queres ?">
                     <a href="/">Agregar al carrito</a>
                 </form>
+                <% if (userCategory === 1) { %>   
                 <div class="products_detail_buttons">
                     <a href="/products/edit/<%= productDetail.id %> ">Editar</a>
                     <form action="/products/delete/<%= productDetail.id %>?_method=DELETE" method="POST">
                         <button type="submit">Eliminar</button>
                     </form>
                 </div>
+            <% } %>
             </div>  
         </div>
         <div class="return_to_list">

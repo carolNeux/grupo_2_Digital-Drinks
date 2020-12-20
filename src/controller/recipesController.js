@@ -25,9 +25,22 @@ module.exports = {
 
      /*****MOSTRANDO EL FORMULARIO de creacion */
         
-    new :async (req,res) =>{
-         res.render('./recipes/recipesCreateForm')   
-        } ,
+    new: async (req, res) => {
+        try {
+            if (req.session.userCategory === 1) {
+                
+                res.render('./recipes/recipesCreateForm')   
+
+            } else if (req.session.userCategory === 2) {
+                res.render('./users/forbidden');
+            }
+            else {
+                res.redirect('/users/login');
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    } ,
 
     /*****   Creamos  */
     create: async(req,res)=>{
@@ -48,17 +61,27 @@ module.exports = {
  
     /**muestra el form para editar */
     edit: async (req,res) => {
-            try{
+        try {
+            if (req.session.userCategory === 1) {
+                
                 const recipeId = req.params.id;
                 const recipeDetail =await Recipe.findByPk(recipeId);
                 res.render('./recipes/recipesEditForm', {'recipeDetail': recipeDetail}) // Buscar y enviar el producto a editar a la vista    
+
+            } else if (req.session.userCategory === 2) {
+                res.render('./users/forbidden');
+            }
+            else {
+                res.redirect('/users/login');
+            }
                 } catch(error) {
                 console.log(error)
                 } 
-        },
+    },
     /* Recibe el formulario de edicion actualiza la base de datos y lista las recetas actualizados */
     update: async(req,res)=>{
-        try{ 
+        try { 
+            
          const recipeId = req.params.id;
          const recipeToEdit = await Recipe.findByPk(recipeId);
             if (req.body.image == undefined) {
@@ -82,11 +105,20 @@ module.exports = {
     },
      
     delete: async(req, res) => {
-       try {
-        const recipeId = req.params.id; 
-        const recipeToDelete = await Recipe.findByPk(recipeId);
-        await recipeToDelete.destroy();    
-        res.redirect('/recipes');      
+        try {
+            if (req.session.userCategory === 1) {
+                
+                const recipeId = req.params.id; 
+                const recipeToDelete = await Recipe.findByPk(recipeId);
+                await recipeToDelete.destroy();    
+                res.redirect('/recipes');      
+
+            } else if (req.session.userCategory === 2) {
+                res.render('./users/forbidden');
+            }
+            else {
+                res.redirect('/users/login');
+            }
        } catch (error) {
         console.log(error)  
        }

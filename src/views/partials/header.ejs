@@ -8,8 +8,18 @@
     <nav class="navigation_bar">
         <ul>
             <div class="sign_button">
-                <li><a href="/login" class="sign_up_button"><b>Ingresar</b></a></li>
-                <li><a href="/register" class="sign_in_button"><b>Crear Cuenta</b></a></li>
+
+                <% if (username) { %>
+                    <!-- <li> -->
+                        <li><a href="/users/logout" class="sign_up_button"><b>Cerrar Sesión</b></a></li>
+                        <!-- <form action="/users/logout" method="POST" class="sign_in_button"> -->
+                            <!-- <button type = "submit">Cerrar Sesión</button> -->
+                        <!-- </form> -->
+                    <!-- </li> -->
+                    <% } else { %>
+                <li><a href="/users/login" class="sign_up_button"><b>Ingresar</b></a></li>
+                <li><a href="/users/register" class="sign_in_button"><b>Crear Cuenta</b></a></li>
+                    <% } %>
                 <!-- <li><a href="log-out">Salir</a></li> -->
             </div>
             <div class="options">
@@ -18,14 +28,20 @@
                 <li><a href="/courses"><img src="" alt="">Cursos</a></li>
                 <li><a href="/recipes"><img src="" alt="">Recetas</a></li>
                 <li><a href="/products/productsCart"><img src="" alt="">Carrito</a></li>
-                <li><a href=""><img src="" alt="">Cuenta Administrador</a>
-                    <ul class="admin_link">
-                        <li><a href="/products/new">Añadir producto</a></li>
-                        <li><a href="/recipes/new">Añadir receta</a></li>
-                        <li><a href="/courses/new">Añadir curso</a></li>
-                        <li><a href="/users/list">Usuarios</a></li>
-                    </ul>
-                </li>
+
+                <% if (userCategory === 1) { %>                
+                    <li><a href=""><img src="" alt="">Bienvenid@ <%= username %></a>
+                        <ul class="admin_link">
+                            <li><a href="/products/new">Añadir producto</a></li>
+                            <li><a href="/recipes/new">Añadir receta</a></li>
+                            <li><a href="/courses/new">Añadir curso</a></li>
+                            <li><a href="/users/list">Usuarios</a></li>          
+                        </ul>
+                    </li>
+                <% } else if(userCategory === 2){ %>
+                    <li class = 'login_user'> Bienvenid@ <%= username %></li>
+                <% } %>
+
                 <div class="not_visible">
                     <li><a href="#"><img src="" alt="" >Contacto</a></li>
                     <li><a href="#"><img src="" alt="">Quienes somos</a></li>
