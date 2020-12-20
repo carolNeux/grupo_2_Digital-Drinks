@@ -9,7 +9,6 @@ module.exports = {
     list: async (req, res) => {
         
         try {
-            if (req.session.userCategory === 1) {
                 let users = await User.findAll({
                     include: {
                         all: true
@@ -22,12 +21,6 @@ module.exports = {
                 }
                 res.render("./users/userList", { users });
 
-            } else if (req.session.userCategory === 2) {
-                res.render('./users/forbidden');
-            }
-            else {
-                res.redirect('/users/login');
-            }
         } catch (error) {
             console.log(error);
         }
@@ -101,9 +94,7 @@ module.exports = {
         }
     },
     edit: async (req, res) => {
-        try {
-            if (req.session.userCategory === 1) {
-                
+        try {          
                 let editUser = await User.findByPk(req.params.id, {
                     include: {
                         all: true
@@ -115,12 +106,6 @@ module.exports = {
                     category
                 });
                 
-            } else if (req.session.userCategory === 2) {
-                res.render('./users/forbidden');
-            }
-            else {
-                res.redirect('/users/login');
-            }
         } catch (error) {
             console.log(error);
         }
@@ -138,19 +123,10 @@ module.exports = {
     /*borrado de un usuario con redireccion */
     delete: async (req, res) => {
         try {
-            if (req.session.userCategory === 1) {
-                
                 let idUser = req.params.id;
                 let deleteUsers = await User.findByPk(idUser);
                 await deleteUsers.destroy();
                 res.render("./users/destroyRedirect");
-                
-            } else if (req.session.userCategory === 2) {
-                res.render('./users/forbidden');
-            }
-            else {
-                res.redirect('/users/login');
-            }
         } catch (error) {
             console.log(error);
         }

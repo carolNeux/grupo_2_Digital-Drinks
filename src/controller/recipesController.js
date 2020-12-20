@@ -27,16 +27,7 @@ module.exports = {
         
     new: async (req, res) => {
         try {
-            if (req.session.userCategory === 1) {
-                
                 res.render('./recipes/recipesCreateForm')   
-
-            } else if (req.session.userCategory === 2) {
-                res.render('./users/forbidden');
-            }
-            else {
-                res.redirect('/users/login');
-            }
         } catch (error) {
             console.log(error);
         }
@@ -62,18 +53,9 @@ module.exports = {
     /**muestra el form para editar */
     edit: async (req,res) => {
         try {
-            if (req.session.userCategory === 1) {
-                
                 const recipeId = req.params.id;
                 const recipeDetail =await Recipe.findByPk(recipeId);
                 res.render('./recipes/recipesEditForm', {'recipeDetail': recipeDetail}) // Buscar y enviar el producto a editar a la vista    
-
-            } else if (req.session.userCategory === 2) {
-                res.render('./users/forbidden');
-            }
-            else {
-                res.redirect('/users/login');
-            }
                 } catch(error) {
                 console.log(error)
                 } 
@@ -105,20 +87,12 @@ module.exports = {
     },
      
     delete: async(req, res) => {
-        try {
-            if (req.session.userCategory === 1) {
-                
+        try {              
                 const recipeId = req.params.id; 
                 const recipeToDelete = await Recipe.findByPk(recipeId);
                 await recipeToDelete.destroy();    
                 res.redirect('/recipes');      
 
-            } else if (req.session.userCategory === 2) {
-                res.render('./users/forbidden');
-            }
-            else {
-                res.redirect('/users/login');
-            }
        } catch (error) {
         console.log(error)  
        }

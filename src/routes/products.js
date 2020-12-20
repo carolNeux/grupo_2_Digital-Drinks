@@ -3,7 +3,8 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 
-const productsController = require('../controller/productsController')
+const productsController = require('../controller/productsController');
+const allowed = require('../middlewares/routes/allowed');
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -31,15 +32,15 @@ router.get('/productDetail/:id', productsController.detail);
 router.get('/productsCart', productsController.cart);
 
 //creacion de producto//
-router.get('/new', productsController.new);
-router.post('/create', upload.single("image"), productsController.create);
+router.get('/new', allowed, productsController.new);
+router.post('/create', upload.single("image"), allowed, productsController.create);
 
 //edicion de un producto//
-router.get('/edit/:id', productsController.edit);
-router.put('/edit/:id', upload.single("image"), productsController.update);
+router.get('/edit/:id', allowed, productsController.edit);
+router.put('/edit/:id', upload.single("image"), allowed, productsController.update);
 
 //eliminar un producto
-router.delete('/delete/:id', productsController.delete);
+router.delete('/delete/:id', allowed, productsController.delete);
 
 // busqueda de productos
 router.get('/search', productsController.search);

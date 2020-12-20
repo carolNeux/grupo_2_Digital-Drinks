@@ -1,16 +1,27 @@
 const form = document.querySelector('form');
-const firstName = document.querySelectorAll('.first_name');
-const lastName = document.querySelectorAll('.last_name');
-const userName = document.querySelectorAll('.user_name');
+const firstName = document.querySelector('.first_name');
+const lastName = document.querySelector('.last_name');
+const username = document.querySelector('.username');
+const email = document.querySelector('.email');
+const birthday = document.querySelector('.date');
+const password = document.querySelector('.password');
 
-const email = document.querySelector('email');
+// console.log(form);
 console.log(firstName);
+console.log(lastName);
+console.log(username);
+console.log(email);
+console.log(birthday);
+console.log(password);
 
-let errores = {}
+let errores = {};
+
 function isEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }    
+
+
 form.addEventListener('submit',function (event) {
     checkInputs()
     console.log(Object.keys(errores).length);
@@ -34,13 +45,13 @@ function checkInputs() {
     }
 
     if (userNameValue === '') {
-        setError(userName,'Completá el campo con tu nombre de usuraio')
+        setError(username,'Completá el campo con tu nombre de usuraio')
      } else {const userNameValue = userName.value.trim();
         setSucces(username)
     }
     // falta validar si es mayor a 18
-    if (birdthday === '') {
-       setError(birdthday,'Completá tu fehca de nacimiento')
+    if (birthday === '') {
+       setError(birthday,'Completá tu fecha de nacimiento')
      } 
      else {
       const birdthday = document.querySelector('.date');

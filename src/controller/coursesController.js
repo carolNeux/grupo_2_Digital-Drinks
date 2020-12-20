@@ -34,16 +34,9 @@ module.exports = {
     },
     /*creacion de un curso*/
     new: (req, res) => {
-        if (req.session.userCategory === 1) {
                 
             res.render('./courses/coursesCreateForm')  //decidir si se crea un formulario ?????
 
-        } else if (req.session.userCategory === 2) {
-            res.render('./users/forbidden');
-        }
-        else {
-            res.redirect('/users/login');
-        }
     },
     create: async (req,res) => {
         try {
@@ -58,20 +51,11 @@ module.exports = {
     },
     /*se busca y se muestra un curso para editar dentro de la base de datos */
     edit: async (req,res) => {
-        try {
-            if (req.session.userCategory === 1) {
-                
+        try {              
                 let courses = await Course.findAll();
-                let coursesDetail = await courses.find(course=> 
-                    course.id == req.params.id) 
+                let coursesDetail = await courses.find(course=>  course.id == req.params.id) 
                 res.render('./courses/coursesEditForm', {'coursesDetail': coursesDetail, toThousand});
 
-            } else if (req.session.userCategory === 2) {
-                res.render('./users/forbidden');
-            }
-            else {
-                res.redirect('/users/login');
-            }
     } catch (error){
         console.log(error);
     } 
@@ -120,19 +104,11 @@ module.exports = {
     /*borrado de un curso NO BORRA LA IMAGEN  */
     destroy: async (req,res) => {
         try {
-            if (req.session.userCategory === 1) {
                 
                 let id = req.params.id;
                 let course = await Course.findByPk(id);
                 await course.destroy();
                 res.redirect('/courses');          
-
-            } else if (req.session.userCategory === 2) {
-                res.render('./users/forbidden');
-            }
-            else {
-                res.redirect('/users/login');
-            }
         } catch (error) {
             console.log(error);
             

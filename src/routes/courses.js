@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 
-const coursesController = require('../controller/coursesController')
+const coursesController = require('../controller/coursesController');
+const allowed = require('../middlewares/routes/allowed');
 
 const path = require('path');
 var storage = multer.diskStorage({
@@ -32,17 +33,17 @@ router.get('/coursesContact', coursesController.consult);
 router.post('/coursesContact', coursesController.redireccion)
 
 //crear curso//
-router.get('/new', coursesController.new);
-router.post('/create', upload.single("image"), coursesController.create);
+router.get('/new', allowed, coursesController.new);
+router.post('/create', allowed, upload.single("image"), coursesController.create);
 
 //editar un curso//
-router.get('/edit/:id', coursesController.edit);
-router.put('/edit/:id', upload.single("image"), coursesController.update);
+router.get('/edit/:id', allowed, coursesController.edit);
+router.put('/edit/:id', upload.single("image"), allowed, coursesController.update);
 
 /*buscar un curso */
 router.get('/search', coursesController.search);
 /*borrar un curso */
-router.delete('/delete/:id', coursesController.destroy)
+router.delete('/delete/:id', allowed, coursesController.destroy)
 
 
 module.exports = router; 
