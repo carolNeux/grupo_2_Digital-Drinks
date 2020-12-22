@@ -9,28 +9,31 @@
     <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
 </head>
 <body>
-    <div class="reg-box"> 
+    <div class="reg-box">
         <a href="/courses/"> <img src="/images/header/logoAzul.svg" alt=""> </a>
         <h2> Crea tu Curso</h2>
         <form action="/courses/create" method="POST" enctype="multipart/form-data">
+            <% if (typeof errors != 'undefined') { %>
+                <% errors.forEach(error => { %>
+                 <ul class="errors">
+                     <li> <%= error.msg %> </li>
+                 </ul>
+                <% }) %>
+               <% } %>
         <div class="reg-fill">  
-             <!-- Desde aqui todo lo que queremos crear en un curso -->
-
-                <label for="name">Nombre del Curso</label>
-                <input type="text" name="name" placeholder="Sommelier">
-            
-                <label for="price" >Precio :</label>
-                <input type="text" id="price" name="price" placeholder="$ 18540" >
-
-                <label for="discount">Descuento:</label>
-                <input type="text" id="discount" name="discount" placeholder="15" >
-
-                 <label for="description" class="">Descripción:</label>
-                 <textarea name="description" id="description" class="form-input"></textarea>
-                 <p>Agregar imagen</p>
-                 <input type="file" name="image">
-                 <br>
-                 <button type="submit">Guardar curso</button>
+            <!-- Desde aqui todo lo que queremos crear en un curso -->
+            <label for="name">Nombre del Curso</label>
+            <input type="text" name="name" placeholder="Sommelier">
+            <label for="price" >Precio :</label>
+            <input type="text" id="price" name="price" placeholder="$ 18540" >
+            <label for="discount">Descuento:</label>
+            <input type="text" id="discount" name="discount" placeholder="15" >
+            <label for="description" class="">Descripción:</label>
+            <textarea name="description" id="description" class="form-input"></textarea>
+            <p>Agregar imagen</p>
+            <input type="file" name="image">
+            <br>
+            <button type="submit">Guardar curso</button>
         </div>
     </form>
     </div> 

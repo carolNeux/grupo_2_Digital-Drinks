@@ -103,3 +103,8 @@ small {
 .box.succes input {
   border: 0.5px solid green;
 }
+.errors {
+  text-align: left;
+  color: red;
+  font-weight: bold;
+}

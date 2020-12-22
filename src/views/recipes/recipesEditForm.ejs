@@ -17,32 +17,30 @@
         <h2> Edita tu Receta</h2>
         <form action="/recipes/edit/<%= recipeDetail.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
         <div class="reg-fill">  
-     
-              <div class= " ">
-                <form action="" method="POST">   </form>
-                 <label for="name">Nombre</label>
-                 <input type="text" placeholder="Nombre del Cocktail" value= "<%= recipeDetail.name %>" name="name" >
-            
-                 <label for="ingredients" >Ingredientes:</label>
-                 <textarea name="ingredients" id="ingredients" class="form-input" ><%= recipeDetail.ingredients %></textarea>
-
-                 <label for="method">Metodo de preparacion:</label>
+            <div class= " ">
+                <form action="" method="POST"></form>
+                <% if (typeof errors != 'undefined') { %>
+                    <% errors.forEach(error => { %>
+                     <ul class="errors">
+                         <li> <%= error.msg %> </li>
+                     </ul>
+                    <% }) %>
+                   <% } %>
+                <label for="name">Nombre</label>
+                <input type="text" placeholder="Nombre del Cocktail" value= "<%= recipeDetail.name %>" name="name" >
+                <label for="ingredients" >Ingredientes:</label>
+                <textarea name="ingredients" id="ingredients" class="form-input" ><%= recipeDetail.ingredients %></textarea>
+                <label for="method">Metodo de preparacion:</label>
                 <textarea name="method" id="method" class="form-input" ><%= recipeDetail.method %></textarea>
-
-                 <label for="garnish" class="">Decoración:</label>
-                 <textarea name="garnish" id="description" class="form-input"><%= recipeDetail.garnish %></textarea>
-
-                 
-                 <label for="image">Imagen:</label>
-                 <div class="foto"> <img class="img" src ="/images/recipes/<%=recipeDetail.image%>" alt="<%= recipeDetail.name %>"> </div> 
-                 <label for="file" name= "image"> Subir imagen</label>
-                 <input type="file" name="image">
-                 <br>
-
-                 <button type="submit">Guardar Receta</button>
-               
-              </div>
-
+                <label for="garnish" class="">Decoración:</label>
+                <textarea name="garnish" id="description" class="form-input"><%= recipeDetail.garnish %></textarea> 
+                <label for="image">Imagen:</label>
+                <div class="foto"> <img class="img" src ="/images/recipes/<%=recipeDetail.image%>" alt="<%= recipeDetail.name %>"> </div> 
+                <label for="file" name= "image"> Subir imagen</label>
+                <input type="file" name="image">
+                <br>
+                <button type="submit">Guardar Receta</button>  
+            </div>
         </div>
     </form>
     </div>

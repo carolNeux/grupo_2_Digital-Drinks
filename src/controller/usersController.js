@@ -3,24 +3,17 @@ const moment = require("moment");
 const path = require("path");
 const bcrypt = require("bcryptjs");
 const { User, userCategory } = require("../database/models");
+const {validationResult} = require('express-validator')
 
 module.exports = {
     /*listado de usuarios para admins */
     list: async (req, res) => {
-        
         try {
-                let users = await User.findAll({
-                    include: {
-                        all: true
-                    }
-                });
+            let users = await User.findAll({include: {all: true}});
                 for (let i = 0; i < users.length; i++) {
-                    users[i].dataValues.birthday = moment(
-                        users[i].dataValues.birthday
-                    ).format("DD-MM-YYYY");
+                    users[i].dataValues.birthday = moment(users[i].dataValues.birthday).format("DD-MM-YYYY");
                 }
-                res.render("./users/userList", { users });
-
+            res.render("./users/userList", {users});
         } catch (error) {
             console.log(error);
         }
@@ -29,16 +22,15 @@ module.exports = {
     showRegister: (req, res) => {
         res.render("./users/register");
     },
-    usersRegister: async (req, res) => {
+    usersRegister: async (req, res, next) => {
+        let results = validationResult(req);
         try {
             const user = await User.create({
                 ...req.body,
                 password: bcrypt.hashSync(req.body.password, 10),
                 user_category_id: 2,
             });
-            res.render("./users/registerRedirect", {
-                user
-            });
+            res.render("./users/registerRedirect", {user});
         } catch (error) {
             console.log(error);
             res.render("./users/errorRegister");
@@ -47,7 +39,8 @@ module.exports = {
     showLogin: (req, res) => {
         res.render("./users/login");
     },
-    userLogin: async (req, res) => {
+    userLogin: async (req, res, next) => {
+        let results = validationResult(req);
         try {
             let { username, password } = req.body;
             //buscamos en la base de datos el username
@@ -61,15 +54,13 @@ module.exports = {
                 const validPassword = await bcrypt.compare(password, user.password);
                 if (validPassword) {
                     //si el password es correcto almacenamos el nombre y la categoria del usuario es session
-                    req.session.username = user.username
-                    
-                    req.session.userCategory = user.user_category_id
+                    req.session.username = user.username;
+                    req.session.userCategory = user.user_category_id;
                     console.log(req.body);
-                    
                     if (req.body.rememberMe) {
                         //si el usuario marca el checkbox creamos una cookie
-                        res.cookie('rememberMe', user.username, {maxAge : 1000 * 60 * 60})
-                        res.cookie('rememberCategory', user.user_category_id, {maxAge : 1000 * 60 * 60})
+                        res.cookie('rememberMe', user.username, {maxAge : 1000 * 60 * 60});
+                        res.cookie('rememberCategory', user.user_category_id, {maxAge : 1000 * 60 * 60});
                     }
                     res.redirect('/');
                     res.render("./users/loginRedirect", {user});
@@ -95,14 +86,15 @@ module.exports = {
     edit: async (req, res) => {
         try {
             let editUser = await User.findByPk(req.params.id, {include: { all:true}});
-            let category = await userCategory.findAll()
-            res.render ('./users/userEdit', {editUser, category})         
+            let category = await userCategory.findAll();
+            res.render ('./users/userEdit', {editUser, category}) ;        
         } catch (error) {
             console.log(error);
         }
     },
-    editStorage: async (req, res) => {
+    editStorage: async (req, res, next) => {
         try {
+            let results = validationResult(req);
             let idUser = req.params.id;
             editUsers = await User.findByPk(idUser);
             await editUsers.update(req.body);
