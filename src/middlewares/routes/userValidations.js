@@ -242,7 +242,6 @@ module.exports = {
             .withMessage('Debes ingresar tu contraseña.')
             .bail()
             .custom(async function (value) {
-                // bcrypt.compareSync(value, userPassword.dataValues.password)
                 let userPassword = await User.findAll();
                 let hasheo;
                 for (let i = 0; i<userPassword.length; i++) {

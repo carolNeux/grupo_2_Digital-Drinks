@@ -86,3 +86,34 @@ STOP DOING:
 * Procrastinación
 STOP DOING:
 * Dejarnos estar
+//***************************************************////
+      SPRINT 5 y 7
+
+
+      RETROSPECTIVA ESTRELLA
+
+   START DOING:
+
+* Ponernos fecha limite individuales y grupales.
+* Para visualizar mejor los avances y mostrar archivos seria bueno acostumbrarnos al Trello.
+
+   MORE OF:
+
+* Nos comunicamos bien por whatssapp.
+* Tocar mas el Trello.
+
+   KEEP DOING:
+
+* Trabajar online los 4 juntos, si no se puede como se sugirio en la reunion hacerlo de a pares.
+* WhatssApp
+* Meetings
+* Trabajo en equipo apoyandonos
+* Vida en equipo apoyandonos tambien
+
+   LESS OF:
+
+* Nada.
+
+ STOP DOING:
+
+* Nada.
