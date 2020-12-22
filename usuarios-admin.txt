@@ -1,0 +1,13 @@
+Usuarios Administradores:
+
+Username: ximena
+password: ximena123
+
+Username: carol
+password: carol123
+
+Username: carlos
+password: carlos123
+
+Username: robert
+password: robert123
