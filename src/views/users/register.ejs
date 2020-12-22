@@ -10,45 +10,51 @@
     <meta name="description" content="cocktails, drinks, bar tools, herramientas de barra, cocteleras, cocktails recepies, recetas de cocteles, cursos de cocteleria">
 </head>
 <body>
-    <div class="container">
-        <div class="reg-box">
-            <a href="/"><img class="logo"  src="/images/header/logoAzul.svg" alt="Logo de DD"></a>
-            <h2> Registrate aquí</h2>
-            <form action="/users/register" method="POST">
-                <div class="reg-fill">  
-                    <div class="box">
-                       <label for="first_name">Nombre</label>
-                       <input type="text" placeholder="Alfonsina" name="first_name" id="first_name" />
-                       <small></small>
-                    </div>
-                    <div class="box">
-                      <label for="last_name">Apellido</label>
-                      <input type="text" placeholder="Storni" name="last_name" id="last_name" />
-                      <small></small>
-                   </div>
-                   <div class="box">
-                      <label for="username">Nombre de Usuario</label>
-                      <input type="text" placeholder="Alf" name="username" id="username" />
-                      <small></small>
-                   </div>
-                   <div class="box">
-                      <label for="birthday">Fecha de Nacimiento</label>
-                      <input type="date" name="birthday" id="dateInput" />
-                      <small></small>
-                   </div>
-                    <div class="box">
-                       <label for="email">Email</label>
-                       <input type="text" placeholder="alfo@gmail.com" name="email" id="email" />
-                       <small></small>
-                    </div>
-                    <div class="box">
-                       <label for="password">Password</label>
-                       <input type="password" placeholder="Password" name="password" id="password"/>
-                       <small></small>
-                    </div>
-                    
-                 </div>
-                  <button type="submit">Submit</button>
+   <div class="container">
+      <div class="reg-box">
+         <a href="/"><img class="logo"  src="/images/header/logoAzul.svg" alt="Logo de DD"></a>
+         <h2> Registrate aquí</h2>
+         <form action="/users/register" method="POST">
+            <% if (typeof errors != 'undefined') { %>
+               <% errors.forEach(error => { %>
+                  <ul class="errors">
+                     <li> <%= error.msg %> </li>
+                  </ul>
+               <% }) %>
+            <% } %>
+            <div class="reg-fill">  
+               <div class="box">
+                  <label for="first_name">Nombre</label>
+                  <input type="text" placeholder="Alfonsina" name="first_name" id="first_name" />
+                  <small></small>
+               </div>
+               <div class="box">
+                  <label for="last_name">Apellido</label>
+                  <input type="text" placeholder="Storni" name="last_name" id="last_name" />
+                  <small></small>
+               </div>
+               <div class="box">
+                  <label for="username">Nombre de Usuario</label>
+                  <input type="text" placeholder="Alf" name="username" id="username" />
+                  <small></small>
+               </div>
+               <div class="box">
+                  <label for="birthday">Fecha de Nacimiento</label>
+                  <input type="date" name="birthday" id="dateInput" />
+                  <small></small>
+               </div>
+               <div class="box">
+                  <label for="email">Email</label>
+                  <input type="text" placeholder="alfo@gmail.com" name="email" id="email" />
+                  <small></small>
+               </div>
+               <div class="box">
+                  <label for="password">Password</label>
+                  <input type="password" placeholder="Password" name="password" id="password"/>
+                  <small></small>
+               </div>         
+            </div>
+            <button type="submit">Submit</button>
             <!-- <a href="/" class="reg-button">Enviar</a> -->
             </form>
         </div>

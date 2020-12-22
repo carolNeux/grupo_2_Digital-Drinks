@@ -158,7 +158,11 @@ module.exports = {
                     }
                 });
                   if (userUsername !== null) {
-                    return Promise.reject();
+                      if (userUsername.dataValues.username === value) {
+                        return Promise.resolve();
+                      } else {
+                        return Promise.reject();
+                      }
                   }
             })
             .withMessage('Este username ya existe.'),
@@ -208,7 +212,11 @@ module.exports = {
                     }
                 })
                 if (userEmail !== null) {
-                    return Promise.reject();
+                    if (userEmail.dataValues.email === value) {
+                        return Promise.resolve();
+                    } else {
+                        return Promise.reject();
+                    } 
                   }
             })
             .withMessage("El email ya se encuentra registrado.")

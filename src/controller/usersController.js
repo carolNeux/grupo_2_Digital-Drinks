@@ -24,16 +24,19 @@ module.exports = {
     },
     usersRegister: async (req, res, next) => {
         let results = validationResult(req);
-        try {
-            const user = await User.create({
-                ...req.body,
-                password: bcrypt.hashSync(req.body.password, 10),
-                user_category_id: 2,
-            });
-            res.render("./users/registerRedirect", {user});
-        } catch (error) {
-            console.log(error);
-            res.render("./users/errorRegister");
+        if (results.isEmpty()) {
+            try {
+                const user = await User.create({
+                    ...req.body,
+                    password: bcrypt.hashSync(req.body.password, 10),
+                    user_category_id: 2,
+                });
+                res.render("./users/registerRedirect", {user});
+            } catch (error) {
+                console.log(error);
+            }
+        } else {
+            res.render('./users/register', {errors: results.errors})
         }
     },
     showLogin: (req, res) => {
@@ -41,35 +44,31 @@ module.exports = {
     },
     userLogin: async (req, res, next) => {
         let results = validationResult(req);
-        try {
-            let { username, password } = req.body;
-            //buscamos en la base de datos el username
-            let user = await User.findOne({
-                where: {
-                    username: username,
-                },
-            });
-            if (user) {
-                //si el usuario existe comparamos el password con la db
-                const validPassword = await bcrypt.compare(password, user.password);
-                if (validPassword) {
+        if (results.isEmpty()) {
+            try {
+                let {username} = req.body;
+                //buscamos en la base de datos el username
+                let user = await User.findOne({
+                    where: {
+                        username: username,
+                    },
+                });
+                if (user) {
                     //si el password es correcto almacenamos el nombre y la categoria del usuario es session
                     req.session.username = user.username;
                     req.session.userCategory = user.user_category_id;
-                    console.log(req.body);
                     if (req.body.rememberMe) {
                         //si el usuario marca el checkbox creamos una cookie
                         res.cookie('rememberMe', user.username, {maxAge : 1000 * 60 * 60});
                         res.cookie('rememberCategory', user.user_category_id, {maxAge : 1000 * 60 * 60});
                     }
-                    res.redirect('/');
                     res.render("./users/loginRedirect", {user});
-                } else {
-                    res.render("./users/errorLogin");
                 }
+            } catch (error) {
+                console.log(error);
             }
-        } catch (error) {
-            console.log(error);
+        } else {
+            res.render('./users/login', {errors: results.errors})
         }
     },
     logout: async (req, res) => {
@@ -94,13 +93,24 @@ module.exports = {
     },
     editStorage: async (req, res, next) => {
         let results = validationResult(req);
+        let editUser
+        let category
         try {
             let idUser = req.params.id;
-            editUsers = await User.findByPk(idUser);
-            await editUsers.update(req.body);
-            res.render("./users/editRedirect");
+            editUser = await User.findByPk(idUser);
+            category = await userCategory.findAll();
         } catch (error) {
             console.log(error);
+        }
+        if (results.isEmpty()) {
+            try {
+                await editUser.update(req.body);
+                res.render("./users/editRedirect");
+            } catch (error) {
+                console.log(error);
+            }
+        } else {
+            res.render ('./users/userEdit', {editUser, category, errors: results.errors}) ; 
         }
     },
     /*borrado de un usuario con redireccion */

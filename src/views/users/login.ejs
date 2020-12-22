@@ -12,11 +12,18 @@
 <body>
     <div class="centry">
       <div class="login-box">
-        <a href="/"
-          ><img class="logo" src="/images/header/logoAzul.svg" alt="Logo de DD"
-        /></a>
+        <a href="/">
+          <img class="logo" src="/images/header/logoAzul.svg" alt="Logo de DD"/>
+        </a>
         <h2>Login Here</h2>
         <form action="/users/login" method="POST">
+          <% if (typeof errors != 'undefined') { %>
+            <% errors.forEach(error => { %>
+             <ul class="errors">
+                 <li> <%= error.msg %> </li>
+             </ul>
+            <% }) %>
+           <% } %>
           <div class="box">  
             <label for="username"> Usuario</label>
             <input type="text" name="username" placeholder="Nombre de Usuario" id="username"/>
