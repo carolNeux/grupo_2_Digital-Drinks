@@ -70,18 +70,16 @@ module.exports = {
         }
         if (results.isEmpty()) {
             try {
-                const recipeId = req.params.id;
-                const recipeToEdit = await Recipe.findByPk(recipeId);
-                    if (req.body.image == undefined) {
+                if (req.body.image == undefined) {
                     //si viene indefinido el campo de imagen, almacena la misma imagen que ya tenia
-                    await recipeToEdit.update({
+                    await recipeDetail.update({
                         ...req.body, 
                         image:Recipe.image  
-                    });
+                });
                     res.redirect('/recipes');
                 } else {
                     //si viene una nueva imagen en la edicion, se almacena la nueva imagen
-                    await recipeToEdit.update({
+                    await recipeDetail.update({
                         ...req.body, 
                         image:req.file.filename  
                     });

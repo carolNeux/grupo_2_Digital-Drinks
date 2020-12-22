@@ -46,8 +46,14 @@ module.exports = {
      /* Recibe el formulario de creacion actualiza la base de datos y lista los productos actualizados */
     create: async (req, res, next) => {
         let results = validationResult(req);
-        if (results.isEmpty())
-        {
+        console.log(req.body);
+        let categories
+        try {
+            categories = await Category.findAll();
+        } catch (error) {
+            console.log(error);
+        }
+        if (results.isEmpty()) {
             try {
                 await Product.create({
                     ...req.body,
@@ -59,16 +65,14 @@ module.exports = {
                 console.log(error);
             }
         } else {
-            res.render('./products/productCreateForm', {errors: results.errors});
+            res.render('./products/productCreateForm', {categories, errors: results.errors});
         }
     },  
      /* Muestra el formulario de edicion con los valores que ya trae el producto */
     edit: async (req,res) => {
         try {           
             const { id } = req.params;
-            const productDetail = await Product.findByPk(id, {
-                include: ['Category']
-            });
+            const productDetail = await Product.findByPk(id, {include: ['Category']});
             const categories = await Category.findAll();
             res.render('./products/productEditForm', { productDetail, toThousand, categories });
 
@@ -82,37 +86,33 @@ module.exports = {
         let productDetail
         try {
             const {id} = req.params;
-            productDetail = await Product.findByPk(id, {include: ['Category']});
-            
+            productDetail = await Product.findByPk(id, {include: {all: true}});  
+            categories = await Category.findAll();     
         } catch (error) {
             console.log(error);
         }
         if (results.isEmpty()) {
             try {
-                const {id} = req.params;
-                const product = await Product.findByPk(id, {include: ['Category']});
                 if (req.body.image == undefined) {
                     //si viene indefinido el campo de imagen, almacena la misma imagen que ya tenia
-                    await product.update({
+                    await productDetail.update({
                         ...req.body,
-                        image: product.image
+                        image: productDetail.image
                     })
                     res.redirect('/products')                    
                 } else {
                     //si viene una nueva imagen en la edicion, se almacena la nueva imagen
-                    await product.update({
+                    await productDetail.update({
                         ...req.body,
                         image: req.file.filename
                     })
                     res.redirect('/products')
-                }
-                
+                } 
             } catch (error) {
-                res.render(error);
                 console.log(error);
             }
         } else {
-            res.render('./products/productEditForm', {errors: results.errors});
+            res.render('./products/productEditForm', {productDetail, errors: results.errors});
         }
     },
     /* Elimina un producto actualiza la base de datos y redirecciona a la lista de productos actualizada */

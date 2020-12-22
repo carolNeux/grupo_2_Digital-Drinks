@@ -72,18 +72,16 @@ module.exports = {
         }
         if (results.isEmpty()) {
             try {
-                let id = req.params.id;
-                let courses = await Course.findByPk(id);
                 if (req.body.image == undefined) {
                     //si viene indefinido el campo de imagen, almacena la misma imagen que ya tenia
-                    await courses.update({
+                    await coursesDetail.update({
                         ...req.body,
                         image : Course.image
                     })
                     res.redirect('/courses');
                 } else {
                     //si viene una nueva imagen en la edicion, se almacena la nueva imagen
-                    await courses.update({
+                    await coursesDetail.update({
                         ...req.body,
                         image : req.file.filename
                     })

@@ -5,25 +5,25 @@ module.exports = {
     courseCreate: [
         body('name')
         .notEmpty()
-        .withMessage('Agregar nombre de producto.')
+        .withMessage('Agregar nombre del curso.')
         .bail()
         .isLength({min:3, max:100})
         .withMessage('El nombre debe tener mas de dos letras.'),
     body('price')
         .notEmpty()
-        .withMessage('Agregar precio.')
+        .withMessage('Agregar precio del curso.')
         .bail()
         .isNumeric()
         .withMessage('Solo números.'),
     body('discount')
         .notEmpty()
-        .withMessage('Agregar descuento (0 a 100).')
+        .withMessage('Agregar descuento del curso (0-100).')
         .bail()
         .isNumeric()
         .withMessage('Solo números.'),
     body('description')
         .notEmpty()
-        .withMessage('Agregar una descripción.')
+        .withMessage('Agregar una descripción del curso.')
         .bail()
         .isLength({min:3})
         .withMessage('Debe tener mas de dos letras.')
@@ -50,19 +50,19 @@ module.exports = {
     couseEdit: [
         body('name')
             .notEmpty()
-            .withMessage('Agregar nombre del producto.')
+            .withMessage('Agregar nombre del curso.')
             .bail()
             .isLength({min:3})
             .withMessage('El nombre debe tener mas de dos letras.'),
         body('price')
             .notEmpty()
-            .withMessage('Agregar precio del producto.'),
+            .withMessage('Agregar precio del curso.'),
         body('discount')
             .notEmpty()
-            .withMessage('Agregar descuento.'),
+            .withMessage('Agregar descuento del curso (0-100).'),
         body('description')
             .notEmpty()
-            .withMessage('Agregar descripción del producto.')
+            .withMessage('Agregar descripción del curso.')
             .bail()
             .isLength({min:3})
             .withMessage('Debe tener mas de dos letras.'),
@@ -77,7 +77,7 @@ module.exports = {
                 }
                 return true;
             })
-            .withMessage('No puede estar vacío.')
+            .withMessage('Agregar una imagen formato jpg, jpeg, png, svg.')
             .bail()
             .custom(function (value, {req}) {
                 if (req.file == undefined) {

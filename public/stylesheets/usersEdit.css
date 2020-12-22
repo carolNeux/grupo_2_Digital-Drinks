@@ -54,5 +54,10 @@
         background-color: #ff6600;
         cursor: pointer;
     }
+    .errors {
+        text-align: left;
+        color: red;
+        font-weight: bold;
+    }
     
     

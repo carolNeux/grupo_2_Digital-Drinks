@@ -93,8 +93,8 @@ module.exports = {
         }
     },
     editStorage: async (req, res, next) => {
+        let results = validationResult(req);
         try {
-            let results = validationResult(req);
             let idUser = req.params.id;
             editUsers = await User.findByPk(idUser);
             await editUsers.update(req.body);

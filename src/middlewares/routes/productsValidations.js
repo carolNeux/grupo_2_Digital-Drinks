@@ -6,34 +6,28 @@ module.exports = {
     productCreate: [
         body('name')
             .notEmpty()
-            .withMessage('No puede estar vacío.')
+            .withMessage('Agregar nombre del producto.')
             .bail()
             .isLength({min:3, max:100})
             .withMessage('El nombre debe tener mas de dos letras.'),
         body('price')
             .notEmpty()
-            .withMessage('No puede estar vacío.')
-            .bail()
-            .isNumeric()
-            .withMessage('Solo números.'),
+            .withMessage('Agregar precio del producto.')
+            .bail(),
         body('discount')
             .notEmpty()
-            .withMessage('No puede estar vacío.')
-            .bail()
-            .isNumeric()
-            .withMessage('Solo números.'),
+            .withMessage('Agregar descuento del producto (0-100).')
+            .bail(),
         body('description')
             .notEmpty()
-            .withMessage('No puede estar vacío.')
+            .withMessage('Agregar descripción del producto.')
             .bail()
             .isLength({min:3})
             .withMessage('Debe tener mas de dos letras.')
-            .bail()
-            .isAlphanumeric()
-            .withMessage('Debe contener solo letras y números.'),
+            .bail(),
         body('category_id')
             .notEmpty()
-            .withMessage('No puede estar vacío.'),
+            .withMessage('Agregar categoría del producto.'),
         body('image')
             .custom(function (value, {req}) {
                 if (req.file) {
@@ -41,7 +35,7 @@ module.exports = {
                 }
                 return false;
             })
-            .withMessage('No puede estar vacío.')
+            .withMessage('Agregar una imagen formato jpg, jpeg, png, svg..')
             .bail()
             .custom(function (value, {req}) {
                 const extension = [".jpg", ".jpeg", ".png", ".svg"];
@@ -54,25 +48,25 @@ module.exports = {
     productEdit: [
         body('name')
             .notEmpty()
-            .withMessage('No puede estar vacío.')
+            .withMessage('Agregar nombre del producto.')
             .bail()
             .isLength({min:3})
             .withMessage('El nombre debe tener mas de dos letras.'),
         body('price')
             .notEmpty()
-            .withMessage('No puede estar vacío.'),
+            .withMessage('Agregar precio del producto.'),
         body('discount')
             .notEmpty()
-            .withMessage('No puede estar vacío.'),
+            .withMessage('Agregar descuento del producto (0-100).'),
         body('description')
             .notEmpty()
-            .withMessage('No puede estar vacío.')
+            .withMessage('Agregar descripción del producto.')
             .bail()
             .isLength({min:3})
             .withMessage('Debe tener mas de dos letras.'),
         body('category_id')
             .notEmpty()
-            .withMessage('No puede estar vacío.'),
+            .withMessage('Agregar categoría del producto.'),
         body('image')
             .custom(function (value, {req}) {
                 if (value == "undefined") {
@@ -84,7 +78,7 @@ module.exports = {
                 }
                 return true;
             })
-            .withMessage('No puede estar vacío.')
+            .withMessage('Agregar una imagen formato jpg, jpeg, png, svg..')
             .bail()
             .custom(function (value, {req}) {
                 if (req.file == undefined) {
