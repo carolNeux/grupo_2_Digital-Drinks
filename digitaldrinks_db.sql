@@ -86,7 +86,7 @@ CONSTRAINT `users_user_category_id_foreing` FOREIGN KEY (`user_category_id`) REF
 --
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'ximena','Ximena','Camacho','ximena@digitaldrinks.com','$2a$10$wlEAI6qDV65tlF00PXtZ.umw1ifrxcb.j1dwMFnGbrkNM77NezQg2', '1981-10-07',1, NULL, NULL, NULL),
+INSERT INTO `users` VALUES (1,'ximena','Ximena','Camacho','ximena@digitaldrinks.com','$2a$10$VAXECey1cZD6Dq0LGGmsuuhOIlQgYcfF/Mkafq/0Wv9XOK2dDGu3a', '1981-10-07',1, NULL, NULL, NULL),
 (2, 'carol', 'Carol', 'Neumeyer', 'carol@digitaldrinks.com', '$2a$10$wlEAI6qDV65tlF00PXtZ.umw1ifrxcb.j1dwMFnGbrkNM77NezQg2', '1964-09-11', 1, NULL, NULL, NULL),
 (3,'carlos', 'Carlos', 'Loffreda', 'carlos@digitaldrinks.com', '$2a$10$9y4TnGsNe7UKz4ys6QDF5u4JO49xBArWDoAcVVT74O67pHQ8pXXhm', '1987-12-18', 1 ,NULL, NULL, NULL),
 (4,'robert', 'Robert', 'Rondon', 'robert@digitaldrinks.com', '$2a$10$UIyPECj2tJm77CiX1EMDz.Or.Feqr7SGtkLn6fUw4xbKolWtc8KuW', '1989-10-12', 1, NULL, NULL, NULL);

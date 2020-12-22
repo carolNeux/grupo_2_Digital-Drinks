@@ -89,23 +89,14 @@ module.exports = {
             res.redirect('/');
             
         } catch (error) {
-            console.log(error);
-            
+            console.log(error);  
         }
     },
     edit: async (req, res) => {
-        try {          
-                let editUser = await User.findByPk(req.params.id, {
-                    include: {
-                        all: true
-                    },
-                });
-                let category = await userCategory.findAll();
-                res.render("./users/userEdit", {
-                    editUser,
-                    category
-                });
-                
+        try {
+            let editUser = await User.findByPk(req.params.id, {include: { all:true}});
+            let category = await userCategory.findAll()
+            res.render ('./users/userEdit', {editUser, category})         
         } catch (error) {
             console.log(error);
         }
