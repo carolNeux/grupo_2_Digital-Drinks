@@ -47,7 +47,7 @@ module.exports = {
         })
         .withMessage('Formatos aceptados jpg, jpeg, png, svg ') 
     ],
-    couseEdit: [
+    courseEdit: [
         body('name')
             .notEmpty()
             .withMessage('Agregar nombre del curso.')

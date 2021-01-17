@@ -5,22 +5,22 @@ const {validationResult} = require('express-validator')
 module.exports = {
 
     index : async (req,res) => {
-       try{
+       try {
             const recipes = await Recipe.findAll();
-                res.render('./recipes/recipes', {recipes})
+            res.render('./recipes/recipes', {recipes})
         } catch(error) {
             console.log(error);
         }     
     },
     /*  COMIENZA DETAIL **/ 
     detail : async(req,res) => {
-        try{
+        try {
             const recipeDetail = await Recipe.findByPk(req.params.id);
             res.render('./recipes/recipesDetail', {recipeDetail});
-            } catch(error) {
+        } catch(error) {
                 console.log(error);
         } 
-     },
+    },
      /*****MOSTRANDO EL FORMULARIO de creacion */    
     new: async (req, res) => {
         try {
@@ -38,8 +38,8 @@ module.exports = {
                     ...req.body, 
                     image: req.file.filename
                 });
-                    res.redirect('/recipes');
-            }catch(error) {
+                res.redirect('/recipes');
+            } catch(error) {
                 console.log(error);
             } 
         } else {
@@ -53,8 +53,8 @@ module.exports = {
         try {
             const recipeId = req.params.id;
             const recipeDetail =await Recipe.findByPk(recipeId);
-                res.render('./recipes/recipesEditForm', {'recipeDetail': recipeDetail}); // Buscar y enviar el producto a editar a la vista    
-            } catch(error) {
+            res.render('./recipes/recipesEditForm', {'recipeDetail': recipeDetail}); // Buscar y enviar el producto a editar a la vista    
+        } catch(error) {
                 console.log(error);
             } 
     },
@@ -75,7 +75,7 @@ module.exports = {
                     await recipeDetail.update({
                         ...req.body, 
                         image:Recipe.image  
-                });
+                    });
                     res.redirect('/recipes');
                 } else {
                     //si viene una nueva imagen en la edicion, se almacena la nueva imagen
@@ -86,7 +86,7 @@ module.exports = {
                     res.redirect('/recipes');
                 }
             } catch(error) {
-            console.log(error);
+                console.log(error);
            }
         } else {
             res.render('./recipes/recipesEditForm', {recipeDetail, errors: results.errors});
@@ -98,7 +98,7 @@ module.exports = {
             const recipeToDelete = await Recipe.findByPk(recipeId);
             await recipeToDelete.destroy();    
             res.redirect('/recipes');      
-       } catch (error) {
+        } catch (error) {
         console.log(error); 
        } 
     },
@@ -107,9 +107,7 @@ module.exports = {
             let {search} = req.query;
             let recipes = await Recipe.findAll(
                 { where:{
-                    name:{
-                        [Op.like]: '%' + search + '%'
-                    }
+                    name:{ [Op.like]: '%' + search + '%' }
                 }
             });
             res.render('./recipes/search', {recipes})    

@@ -7,21 +7,20 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
     /* Muestra todos los productos */
     index : async (req,res) => {
-        try{
+        try {
             const products = await Product.findAll({
-                    include: ['Category'] 
-                });
-                if(products.length >0){
-                        let results = { 
-                            metadata:{
-                              status:200,
-                              quantity: products.length
-                             },
-                             data:{
-                               products
-                            }
-                        }
-                    res.json(results)}
+                include: ['Category']
+            });
+            if (products.length >0) {
+                let results = { 
+                    metadata: {
+                        status:200,
+                        quantity: products.length
+                    },
+                    data: { products }
+                }
+                res.json(results)
+            }
         } catch(error){
               res.render(error);
               console.log(error);
@@ -38,9 +37,7 @@ module.exports = {
                     metadata:{
                       status:200,
                      },
-                     data:{
-                       productDetail
-                    }
+                     data:{ productDetail }
                 }
             
             res.json(results)};

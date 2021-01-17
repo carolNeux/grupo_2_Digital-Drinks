@@ -36,7 +36,7 @@ router.post('/create', upload.single("image"), allowed, coursesValidations.cours
 
 //editar un curso//
 router.get('/edit/:id', allowed, coursesController.edit);
-router.put('/edit/:id', upload.single("image"), allowed, coursesValidations.couseEdit, coursesController.update);
+router.put('/edit/:id', upload.single("image"), allowed, coursesValidations.courseEdit, coursesController.update);
 
 /*buscar un curso */
 router.get('/search', coursesController.search);
