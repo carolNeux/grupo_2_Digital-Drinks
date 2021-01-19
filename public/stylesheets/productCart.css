@@ -96,7 +96,6 @@ body {
   display: none;
 }
 .navigation_bar.active {
-  /*Activa el menu haciendoloo visible cuando se hace click sobre el toggle nav.*/
   /*Activa el menu haciendolo visible cuando se hace click sobre el toggle nav.*/
   display: block;
 }
@@ -113,8 +112,6 @@ body {
 
 /*------ hasta aca pegue lo del header------- */
 
-/** comienzo con el codigo **/
-
 /*--------------------------------------------------------*/
 /*Inicio carrito */
 /*--------------------------------------------------------*/
@@ -125,8 +122,6 @@ main {
   margin-top: 50px;
 }
 .cart_header {
-  display: grid;
-  grid-template-columns: 0.2fr;
   text-align: center;
   align-items: center;
   border: none;
@@ -172,16 +167,12 @@ main {
 
 .delete_button a {
   background-color: #ff9100;
-
   color: white;
   font-size: 18px;
-
   cursor: pointer;
 }
 
 .delete_button:hover {
-  transform: translateY(5px);
-
   background-color: darkslateblue;
 }
 
@@ -297,4 +288,4 @@ main {
   .consult_detail textarea {
     width: 90%;
   }
-}}
+}
