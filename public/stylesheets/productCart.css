@@ -97,6 +97,7 @@ body {
 }
 .navigation_bar.active {
   /*Activa el menu haciendoloo visible cuando se hace click sobre el toggle nav.*/
+  /*Activa el menu haciendolo visible cuando se hace click sobre el toggle nav.*/
   display: block;
 }
 /*botones admin*/
@@ -114,10 +115,22 @@ body {
 
 /** comienzo con el codigo **/
 
+/*--------------------------------------------------------*/
+/*Inicio carrito */
+/*--------------------------------------------------------*/
+main {
+  margin-top: 20px;
+  color: darkslateblue;
+  border-radius: 10px;
+  margin-top: 50px;
+}
 .cart_header {
   display: grid;
   grid-template-columns: 0.2fr;
+  text-align: center;
+  align-items: center;
   border: none;
+  width: 95%;
 }
 .carrito_item {
   display: grid;
@@ -170,6 +183,17 @@ body {
   transform: translateY(5px);
 
   background-color: darkslateblue;
+}
+
+.return_to_list {
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18;
+  font-weight: 100;
+}
+.return_to_list:hover {
+  color: orange;
 }
 /*me traje el responsive de style.css*/
 
@@ -273,4 +297,4 @@ body {
   .consult_detail textarea {
     width: 90%;
   }
-}
+}}
