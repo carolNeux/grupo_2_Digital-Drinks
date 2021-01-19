@@ -82,6 +82,54 @@ CONSTRAINT `users_user_category_id_foreing` FOREIGN KEY (`user_category_id`) REF
 ) ENGINE=InnoDB AUTO_INCREMENT= 5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 --
+-- Insertar tabla carrito
+--
+DROP TABLE IF EXISTS `cart`;
+/*!40101 SET @saved_cs_client = @@character_set_client*/;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cart` (
+`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`cart_user_id`int(10) unsigned NOT NULL,
+`cart_product_id` int(10) unsigned NOT NULL,
+`quantity` int(255) unsigned NOT NULL,
+`state` int(10) unsigned NOT NULL,
+`order_number` int(255) unsigned NOT NULL,
+`created_at` timestamp NULL DEFAULT NULL,
+`updated_at` timestamp NULL DEFAULT NULL,
+`deleted_at` timestamp NULL DEFAULT NULL,
+PRIMARY KEY (`id`),
+KEY `products_cart_product_id_foreign` (`cart_product_id`),
+CONSTRAINT `products_cart_product_id_foreign` FOREIGN KEY (`cart_product_id`) REFERENCES `products` (`id`),
+KEY `users_cart_user_id_foreign` (`cart_user_id`),
+CONSTRAINT `users_cart_user_id_foreing` FOREIGN KEY (`cart_user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT= 5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+--
+-- Insertar tabla de historial de compra
+--
+DROP TABLE IF EXISTS `history`;
+/*!40101 SET @saved_cs_client = @@character_set_client*/;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `history` (
+`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`history_user_id`int(10) unsigned NOT NULL,
+`product_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+`price` int(255) unsigned NOT NULL,
+`quantity` int(255) unsigned NOT NULL,
+`discount` int(100) unsigned NOT NULL,
+`total` int(255) unsigned NOT NULL,
+`order_number` int(255) unsigned NOT NULL,
+`image` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+`created_at` timestamp NULL DEFAULT NULL,
+`updated_at` timestamp NULL DEFAULT NULL,
+`deleted_at` timestamp NULL DEFAULT NULL,
+PRIMARY KEY (`id`),
+KEY `users_history_user_id_foreign` (`history_user_id`),
+CONSTRAINT `users_history_user_id_foreing` FOREIGN KEY (`history_user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT= 5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Insertar info de los admins en tabla de usuarios ----
 --
 LOCK TABLES `users` WRITE;
@@ -89,7 +137,9 @@ LOCK TABLES `users` WRITE;
 INSERT INTO `users` VALUES (1,'ximena','Ximena','Camacho','ximena@digitaldrinks.com','$2a$10$VAXECey1cZD6Dq0LGGmsuuhOIlQgYcfF/Mkafq/0Wv9XOK2dDGu3a', '1981-10-07',1, NULL, NULL, NULL),
 (2, 'carol', 'Carol', 'Neumeyer', 'carol@digitaldrinks.com', '$2a$10$wlEAI6qDV65tlF00PXtZ.umw1ifrxcb.j1dwMFnGbrkNM77NezQg2', '1964-09-11', 1, NULL, NULL, NULL),
 (3,'carlos', 'Carlos', 'Loffreda', 'carlos@digitaldrinks.com', '$2a$10$9y4TnGsNe7UKz4ys6QDF5u4JO49xBArWDoAcVVT74O67pHQ8pXXhm', '1987-12-18', 1 ,NULL, NULL, NULL),
-(4,'robert', 'Robert', 'Rondon', 'robert@digitaldrinks.com', '$2a$10$UIyPECj2tJm77CiX1EMDz.Or.Feqr7SGtkLn6fUw4xbKolWtc8KuW', '1989-10-12', 1, NULL, NULL, NULL);
+(4,'robert', 'Robert', 'Rondon', 'robert@digitaldrinks.com', '$2a$10$UIyPECj2tJm77CiX1EMDz.Or.Feqr7SGtkLn6fUw4xbKolWtc8KuW', '1989-10-12', 1, NULL, NULL, NULL),
+(5,'Eme', 'Emeli', 'Pasini', 'eme@dh.com', '$2a$10$RabQ.dnOEUUJz1PmznfyWOssptnIHWNJ2Y7AMRJsfonkKmTIwfgGi', '2000-05-01', 2, NULL, NULL, NULL),
+(6,'Daniel', 'Daniel', 'Fuentes', 'df@dh.com', '$2a$10$WqCGej5TCnBaxe.8nSrJL.q/buzILYA2biUiM4AQtBOouy9BLL2bu', '1966-01-11', 2, NULL, NULL, NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 --

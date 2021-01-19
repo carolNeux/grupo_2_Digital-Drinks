@@ -76,7 +76,7 @@ module.exports = {
             const categories = await Category.findAll();
             res.render('./products/productEditForm', { productDetail, toThousand, categories });
 
-        }catch(error) {
+        } catch(error) {
             console.log(error);
         }
     },
@@ -118,10 +118,10 @@ module.exports = {
     /* Elimina un producto actualiza la base de datos y redirecciona a la lista de productos actualizada */
     delete: async (req, res) => {
         try {
-                const {id} = req.params;
-                const product = await Product.findByPk(id);
-                await product.destroy();
-                res.redirect('/products');
+            const {id} = req.params;
+            const product = await Product.findByPk(id);
+            await product.destroy();
+            res.redirect('/products');
         } catch (error) {
             res.render(error);
             console.log(error); 

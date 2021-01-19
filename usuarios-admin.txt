@@ -11,3 +11,9 @@ password: carlos123
 
 Username: robert
 password: robert123
+
+Username: Eme
+password: eme123
+
+Username: Daniel
+password: daniel123

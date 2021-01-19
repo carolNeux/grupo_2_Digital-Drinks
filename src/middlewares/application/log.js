@@ -1,4 +1,5 @@
 module.exports = function (req, res, next) {
+    
     res.locals.username = false;
     res.locals.userCategory = false;
 
