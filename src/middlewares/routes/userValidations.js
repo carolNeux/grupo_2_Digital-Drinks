@@ -94,9 +94,7 @@ module.exports = {
             .bail()
             .custom(async value => {
                 let userEmail = await User.findOne({
-                    where: {
-                        'email': value
-                    }
+                    where: { 'email': value }
                 })
                 if (userEmail !== null) {
                     return Promise.reject();
@@ -153,9 +151,7 @@ module.exports = {
             .bail()
             .custom(async value => {
                 let userUsername = await User.findOne({ 
-                    where: {
-                        'username': value 
-                    }
+                    where: { 'username': value }
                 });
                   if (userUsername !== null) {
                       if (userUsername.dataValues.username === value) {
@@ -207,9 +203,7 @@ module.exports = {
             .bail()
             .custom(async value => {
                 let userEmail = await User.findOne({
-                    where: {
-                        'email': value
-                    }
+                    where: { 'email': value }
                 })
                 if (userEmail !== null) {
                     if (userEmail.dataValues.email === value) {
@@ -228,9 +222,7 @@ module.exports = {
             .bail()
             .custom(async value => {
                 let userUsername = await User.findOne({ 
-                    where: {
-                        'username': value 
-                    }
+                    where: { 'username': value }
                 });
                 if (userUsername === null) {
                     return Promise.reject();

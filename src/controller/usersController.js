@@ -49,9 +49,7 @@ module.exports = {
                 let {username} = req.body;
                 //buscamos en la base de datos el username
                 let user = await User.findOne({
-                    where: {
-                        username: username,
-                    },
+                    where: { username: username },
                 });
                 if (user) {
                     //si el password es correcto almacenamos el nombre y la categoria del usuario es session
@@ -123,5 +121,5 @@ module.exports = {
         } catch (error) {
             console.log(error);
         }
-    },
+    }
 };
