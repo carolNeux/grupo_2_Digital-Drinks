@@ -1,7 +1,7 @@
 module.exports = function (req,res,next) {
-    if (req.session.userCategory === 1) {
+    if (req.session.user.userCategory === 1) {
         next();
-    } else if (req.session.userCategory === 2) {
+    } else if (req.session.user.userCategory === 2) {
         res.render('./users/forbidden');
     }
     else {

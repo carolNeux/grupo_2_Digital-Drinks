@@ -25,15 +25,22 @@
                             <h2> Precio: $<%= toThousand(productDetail.price) %> </h2>
                         <% } %> 
                     </div>
-                    <h3>Descripcion: </h3>
+                    <h3>Descripción: </h3>
                     <p><%= productDetail.description %> </p>
                 </div>
-                <form action="/" method="POST" class="product_quantity">
-                    <label for="unidades">Cantidad   </label>
-                    <input type="unidades" placeholder="Cuantos queres ?">
-                    <a href="/">Agregar al carrito</a>
+
+                <form action="/cart/addToCart/" method="POST" class="product_quantity">
+                    <input type="hidden"  name="productId" value="<%= productDetail.id%>">
+                    <label for="quantity"> Cantidad </label>
+                    <select name="quantity">
+                        <% quantities.forEach(quantity => { %> 
+                            <option value="<%= quantity %>"><%= quantity %></option>
+                        <% }) %> 
+                    </select>
+                    <button type="submit">Agregar al carrito</button>
                 </form>
-                <% if (userCategory === 1) { %>   
+
+                <% if (user.userCategoryId === 1) { %>   
                 <div class="products_detail_buttons">
                     <a href="/products/edit/<%= productDetail.id %> ">Editar</a>
                     <form action="/products/delete/<%= productDetail.id %>?_method=DELETE" method="POST">

@@ -174,3 +174,58 @@ LOCK TABLES `courses` WRITE;
 INSERT INTO `courses` VALUES (1, 'Bartender Profesional', '11500', '0', 'Destinado para toda persona que quiera iniciarse en esta profesión con o sin conocimientos previos. Las clases son teóricas y prácticas, donde el alumno tiene la posibilidad de entrenar lo aprendido en una barra real, con bebidas reales. El objetivo del curso es que el alumno se pueda desempeñar en una barra en forma profesional, tanto en el manejo de las herramientas, como en la elaboración de un cocktail con la correcta atención al cliente.', 'bartender.jpeg', NULL, NULL, NULL);
 /*!40000 ALTER TABLE `courses` ENABLE KEYS */;
 UNLOCK TABLES;
+
+-- Creacion de tabla de carrito post/compra ----
+
+DROP TABLE IF EXISTS `carts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `carts` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `order` int(10) DEFAULT NULL,
+  `total` decimal(10,2) DEFAULT NULL,
+  `user_id` int(10) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT= 2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Vaciar datos de la tabla `carts`
+--
+
+LOCK TABLES `carts` WRITE;
+/*!40000 ALTER TABLE `carts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `carts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS `cart_items`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cart_items` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `sale_price` decimal(10,2) DEFAULT NULL,
+  `quantity` int(10) DEFAULT NULL,
+  `subtotal` decimal(10,2) DEFAULT NULL,
+  `state` tinyint(4) DEFAULT NULL,
+  `user_id` int(10) DEFAULT NULL,
+  `product_id` int(10) DEFAULT NULL,
+  `cart_id` int(10) DEFAULT NULL,
+  `image` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT= 2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+--  Vaciar datos de la tabla `cartItems`
+--
+
+LOCK TABLES `cart_items` WRITE;
+/*!40000 ALTER TABLE `cart_items` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cart_items` ENABLE KEYS */;
+UNLOCK TABLES;

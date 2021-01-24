@@ -31,7 +31,7 @@
             <div class="product_quantity">
                 <a href="/courses/coursesContact">Solicitar mas información</a>
             </div>
-            <% if (userCategory === 1) { %>   
+            <% if (user.userCategoryId === 1) { %>   
             <div class="edition_button_recipes">
                 <a href="/courses/edit/<%= coursesDetail.id %>">Editar</a>
                 <form action="/courses/delete/<%= coursesDetail.id %>?_method=DELETE" method="POST">

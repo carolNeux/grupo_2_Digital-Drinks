@@ -42,6 +42,7 @@ const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const coursesRouter = require('./routes/courses');
 const recipesRouter = require('./routes/recipes');
+const cartRouter = require('./routes/cart');
 
 // ************ WRITE API ************
 const apiProductsRouter = require('./routes/api/apiProducts')
@@ -54,6 +55,7 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/courses', coursesRouter);
 app.use('/recipes', recipesRouter);
+app.use('/cart', cartRouter);
 app.use('/api/products', apiProductsRouter);
 app.use('/api/courses', apiCoursesRouter);
 app.use('/api/recipes', apiRecipesRouter);

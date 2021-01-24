@@ -118,7 +118,9 @@ body {
   display: grid;
   grid-template-columns: 0.2fr;
   border: none;
+  color: pink;
 }
+
 .carrito_item {
   display: grid;
   grid-template-columns: 0.2fr 0.5fr 0.3fr 0.3fr 0.5fr 0.1fr;
@@ -157,18 +159,18 @@ body {
   flex-direction: column;
 }
 
-.delete_button a {
+.delete_button {
   background-color: #ff9100;
-
   color: white;
   font-size: 18px;
-
+  border-radius: 10px;
   cursor: pointer;
+  padding: 4px;
 }
 
 .delete_button:hover {
   transform: translateY(5px);
-
+  color: white;
   background-color: darkslateblue;
 }
 /*me traje el responsive de style.css*/

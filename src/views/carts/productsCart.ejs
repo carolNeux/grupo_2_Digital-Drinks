@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--head/partial-->
+    <%- include('../partials/head', {title: 'Carrito| Digital Drinks'}) %>
+<link rel="stylesheet" href="/stylesheets/productCart.css">
+    <!--fin head/partial-->
+<body>
+    <div class="central_container">
+    <!--header/partial-->
+    <%- include('../partials/header') %>
+    <!--fin header/partial-->
+<!-- COntenido carrito -->
+        <main class="cart">
+            <div class="cart2">
+                <div class="cart_header">
+                    <h3>Mi Carrito</h3>
+                    
+                </div>
+                
+                <!-- Aqui comienza lo que lleva el carrito,  -->
+            <% cartItems.forEach(item => { %>
+                <article class="carrito_item">
+                    
+                    <div class="fo"> 
+                    <img src="/images/products/<%= item.image %>" alt="foto">
+                    </div>    
+
+                    <div class="a">
+                        <p><%= item.Product.name %> </p> 
+                    </div>   
+ 
+                    
+                       <!-- <div class="b">
+                        <p>$______ </p>
+                        </div>      -->
+                
+                        <div class="c">
+                        <label for="cantidad"><%= item.quantity %> </label>
+                        <!-- <input type="number"> -->
+                        </div>
+
+                        <div class="d">
+                        <label for="precio_total">$ <%= item.subtotal %> </label>    
+                       </div>
+                   
+
+                   <form action="/cart/deleteCartItem?_method=DELETE" method="POST">
+                        <input type="hidden" name="idProduct" value="<%= item.Product.id %>">
+                        <button type="submit" class= "delete_button">Eliminar</button>
+                   </form>
+               
+                </article>   
+             <% }) %>
+
+                  <!-- Aqui terminael tercer art,  -->
+                     <div class="d">
+                        <label for="precio_total">$ <%= total %> </label>    
+                    </div>
+ <!-- button de pagar y agrego una pagina checkOut gracias por tu compra  -->
+
+            <form action="/cart/purchase" method="POST" class="return_to_list">
+             <button type="submit"> COMPRAR </button>
+            </form>
+
+
+
+
+
+                
+            </div>            
+        </main>
+    <!--footer/partial-->
+    <%- include('../partials/footer') %>
+    <!--final footer/partial-->
+    <script src="./javascripts/slider.js"></script>
+</body>
+</html>

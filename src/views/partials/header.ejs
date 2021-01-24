@@ -9,7 +9,7 @@
         <ul>
             <div class="sign_button">
 
-                <% if (username) { %>
+                <% if (user.username) { %>
                     <!-- <li> -->
                         <li><a href="/users/logout" class="sign_up_button"><b>Cerrar Sesión</b></a></li>
                         <!-- <form action="/users/logout" method="POST" class="sign_in_button"> -->
@@ -27,10 +27,10 @@
                 <li><a href="/products "><img src="" alt="">Productos</a></li>
                 <li><a href="/courses"><img src="" alt="">Cursos</a></li>
                 <li><a href="/recipes"><img src="" alt="">Recetas</a></li>
-                <li><a href="/products/productsCart"><img src="" alt="">Carrito</a></li>
+                <li><a href="/cart"><img src="" alt="">Carrito</a></li>
 
-                <% if (userCategory === 1) { %>                
-                    <li><a href=""><img src="" alt="">Bienvenid@ <%= username %></a>
+                <% if (user.userCategoryId === 1) { %>                
+                    <li><a href=""><img src="" alt="">Bienvenid@ <%= user.username %></a>
                         <ul class="admin_link">
                             <li><a href="/products/new">Añadir producto</a></li>
                             <li><a href="/recipes/new">Añadir receta</a></li>
@@ -38,8 +38,8 @@
                             <li><a href="/users/list">Usuarios</a></li>          
                         </ul>
                     </li>
-                <% } else if(userCategory === 2){ %>
-                    <li class = 'login_user'> Bienvenid@ <%= username %></li>
+                <% } else if(user.userCategoryId === 2){ %>
+                    <li class = 'login_user'> Bienvenid@ <%= user.username %></li>
                 <% } %>
 
                 <div class="not_visible">

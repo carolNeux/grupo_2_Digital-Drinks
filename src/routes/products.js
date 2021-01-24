@@ -26,9 +26,6 @@ router.get('/', productsController.index);
 //Detalle de producto//
 router.get('/productDetail/:id', productsController.detail);
 
-//product cart//
-router.get('/productsCart', productsController.cart);
-
 //creacion de producto//
 router.get('/new', allowed, productsController.new);
 router.post('/create', upload.single("image"), allowed, productsValidations.productCreate, productsController.create);
