@@ -1,0 +1,70 @@
+/*--------------------------------------------------------*/
+/*Organizacion de cajas item*/
+/*--------------------------------------------------------*/
+.index_item_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0px;
+}
+/*Estilos de cada caja item*/
+.index_item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 20px 0px;
+  /* codigo para hacer el efecto donde se levanta la ventana o seleccion */
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.25s;
+}
+.index_item:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+} /*fin del levantamiento de ventana (?)*/
+.index_item img {
+  width: 80%;
+  margin: 20px 5px;
+  border-radius: 50%;
+}
+/*Arreglos de cajas de texto dentro de item*/
+.index_item_description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px 0px 20px 0px;
+}
+.index_item_description h2,
+h4 {
+  margin: 7px;
+}
+.index_item_description p {
+  margin: 0px 10px;
+}
+/*Botones de ver mas*/
+.see_more {
+  color: white;
+  background-color: #483d8b;
+  margin: 15px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.see_more:hover {
+  background-color: #ff6600;
+}
+/*--------------------------------------------------------*/
+/*responsive*/
+/*--------------------------------------------------------*/
+@media (min-width: 900px) {
+  /*cajas de index donde linkeamos nuestros items*/
+  .index_item {
+    flex-wrap: wrap;
+    width: 25%;
+    margin: 20px;
+    justify-content: space-around;
+  }
+}

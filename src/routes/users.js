@@ -26,4 +26,5 @@ router.put("/edit/:id", allowed, userValidations.userEdit, usersController.editS
 /*borrado de un usuario */
 router.delete("/delete/:id", allowed, usersController.delete);
 
+
 module.exports = router;

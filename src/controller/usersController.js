@@ -36,9 +36,10 @@ module.exports = {
                 console.log(error);
             }
         } else {
-            res.render('./users/register', {errors: results.errors})
+            res.render('./users/register', {errors: results.errors, old:req.body})
         }
     },
+   
     showLogin: (req, res) => {
         res.render("./users/login");
     },

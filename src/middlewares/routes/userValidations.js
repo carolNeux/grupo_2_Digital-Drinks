@@ -110,8 +110,29 @@ module.exports = {
             .bail()
             .isAlphanumeric()
             .withMessage('La contraseña debe contener letras y números.')
+            .bail(),
+         body("confirmPassword")
+            .notEmpty()
+            .withMessage("Debes ingresar una contraseña.")
             .bail()
+            .isLength({min:6, max:12})
+            .withMessage('La contraseña debe tener entre 6 y 12 caracteres.')
+            .bail()
+            .isAlphanumeric()
+            .withMessage('La contraseña debe contener letras y números.')
+            .bail()
+            .custom((value, { req }) => {
+                console.log(value);
+                console.log(req.body);
+                if(value === req.body.password){
+                return true
+                }else{
+                return false
+                }
+            })
+            .withMessage('Las contraseñas no coinciden')
     ],
+
     userEdit: [
         body("first_name")
             .notEmpty()
