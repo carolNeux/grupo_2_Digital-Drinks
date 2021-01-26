@@ -1,6 +1,4 @@
-const fs = require("fs");
 const moment = require("moment");
-const path = require("path");
 const bcrypt = require("bcryptjs");
 const { User, userCategory } = require("../database/models");
 const {validationResult} = require('express-validator')

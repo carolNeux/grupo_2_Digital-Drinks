@@ -39,6 +39,9 @@ module.exports = {
       });
       const total = cartItems.reduce((total, cartItem) => total = (total + Number(cartItem.subtotal)), 0)
       res.render('./carts/productsCart', { cartItems, total });
+      // res.send(cartItems);
+      console.log(cartItems);
+      
 
     } catch (error) {
       console.log(error);

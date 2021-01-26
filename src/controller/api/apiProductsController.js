@@ -40,7 +40,8 @@ module.exports = {
                      data:{ productDetail }
                 }
             
-            res.json(results)};
+                res.json(results)
+            };
             
         } catch (error) {
             res.render(error);
