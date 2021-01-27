@@ -1,8 +1,8 @@
 .user_main_container {
-display: flex;
-flex-direction: column;
-width: 50%;
-margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
 }
 .user_main_container h2 {
     color: #ff6600;
@@ -48,8 +48,19 @@ margin: auto;
     font-size: 15px;
     font-weight: bold;
 }
-.user_buttons_container input:hover {
+.user_buttons_container input:hover, .user_button_back a:hover  {
     background-color: #ff6600;
     cursor: pointer;
+}
+.user_button_back a {
+    padding: 7px 30px;
+    text-decoration: none;
+    background-color: #483D8B;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
 }
 

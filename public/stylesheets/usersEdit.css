@@ -4,60 +4,61 @@
     width: 50%;
     margin: auto;
     }
-    .user_main_container h2 {
-        color: #ff6600;
-        text-align: center;
-        margin-bottom: 15px;
-        font-size: 25px;
-        text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
-    }
-    .user_list_container {
-        padding: 15px 15px 70px 25px;
-        width: 100%;
-        font-size: 18px;
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    .user_list_container div{
-        display: flex;
-        align-items: center;
-        margin: 10px;
-    }
-    .user_list_container h4 {
-        color: #FF6600;
-    }
-    .input_data {
-       padding: 7px 0px;
-    }
-    .input_data input, .input_data select {
-        border: 1px solid #473d8b63;
-        border-radius: 5px;
-        padding: 2px 15px;
-        color: #483D8B;
-        margin-left: 10px;
-    }
-    .user_buttons_container {
-        float: right;
-    }
-    .user_buttons_container input {
-        padding: 7px 30px;
-        border: none;
-        background-color: #483D8B;
-        color: white;
-        border-radius: 15px;
-        cursor: pointer;
-        font-size: 15px;
-        font-weight: bold;
-    }
-    .user_buttons_container input:hover {
-        background-color: #ff6600;
-        cursor: pointer;
-    }
-    .errors {
-        text-align: left;
-        color: red;
-        font-weight: bold;
-    }
+.user_main_container h2 {
+    color: #ff6600;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 25px;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+}
+.user_list_container {
+    padding: 15px 15px 70px 25px;
+    width: 100%;
+    font-size: 18px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.user_list_container div{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.user_list_container h4 {
+    color: #FF6600;
+}
+.input_data {
+   padding: 7px 0px;
+}
+.input_data input, .input_data select {
+    border: 1px solid #473d8b63;
+    border-radius: 5px;
+    padding: 2px 15px;
+    color: #483D8B;
+    margin-left: 10px;
+}
+.user_buttons_container {
+    float: right;
+}
+.user_buttons_container input, .user_buttons_container a {
+    padding: 7px 30px;
+    border: none;
+    background-color: #483D8B;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.user_buttons_container input:hover, .user_buttons_container a:hover {
+    background-color: #ff6600;
+    cursor: pointer;
+}
+.errors {
+    text-align: left;
+    color: red;
+    font-weight: bold;
+}
     
     

@@ -20,6 +20,9 @@
                 <div><h4>Fecha de nacimiento: </h4><p> <%= userInformation.birthday %></p></div>
                 <div><h4>Contraseña: </h4><p> ********</p></div>
                 <div class="user_buttons_container">
+                    <div class="user_button_back">
+                        <a href="/">Volver al Home</a>
+                    </div>
                     <form action="/users/accountEdit/<%= userInformation.id %>" method="GET">
                         <input type="submit" value="Editar">
                     </form>
