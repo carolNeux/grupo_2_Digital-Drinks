@@ -39,7 +39,7 @@
     border-radius: 5px;
     border: #483D8B 1px solid;
 }
-.product_quantity a {
+.product_quantity button, .product_quantity a {
     text-decoration: none;
     color: white;
     padding: 5px 20px;
@@ -47,6 +47,12 @@
     font-size: 15px;
     font-weight: bold;
     margin-left: 15px; 
+    background-color: #483D8B;
+    cursor: pointer;
+}
+
+.product_quantity button:hover {
+    background-color: #FF6600;  
 }
 /*--------------------------------------------------------*/
 /* Estilos pagina detalle de recetas */

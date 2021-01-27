@@ -1,17 +1,12 @@
 module.exports = function (req, res, next) {
     
-    res.locals.username = false;
-    res.locals.userCategory = false;
-
-    if (req.session.username) {
-        res.locals.username = req.session.username;
-        res.locals.userCategory = req.session.userCategory;
+    res.locals.user = false
+    
+    if (req.session.user) {
+        res.locals.user = req.session.user;   
     } else if (req.cookies.rememberMe) {
-        req.session.username = req.cookies.rememberMe;
-        res.locals.username = req.session.username;
-        req.session.userCategory = req.cookies.rememberCategory;
-        res.locals.userCategory = req.session.userCategory;
+        req.session.user = req.cookies.rememberMe;
+        res.locals.user = req.session.user
     }
-
     next();
 }

@@ -1,132 +1,11 @@
-/*--------------------------------------------------------*/
-/* caracteristicas dadas al body por cambio de fuente y uso de imagen de fondo */
-/*--------------------------------------------------------*/
-body {
-  background-image: url(/images/home/fondo.jpg); /*Imagen de fondo del site */
-  font-family: Verdana, sans-serif; /*Cambio de tipo de fuente para todo el texto escrito dentro del body */
-  background-repeat: repeat; /*No repite la imagen de fondo para rellenar*/
-  background-attachment: fixed; /*Fija la imagen que aparece en el fondo y queda estatica*/
-}
-/*--------------------------------------------------------/
-/Caja creada para dar estilos y centrados al cuerpo del site Y NO TOCAR EL BODY/
-/--------------------------------------------------------*/
-.central_container {
-  width: 100%; /*Indica que va a ocupar el 100% del ancho*/
-}
-/*--------------------------------------------------------*/
-/*Inicio de los stilos del header*/
-/*--------------------------------------------------------*/
-.header_container {
-  /*ubica los elementos del header*/
-  display: block;
+
+.cart_header h3{
   text-align: center;
-  width: 100%;
-}
-/*Redimension del logo para poder centrarlo*/
-.logo {
-  width: 200px;
-}
-.navigation_bar a {
-  /*quita la linea debajo de los vinculos*/
-  text-decoration: none;
-}
-/*boton de navegacion*/
-.toggle_nav {
-  position: absolute;
-  text-align: center;
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  padding: 5px;
-  background-color: #483d8b;
-  color: white;
   font-size: 30px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-.toggle_nav:hover {
-  background-color: #ff6600;
-}
-/*botones de login y registro*/
-.sign_button {
-  display: flex;
-  justify-content: space-around;
-  margin: 30px;
-  list-style: none;
-}
-.sign_in_button,
-.sign_up_button {
-  justify-content: center;
-  padding: 15px;
-  border-radius: 5px;
-  margin: 10px;
-  color: white;
-}
-.sign_up_button,
-.sign_in_button:hover {
-  background-color: #483d8b;
-}
-.sign_in_button,
-.sign_up_button:hover {
-  background-color: #ff6600;
-}
-/*botones de opciones de navegacion para el usuario*/
-.options {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-}
-.options li a {
-  display: block;
-  list-style: none;
-  background-color: #483d8b;
-  margin: 1px 0px;
-  padding: 15px 0px 15px 15px;
-  color: white;
-  font-size: 20px;
-  text-align: left;
-}
-.options li a:hover {
-  background-color: #ff6600;
-}
+  color: #483D8B;
+  /* background-color: blue */
+ }
 
-/*activacion del boton */
-.navigation_bar {
-  /*Oculta el menu de opciones para versión mobile*/
-  display: none;
-}
-.navigation_bar.active {
-  /*Activa el menu haciendolo visible cuando se hace click sobre el toggle nav.*/
-  display: block;
-}
-/*botones admin*/
-.admin_link {
-  list-style: none;
-}
-.options > li > ul {
-  display: none;
-}
-.options > li:hover > ul {
-  display: block;
-}
-
-/*------ hasta aca pegue lo del header------- */
-
-/*--------------------------------------------------------*/
-/*Inicio carrito */
-/*--------------------------------------------------------*/
-main {
-  margin-top: 20px;
-  color: darkslateblue;
-  border-radius: 10px;
-  margin-top: 50px;
-}
-.cart_header {
-  text-align: center;
-  align-items: center;
-  border: none;
-  width: 95%;
-}
 .carrito_item {
   display: grid;
   grid-template-columns: 0.2fr 0.5fr 0.3fr 0.3fr 0.5fr 0.1fr;
@@ -144,6 +23,7 @@ main {
 
 .fo img {
   width: 40%;
+  /* background-color: yellow; */
 }
 
 .c {
@@ -152,6 +32,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 
 /*  hasta aqui */
 .cart_item {
@@ -165,15 +46,65 @@ main {
   flex-direction: column;
 }
 
-.delete_button a {
+.delete_button {
   background-color: #ff9100;
   color: white;
   font-size: 18px;
+  border-radius: 10px;
   cursor: pointer;
+  padding: 4px;
 }
 
 .delete_button:hover {
+  transform: translateY(5px);
+  color: white;
   background-color: darkslateblue;
+}
+.pay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pay button {
+  background-color: darkslateblue;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 4px;
+  margin: 10px 30px 0px 50px;
+}
+.pay button:hover {
+  color: darkslateblue;
+  background-color: #ff9100;
+}
+.pay label {
+  font-size: 18px;
+  font-weight: bold;
+}
+.no_items_container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.message {
+    flex-wrap: wrap;
+    text-align: center;
+    width: 50%;
+    padding: 40px;
+    margin: 120px 50px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.message h3 {
+    color: #483D8B;
+    margin: 20px 0px;
+}
+.message h2 {
+    color: #FF6600;
+    margin: 20px 0px;
 }
 
 .return_to_list {
@@ -186,106 +117,4 @@ main {
 .return_to_list:hover {
   color: orange;
 }
-/*me traje el responsive de style.css*/
 
-@media (min-width: 900px) {
-  /*header y navbar*/
-  .toggle_nav,
-  .not_visible {
-    display: none;
-  }
-  .navigation_bar {
-    display: flex;
-  }
-  .header_container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .logo {
-    display: flex;
-    width: 150%;
-  }
-  .sign_button {
-    justify-content: right;
-    margin-top: 60px;
-  }
-  .options {
-    flex-direction: row;
-  }
-  .options li a {
-    background-color: transparent;
-    color: #483d8b;
-    border-left: solid 2px #483d8b;
-    padding: 8px;
-    margin: 10px 0px;
-    font-size: 18px;
-  }
-  .options li a:hover {
-    background-color: #ff66006e;
-  }
-  /*slider*/
-  .contenedor {
-    margin: 70px 0px;
-  }
-  /*detalle de recetas*/
-  .detail_container {
-    flex-wrap: nowrap;
-    width: 75%;
-  }
-  .detail_container img {
-    width: auto;
-    height: 37.3vh;
-    align-self: center;
-  }
-  /*detalle productos*/
-  .product_detail_container {
-    flex-wrap: nowrap;
-    width: 85%;
-  }
-  .product_detail_container img {
-    width: auto;
-    height: 42.6vh;
-    align-self: center;
-  }
-  /*detalle de cursos*/
-  .courses_detail_container {
-    flex-wrap: nowrap;
-    width: 85%;
-  }
-  .courses_detail_container img {
-    width: auto;
-    height: 21.3vh;
-    align-self: center;
-  }
-  /*cajas de index donde linkeamos nuestros items*/
-  .item {
-    flex-wrap: wrap;
-    width: 25%;
-    margin: 20px;
-    justify-content: space-around;
-  }
-}
-@media (min-width: 1024px) {
-  /*detalle de recetas*/
-  .detail_container {
-    width: 65%;
-  }
-  .product_detail_container {
-    width: 85%;
-  }
-  .courses_detail_container img {
-    width: auto;
-    height: 33vh;
-    align-self: center;
-  }
-  /* estilos pagina de consulta*/
-  .consult_courses_form {
-    width: 45%;
-  }
-  .consult_detail input {
-    width: 80%;
-  }
-  .consult_detail textarea {
-    width: 90%;
-  }
-}
