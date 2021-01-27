@@ -108,3 +108,15 @@ small {
   color: red;
   font-weight: bold;
 }
+.get_in a {
+  font-size: 17px;
+}
+.get_in a:hover {
+  color: #ff9100;
+}
+.get_out a {
+  font-size: 16px;
+}
+.get_out a:hover {
+  color: #ff9100;
+}

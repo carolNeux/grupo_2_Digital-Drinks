@@ -33,14 +33,22 @@
                 <% if (userCategory === 1) { %>                
                     <li><a href=""><img src="" alt="">Bienvenid@ <%= username %></a>
                         <ul class="admin_link">
+                            <li><a href="/users/account">Mi Perfil</a></li>
                             <li><a href="/products/new">Añadir producto</a></li>
                             <li><a href="/recipes/new">Añadir receta</a></li>
                             <li><a href="/courses/new">Añadir curso</a></li>
-                            <li><a href="/users/list">Usuarios</a></li>          
+                            <li><a href="/users/list">Usuarios</a></li>   
+                            <li><a href="/">Carrito</a></li>            
                         </ul>
                     </li>
                 <% } else if(userCategory === 2){ %>
-                    <li class = 'login_user'> Bienvenid@ <%= username %></li>
+                    <li > <a href="">Bienvenid@ <%= username %></a>
+                        <ul class="admin_link">
+                            <li><a href="/users/account">Mi Perfil</a></li>
+                            <li><a href="/">Carrito</a></li>
+                            <li><a href="/">Mis Compras</a></li>
+                        </ul>
+                    </li>
                 <% } %>
 
                 <div class="not_visible">
