@@ -70,6 +70,65 @@ module.exports = {
             res.render('./users/login', {errors: results.errors})
         }
     },
+    account: async (req, res) => {
+        try {
+            let userInformation = await User.findOne({
+                where: {
+                    username: req.session.username
+                }
+            });
+            userInformation.dataValues.birthday = moment(userInformation.dataValues.birthday).format("DD-MM-YYYY");
+            res.render('./users/userAccount', {userInformation});  
+        } catch (error) {
+            console.log(error)
+        }
+    },
+    accountEdit: async (req, res, next) => {
+        try {
+            let userInformation = await User.findOne({
+                where: {
+                    username: req.session.username
+                }
+            });
+            res.render('./users/accountEdit', {userInformation})  
+        } catch (error) {
+            console.log(error)
+        }  
+    },
+    accountStorage: async (req, res, next) => {
+        let results = validationResult(req);
+        let userInformation
+        try {
+            let idUser = req.params.id;
+            console.log(idUser);
+            userInformation = await User.findByPk(idUser);
+        } catch (error) {
+            console.log(error);
+        }
+        if (results.isEmpty()) {
+            if (userInformation.password === req.body.password) {
+                try {
+                    await userInformation.update(req.body);
+                        res.render("./users/userAccount", {userInformation});
+                } catch (error) {
+                    console.log(error);
+                }
+            } else {
+                try {
+                    await userInformation.update(
+                        {...req.body,
+                        password: bcrypt.hashSync(req.body.password, 10),
+                        user_category_id: 2,
+                        });
+                        res.render("./users/userAccount", {userInformation});
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+        } else {
+            res.render ('./users/accountEdit', {userInformation, errors: results.errors}) ; 
+        }
+    },    
     logout: async (req, res) => {
         try {
             req.session.destroy();

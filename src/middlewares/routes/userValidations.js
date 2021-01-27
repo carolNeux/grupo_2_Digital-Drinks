@@ -269,6 +269,116 @@ module.exports = {
                 }
             })
             .withMessage('La contraseña es incorrecta.')
-    ]
-    
+    ],
+    userEditAccount: [
+        body("first_name")
+            .notEmpty()
+            .withMessage('Nombre no puede estar vacío.')
+            .bail()
+            .isLength({min:3, max:50})
+            .withMessage('Más de 3 letras.')
+            .bail()
+            .custom(value => {
+                let spacebar = value.replace(/\s+/g, '');
+                let trim = /^[a-zA-Z\s]+$/.test(spacebar);
+                return trim;
+            })
+            .withMessage('Solo letras.'),
+        body("last_name")
+            .notEmpty()
+            .withMessage('Apellido no puede estar vacío.')
+            .bail()
+            .isLength({min:3, max:50})
+            .withMessage('Más de 3 letras.')
+            .bail()
+            .custom(value => {
+                let spacebar = value.replace(/\s+/g, '');
+                let trim = /^[a-zA-Z\s]+$/.test(spacebar);
+                return trim;
+            })
+            .withMessage('Solo letras.'),
+        body("username")
+            .notEmpty()
+            .withMessage('User Name no puede estar vacío.')
+            .bail()
+            .isLength({min:3, max:50})
+            .withMessage('Más de 3 letras.')
+            .bail()
+            .isAlphanumeric()
+            .withMessage('Solo letras.')
+            .bail()
+            .custom(async value => {
+                let userUsername = await User.findOne({ 
+                    where: {
+                        'username': value 
+                    }
+                });
+                  if (userUsername !== null) {
+                      if (userUsername.dataValues.username === value) {
+                        return Promise.resolve();
+                      } else {
+                        return Promise.reject();
+                      }
+                  }
+            })
+            .withMessage('Este username ya existe.'),
+        body("birthday")
+            .notEmpty()
+            .withMessage('fecha de nacimiento no puede estar vacío.')
+            .bail()
+            .custom (function (value) {
+                let input = new Date(value);
+                let actualDate = new Date ();
+                let dayInput = (input.getDate()+1);
+                let monthInput = (input.getMonth()+1);
+                let yearInput = input.getFullYear(input);
+                let dayActualDate = actualDate.getDate();
+                let monthActualDate = (actualDate.getMonth(actualDate)+1);
+                let yearActualDate = actualDate.getFullYear(actualDate);
+                let result
+                if ((yearActualDate - yearInput) <= 18) {
+                    result = yearActualDate - yearInput;
+                    if (monthActualDate <= monthInput) {
+                        if (dayActualDate < dayInput) {
+                            result = (yearActualDate - yearInput) -1
+                            return (result >= 18);
+                        } else {
+                            return (result >= 18);
+                        }
+                    }
+                    else {
+                        return (yearActualDate - yearInput>= 18);
+                    }
+                } else {
+                    return (yearActualDate - yearInput >= 18);
+                } 
+            })
+            .withMessage('No menores de 18'),
+        body("email")
+            .notEmpty()
+            .withMessage("Email no puede estar vacío.")
+            .bail()
+            .isEmail()
+            .withMessage("No es una dirección válida")
+            .bail()
+            .custom(async value => {
+                let userEmail = await User.findOne({
+                    where: {
+                        'email': value
+                    }
+                })
+                if (userEmail !== null) {
+                    if (userEmail.dataValues.email === value) {
+                        return Promise.resolve();
+                    } else {
+                        return Promise.reject();
+                    } 
+                  }
+            })
+            .withMessage("El email ya se encuentra registrado."),
+            body("password")
+            .notEmpty()
+            .withMessage("Debes ingresar una contraseña.")
+            .bail()
+    ]   
 }
