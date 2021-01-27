@@ -38,7 +38,7 @@
                         </div>   
     
                         <div class="c">
-                            <label for="cantidad"><%= item.quantity %> </label>
+                            <label for="cantidad"><%= `$ ${item.Product.price} x ${item.quantity} uni` %> </label>
                         </div>
 
                         <div class="d">
@@ -52,17 +52,17 @@
                
                     </article>   
                 <% }) %>
+                  <!-- Aqui termina el tercer art,  -->
+
                 <div class="pay">
-
-                  <!-- Aqui terminael tercer art,  -->
                      <div class="d">
-                        <label for="precio_total">$ <%= total %> </label>    
+                        <label for="precio_total">TOTAL $<%= total %> </label>    
                     </div>
-                <!-- button de pagar y agrego una pagina checkOut gracias por tu compra  -->
+                    <!-- button de pagar y agrego una pagina checkOut gracias por tu compra  -->
 
-                <form action="/cart/purchase" method="POST" class="return_to_list">
-                    <button type="submit" class="delete_button"> COMPRAR </button>
-                </form>
+                    <form action="/cart/purchase" method="POST" class="return_to_list">
+                        <button type="submit" class="purchase_button"> COMPRAR </button>
+                    </form>
                 </div>
             <% } %>                   
         </main>
