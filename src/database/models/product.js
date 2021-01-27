@@ -1,4 +1,4 @@
-const {sequelize, Datatypes} = require ('sequelize');
+const {sequelize, DataTypes} = require ('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
     const Product = sequelize.define('Product', {
@@ -31,7 +31,10 @@ module.exports = (sequelize, DataTypes) => {
     Product.associate = (models => {
         Product.belongsTo(models.Category, {
             as: "Category"
-        })
+        });
+        Product.hasMany(models.CartItem, {
+            as: "CartItem",
+        });
     })
 
     return Product;

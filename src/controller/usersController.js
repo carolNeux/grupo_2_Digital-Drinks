@@ -1,6 +1,4 @@
-const fs = require("fs");
 const moment = require("moment");
-const path = require("path");
 const bcrypt = require("bcryptjs");
 const { User, userCategory } = require("../database/models");
 const {validationResult} = require('express-validator')
@@ -54,14 +52,22 @@ module.exports = {
                 });
                 if (user) {
                     //si el password es correcto almacenamos el nombre y la categoria del usuario es session
-                    req.session.username = user.username;
-                    req.session.userCategory = user.user_category_id;
+                    // req.session.username = user.username;
+                    // req.session.userCategory = user.user_category_id;
+                    // req.session.idUser = user.id;
+                    req.session.user = user;
+                    // res.json(req.session);
+                    
                     if (req.body.rememberMe) {
                         //si el usuario marca el checkbox creamos una cookie
-                        res.cookie('rememberMe', user.username, {maxAge : 1000 * 60 * 60});
-                        res.cookie('rememberCategory', user.user_category_id, {maxAge : 1000 * 60 * 60});
+                        // res.cookie('rememberMe', user.username, {maxAge : 1000 * 60 * 60 * 24});
+                        // res.cookie('rememberCategory', user.user_category_id, {maxAge : 1000 * 60 * 60 * 24});
+                        // res.cookie('rememberId', user.id, {maxAge : 1000 * 60 * 60 * 24});
+                        res.cookie('rememberMe', user, { maxAge: 1000 * 60 * 60 * 24 });
+                        console.log(res.cookie)
                     }
                     res.render("./users/loginRedirect", {user});
+                    // res.send(user)
                 }
             } catch (error) {
                 console.log(error);
@@ -174,10 +180,10 @@ module.exports = {
     /*borrado de un usuario con redireccion */
     delete: async (req, res) => {
         try {
-                let idUser = req.params.id;
-                let deleteUsers = await User.findByPk(idUser);
-                await deleteUsers.destroy();
-                res.render("./users/destroyRedirect");
+            let idUser = req.params.id;
+            let deleteUsers = await User.findByPk(idUser);
+            await deleteUsers.destroy();
+            res.render("./users/destroyRedirect");
         } catch (error) {
             console.log(error);
         }

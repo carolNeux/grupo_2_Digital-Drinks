@@ -42,21 +42,25 @@ const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const coursesRouter = require('./routes/courses');
 const recipesRouter = require('./routes/recipes');
+const cartRouter = require('./routes/cart');
 
 // ************ WRITE API ************
-const apiProductsRouter = require('./routes/api/apiProducts')
-const apiCoursesRouter = require('./routes/api/apiCourses')
-const apiRecipesRouter = require('./routes/api/apiRecipes')
-const apiNaranja = require('./request/apiNaranja')
+const apiProductsRouter = require('./routes/api/apiProducts');
+const apiCoursesRouter = require('./routes/api/apiCourses');
+const apiRecipesRouter = require('./routes/api/apiRecipes');
+const apiUsersRouter = require('./routes/api/apiUsers');
+const apiNaranja = require('./request/apiNaranja');
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/courses', coursesRouter);
 app.use('/recipes', recipesRouter);
+app.use('/cart', cartRouter);
 app.use('/api/products', apiProductsRouter);
 app.use('/api/courses', apiCoursesRouter);
 app.use('/api/recipes', apiRecipesRouter);
+app.use('/api/users', apiUsersRouter);
 app.use('/naranja', apiNaranja);
 
 // catch 404 and forward to error handler

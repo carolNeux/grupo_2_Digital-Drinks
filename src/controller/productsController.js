@@ -1,6 +1,6 @@
-const {Product, Category} = require('../database/models');
-const {Op} = require('sequelize');
-const {validationResult} = require('express-validator')
+const { Product, Category } = require('../database/models');
+const { Op } = require('sequelize');
+const { validationResult } = require('express-validator')
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
@@ -13,21 +13,14 @@ module.exports = {
             console.log(error);
         }
     },
-      /* Muestra el carrito */
-    cart : async (req,res) => {
-        try {
-            const products = await Product.findAll({ include: ['Category']});
-            res.render('./products/productsCart');   
-        } catch (error) {
-            console.log(error);
-        }
-    },
       /* Muestra el detalle de un producto */
     detail: async (req,res) => {
         try {
+            const quantities = [1,2,3,4,5,6,7,8,9,10];
             const {id} = req.params;
             const productDetail = await Product.findByPk(id, {include: ['Category']});          
-            res.render('./products/productDetail', {productDetail, toThousand});
+            res.render('./products/productDetail', {productDetail, toThousand, quantities}); 
+            // res.json(quantities);
             
         } catch (error) {
             console.log(error); 
