@@ -13,6 +13,9 @@
   justify-content: center;
   text-align: right;
 }
+.item_name_history {
+  width: 200px;
+}
 .history_main_container a {
   text-decoration: none;
   font-weight: bold;
