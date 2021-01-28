@@ -1,4 +1,5 @@
-const {sequelize, Datatypes} = require ('sequelize');
+const { sequelize, Datatypes } = require('sequelize');
+const moment = require('moment');
 
 module.exports = (sequelize, DataTypes) => {
   const CartItem = sequelize.define('CartItem', {
@@ -38,6 +39,12 @@ module.exports = (sequelize, DataTypes) => {
     image: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    createdAt: {
+        type: DataTypes.DATEONLY,
+        get() {
+            return moment(this.getDataValue('created_at')).format('DD-MM-YYYY');
+      }
     }
   })
     
