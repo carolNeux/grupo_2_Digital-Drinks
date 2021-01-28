@@ -16,7 +16,7 @@ body {
 .login-box {
   box-shadow: 12px 12px 16px rgba(0, 0, 0, 0.2);
   width: 320px;
-  height: autopx;
+  height: auto;
   background: whitesmoke;
   color: darkslateblue;
   border-radius: 5%;
@@ -56,16 +56,16 @@ body {
   margin-bottom: 20px;
   text-align: center;
 }
-.login-box input [type='username'] {
+.login-box input [type="username"] {
   color: darkslateblue;
   font-size: 14px;
 }
-.login-box input[type='password'] {
+.login-box input[type="password"] {
   color: darkslateblue;
   font-size: 14px;
 }
 
-.login-box input[type='submit'] {
+.login-box input[type="submit"] {
   background-color: #ff9100;
   border: none;
   color: white;
@@ -74,7 +74,7 @@ body {
   cursor: pointer;
 }
 
-.login-box input[type='submit']:hover {
+.login-box input[type="submit"]:hover {
   transform: translateY(5px);
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
   background-color: darkslateblue;

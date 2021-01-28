@@ -115,7 +115,6 @@ module.exports = {
           nested: true
         }
       });
-      console.log(carts);
       res.render('./carts/cartsHistory', { carts });
     } catch (error) {
       console.log(error);
