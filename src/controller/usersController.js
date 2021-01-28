@@ -48,21 +48,15 @@ module.exports = {
                 let {username} = req.body;
                 //buscamos en la base de datos el username
                 let user = await User.findOne({
-                    where: { username: username },
+                    where: { 
+                        username: username 
+                    },
                 });
                 if (user) {
                     //si el password es correcto almacenamos el nombre y la categoria del usuario es session
-                    // req.session.username = user.username;
-                    // req.session.userCategory = user.user_category_id;
-                    // req.session.idUser = user.id;
                     req.session.user = user;
-                    // res.json(req.session);
-                    
                     if (req.body.rememberMe) {
                         //si el usuario marca el checkbox creamos una cookie
-                        // res.cookie('rememberMe', user.username, {maxAge : 1000 * 60 * 60 * 24});
-                        // res.cookie('rememberCategory', user.user_category_id, {maxAge : 1000 * 60 * 60 * 24});
-                        // res.cookie('rememberId', user.id, {maxAge : 1000 * 60 * 60 * 24});
                         res.cookie('rememberMe', user, { maxAge: 1000 * 60 * 60 * 24 });
                         console.log(res.cookie)
                     }
@@ -78,11 +72,7 @@ module.exports = {
     },
     account: async (req, res) => {
         try {
-            let userInformation = await User.findOne({
-                where: {
-                    username: req.session.username
-                }
-            });
+            let userInformation = await User.findByPk(req.session.user.id);
             userInformation.dataValues.birthday = moment(userInformation.dataValues.birthday).format("DD-MM-YYYY");
             res.render('./users/userAccount', {userInformation});  
         } catch (error) {

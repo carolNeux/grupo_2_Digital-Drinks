@@ -4,32 +4,41 @@
     <!--head/partial-->
     <%- include('../partials/head') %>
     <!--fin head/partial-->
-    <link rel="stylesheet" href="/stylesheets/usersList.css">
+    <link rel="stylesheet" href="/stylesheets/cartHistory.css">
 </head>
 <body>
     <!--header/partial-->
     <%- include('../partials/header') %>
     <!--fin header/partial--> 
-    <section class="user_main_container">
-        <h2>Lista de compras:</h2>
-        <% carts.forEach(cart => { %>
-            <article class="user_list_container">
-                <div><h4>Fecha de Compra: </h4><p> <%= cart.createdAt %> </p></div>
-                <div><h4>Apellido: </h4><p> <%= user.last_name %></p></div>
-                <div><h4>Nombre de Usuario: </h4><p> <%= user.username %></p></div>
-                <div><h4>Email:</h4><p> <%= user.email %></p></div>
-                <div><h4>Fecha de compra: </h4><p> <%= user.birthday %></p></div>
-                <div><h4>Categoria: </h4><p> <%= user.userCategory.name %></p></div>
-                <div class="user_buttons_container">
-                    <form action="/users/edit/<%= user.id %>" method="GET">
-                        <input type="submit" value="Editar">
-                    </form>
-                    <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
-                        <input type="submit" value="Borrar">
-                    </form>
-                </div>
-            </article>
-        <% }) %>
+    <section class="history_main_container">
+        <div class="a_history_container">
+            <a href="/users/account">Mi perfil</a>
+            <a href="/">Home</a>
+        </div>
+        <h2>Mis compras:</h2>
+            <% carts.forEach(cart => { %>
+                <% if (cart.state == 0) { %> 
+                <div class="list_main_container">
+                    <div class="image_list_container">
+                        <img src="/images/products/<%= cart.image %>" alt="">
+                    </div>
+                    <article class="history_list_container">
+                        <div class="item_list_container">
+                            <p><%= cart.Product.name %> </p>
+                        </div>
+                        <div class="item_list_container">
+                            <p><%= `$ ${cart.Product.price} x ${cart.quantity} uni` %></p>
+                        </div>
+                        <div class="item_list_container">
+                            <p> $ <%= cart.subtotal %>  </p>
+                        </div>
+                        <div class="item_list_container">
+                            <p> <%= cart.createdAt %> </p>
+                        </div>
+                    </article>
+                </div>              
+                <% } %>
+            <% }) %>
     </section>
     <!--footer/partial-->
     <%- include('../partials/footer') %>

@@ -28,14 +28,16 @@
                             <li><a href="/recipes/new">Añadir receta</a></li>
                             <li><a href="/courses/new">Añadir curso</a></li>
                             <li><a href="/users/list">Usuarios</a></li>   
-                            <li><a href="/products/productsCart">Carrito</a></li>           
+                            <li><a href="/cart">Carrito</a></li> 
+                            <li><a href="/cart/cartsHistory">Mis compras</a></li>          
                         </ul>
                     </li>
                 <% } else if(user.userCategoryId === 2){ %>
                     <li > <a href="">Bienvenid@ <%= user.username %></a>
                         <ul class="admin_link">
                             <li><a href="/users/account">Mi Perfil</a></li>
-                            <li><a href="/products/productsCart">Carrito</a></li>
+                            <li><a href="/cart">Carrito</a></li>
+                            <li><a href="/cart/cartsHistory">Mis compras</a></li>
                         </ul>
                     </li>
                 <% } %>

@@ -1,5 +1,5 @@
+const moment = require("moment");
 const { Product, User, Cart, CartItem } = require('../database/models');
-
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
@@ -74,7 +74,6 @@ module.exports = {
       });
       console.log(cartItems);
       const finalPrice = cartItems.reduce((finalPrice, cartItem) => finalPrice = (finalPrice + Number(cartItem.subtotal)), 0);
-
       const lastCart = await Cart.findOne({
         order: [['createdAt', 'DESC']]
       });
@@ -107,7 +106,7 @@ module.exports = {
   },
   cartsHistory:  async (req, res) => {
     try {
-      const carts = await Cart.findAll({
+      let carts = await CartItem.findAll({
         where: {
           userId: req.session.user.id
         },
@@ -116,8 +115,8 @@ module.exports = {
           nested: true
         }
       });
-      // res.render('./carts/cartsHistory', { carts });
-      res.send(carts);
+      console.log(carts);
+      res.render('./carts/cartsHistory', { carts });
     } catch (error) {
       console.log(error);
     }
