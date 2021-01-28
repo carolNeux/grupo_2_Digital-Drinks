@@ -3,14 +3,12 @@
 /*--------------------------------------------------------*/
 .index_item_container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   margin: 10px 0px;
 }
 /*Estilos de cada caja item*/
 .index_item {
   display: flex;
-  flex-wrap: no-wrap;
   justify-content: center;
   width: 70%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -36,15 +34,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
   margin: 0px 0px 20px 0px;
 }
 .index_item_description h2,
 h4 {
   margin: 7px;
+  margin-bottom: 10px;
 }
 .index_item_description p {
-  margin: 0px 10px;
+  margin: 0px 20px;
+  text-align: justify;
 }
 /*Botones de ver mas*/
 .see_more {

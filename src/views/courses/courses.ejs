@@ -25,7 +25,7 @@
             <% courses.forEach(course => { %>
                 <article class="product">
                     <div class="product_img_container">
-                        <a>
+                        <a href="/courses/coursesDetail/<%= course.id %>">
                             <img src="/images/courses/<%= course.image %>"  alt="<%= course.name %>" class = "course_img">
                         </a>
                     </div>

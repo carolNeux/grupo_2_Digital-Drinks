@@ -12,19 +12,21 @@
     <!--fin header/partial--> 
     <section class="user_main_container">
         <h2>Lista de usuarios:</h2>
-        <% users.forEach(user => { %>
+        <% usersList.forEach(userItem => { %>
             <article class="user_list_container">
-                <div><h4>Nombre: </h4><p> <%= user.first_name %> </p></div>
-                <div><h4>Apellido: </h4><p> <%= user.last_name %></p></div>
-                <div><h4>Nombre de Usuario: </h4><p> <%= user.username %></p></div>
-                <div><h4>Email:</h4><p> <%= user.email %></p></div>
-                <div><h4>Fecha de nacimiento: </h4><p> <%= user.birthday %></p></div>
-                <div><h4>Categoria: </h4><p> <%= user.userCategory.name %></p></div>
+                <div><h4>Nombre: </h4><p> <%= userItem.first_name %> </p></div>
+                <div><h4>Apellido: </h4><p> <%= userItem.last_name %></p></div>
+                <div><h4>Nombre de Usuario: </h4><p> <%= userItem.username %></p></div>
+                <div><h4>Email:</h4><p> <%= userItem.email %></p></div>
+                <div><h4>Fecha de nacimiento: </h4><p> <%= userItem.birthday %></p></div>
+                <div><h4>Categoria: </h4><p> <%= userItem.userCategory.name %></p></div>
                 <div class="user_buttons_container">
-                    <form action="/users/edit/<%= user.id %>" method="GET">
+                    <% if (userItem.username === user.username) { %>
+                    <form action="/users/edit/<%= userItem.id %>" method="GET">
                         <input type="submit" value="Editar">
-                    </form>
-                    <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
+                    </form>                  
+                    <% } %>
+                    <form action="/users/delete/<%= userItem.id %>?_method=DELETE" method="POST">
                         <input type="submit" value="Borrar">
                     </form>
                 </div>

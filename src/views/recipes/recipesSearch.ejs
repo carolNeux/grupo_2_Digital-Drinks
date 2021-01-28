@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--head/partial-->
+    <%- include('../partials/head') %>
+    <!--fin head/partial-->
+    <link rel="stylesheet" href="/stylesheets/listingPages.css">
+</head>
+<body>
+    <div class="central_container">
+    <!--header/partial-->
+    <%- include('../partials/header') %>
+    <!--fin header/partial-->
+        <!-- Barra de busqueda recetas -->
+        <div class="search_container">
+          <form action="/recipes/search" method="GET">
+            <label for="products_search"></label>
+            <input type="search" id="products_search" name="search" placeholder="Busqueda de Recetas">
+            <button type="submit" value="search" class="button_search">Buscar</button>
+          </form>
+        </div>
+        <!--Inicio de Recetas-->
+        <main class="product_detail_description">
+            <% if(recipes == '') { %>  
+
+                <div class="no_items_container">
+                    <div class="message">
+                    <h2>Búsqueda no encontrada!! </h2>
+                    <h3><a href="/products"> Vuelve a nuestras recetas</a></h3>
+                    </div>
+                </div>
+
+            <% } else { %>
+
+                <% recipes.forEach(recipe => { %>
+                    <article class="product">
+                        <div class="product_img_container">
+                            <a href="/recipes/recipesDetail/<%= recipe.id %> ">
+                                <img src= /images/recipes/<%= recipe.image %>  alt="<%= recipe.name %>" class="recipe_img">
+                            </a>
+                        </div>
+                        <div class="product_description">
+                            <h2><%= recipe.name %></h2>
+                            <p><%= recipe.description %> </p>
+                        </div>
+                        <a href="/recipes/recipesDetail/<%= recipe.id %> " class="see_more"><b>VER MÁS</b></a>                
+                    </article>
+ 
+                <% }) %>
+           <% } %>  
+        </main>
+
+    </div>
+    <!--footer/partial-->
+    <%- include('../partials/footer') %>
+    <!--final footer/partial-->
+</body>
+</html>

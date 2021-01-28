@@ -22,8 +22,8 @@ router.get("/logout", usersController.logout)
 router.get("/account", usersController.account)
 
 /*edicion por parte del usuario */
-router.get("/accountEdit/:id", allowed, usersController.accountEdit);
-router.put("/accountEdit/:id", allowed, userValidations.userEditAccount, usersController.accountStorage);
+router.get("/accountEdit/:id", usersController.accountEdit);
+router.put("/accountEdit/:id", userValidations.userEditAccount, usersController.accountStorage);
 
 /*edicion de un usuario */
 router.get("/edit/:id", allowed, usersController.edit);

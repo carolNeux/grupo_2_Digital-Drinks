@@ -51,6 +51,31 @@
     padding: 15px;
     padding-bottom: 50px;
 }
+
+.no_items_container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.message {
+    flex-wrap: wrap;
+    text-align: center;
+    width: 90%;
+    padding: 40px;
+    margin: 120px 50px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.message h3 {
+    color: #483D8B;
+    margin: 20px 0px;
+}
+.message h2 {
+    color: #FF6600;
+    margin: 20px 0px;
+}
+
 @media screen and (max-width: 900px) {
     .product_detail_description { flex-direction: column; }
     .product {

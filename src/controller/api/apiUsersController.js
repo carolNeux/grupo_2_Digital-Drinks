@@ -5,10 +5,8 @@ module.exports = {
     /*listado de usuarios para admins */
     list: async (req, res) => {
         try {
-            const users = await User.findAll({include: {all: true}});
-                for (let i = 0; i < users.length; i++) {
-                    users[i].dataValues.birthday = moment(users[i].dataValues.birthday).format("DD-MM-YYYY");
-                }
+          const users = await User.findAll({ include: { all: true } });
+
             if (users.length > 0) {
               let results = {
                 metadata: {
@@ -29,7 +27,7 @@ module.exports = {
             const {id} = req.params
             const user = await User.findByPk(id, { include: { all: true } });
           
-            if (user.length > 0) {
+            if (user) {
               let results = {
                 metadata: {
                   status: 200,

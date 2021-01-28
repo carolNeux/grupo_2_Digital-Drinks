@@ -110,7 +110,7 @@ module.exports = {
                     name:{ [Op.like]: '%' + search + '%' }
                 }
             });
-            res.render('./recipes/search', {recipes})    
+            res.render('./recipes/recipesSearch', {recipes})    
         } catch (error) {
             console.log(error);    
         }

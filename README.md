@@ -2,7 +2,7 @@
 
 Proyecto integrador
 
-Nuestro e-commers está orientado a bartenders profesionales y a quienes deseen incursionar en el mundo de la cockteleria, ofreciendo gran variedad de productos asociados a cada necesidad, como herramientas de barra, bebidas, cristalería, cursos, etc.
+Nuestro e-commerce está orientado a bartenders profesionales y a quienes deseen incursionar en el mundo de la cockteleria, ofreciendo gran variedad de productos asociados a cada necesidad, como herramientas de barra, bebidas, cristalería, cursos, etc.
 
 Queremos que nuestros clientes tengan una agradable experiencia a la hora de visitar nuestro sitio y puedan encontrar en el, los recursos necesarios para aprender, crecer profesionalmente o probar nuevas cosas. Por este motivo, añadiremos una sección donde los usuarios registrados puedan compartir sus recetas, métodos y secretos con vista al público en general.
 Dentro de los cursos, ofreceremos distintas especialidades como barista, mixologia, bartender, enología y más, ampliando nuestra cartera de productos conjuntamente.
