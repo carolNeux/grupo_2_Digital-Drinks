@@ -17,28 +17,41 @@
           <form action="/courses/search" method="GET">
             <label for="products_search"></label>
             <input type="search" id="products_search" name="search" placeholder="Busqueda de Cursos">
-            <button type="submit" value="Buscar">Buscar</button>
+            <button type="submit" value="Buscar" class="button_search">Buscar</button>
           </form>
         </div>
         <!--Inicio de courses-->
         <main class="product_detail_description">
-            <% courses.forEach(course => { %>
-                <article class="product">
-                    <div class="product_img_container">
-                        <a>
-                            <img src="/images/courses/<%= course.image %>"  alt="<%= course.name %>" class = "course_img">
-                        </a>
+             <% if(courses == '') { %>  
+
+                <div class="no_items_container">
+                    <div class="message">
+                    <h2>Búsqueda no encontrada!! </h2>
+                    <h3><a href="/products"> Vuelve a nuestros cursos</a></h3>
                     </div>
-                    <div class="product_description">
-                        <h2><%= course.name %></h2>
-                        <% if (course.discount !== 0) { %>
-                            <p><%= course.discount %>  % OFF</p>
-                        <% } %> 
-                        <p>$ <%= toThousand(course.price - (course.price * course.discount / 100)) %></p>
-                    </div>
-                    <a href="/courses/coursesDetail/<%= course.id %>" class="see_more"><b>VER MÁS</b></a>                
-                </article>
-            <% }) %>
+                </div>
+
+            <% } else { %>
+
+                <% courses.forEach(course => { %>
+                    <article class="product">
+                        <div class="product_img_container">
+                            <a href="/courses/coursesDetail/<%= course.id %>">
+                                <img src="/images/courses/<%= course.image %>"  alt="<%= course.name %>" class = "course_img">
+                            </a>
+                        </div>
+                        <div class="product_description">
+                            <h2><%= course.name %></h2>
+                            <% if (course.discount !== 0) { %>
+                                <p><%= course.discount %>  % OFF</p>
+                            <% } %> 
+                            <p>$ <%= toThousand(course.price - (course.price * course.discount / 100)) %></p>
+                        </div>
+                        <a href="/courses/coursesDetail/<%= course.id %>" class="see_more"><b>VER MÁS</b></a>                
+                    </article>
+                    
+                <% }) %>
+            <% } %> 
         </main>
     <!--footer/partial-->
     <%- include('../partials/footer') %>

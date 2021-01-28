@@ -16,30 +16,43 @@
           <form action="/products/search" method="GET">
             <label for="products_search"></label>
             <input type="search" id="products_search" name="search" placeholder="Busqueda de Productos">
-            <button type="submit" value="search">Buscar</button>
+            <button type="submit" value="search" class="button_search">Buscar</button>
           </form>
         </div>
         <!--Inicio de productos-->
         <main class="product_detail_description">
-            <% products.forEach(product => { %>
-                <article class="product">
-                    <div class="product_img_container">
-                        <a href="/products/productDetail/<%= product.id %>">
-                            <img src="/images/products/<%= product.image %>" alt="<%= product.name %>" class= "product_img">
-                        </a>
+            <% if(products == '') { %>  
+
+                <div class="no_items_container">
+                    <div class="message">
+                    <h2>Búsqueda no encontrada!! </h2>
+                    <h3><a href="/products"> Vuelve a nuestros productos</a></h3>
                     </div>
-                    <div class="product_description">
-                        <h2><%= product.name %></h2>
-                    <% if (product.discount !== 0) { %>
-                        <p><%= product.discount %>  % OFF</p>
-                        <p>$ <%= toThousand(product.price - (product.price * product.discount / 100)) %></p>
-                    <% } else { %>
-                    <p>$<%= toThousand(product.price) %></p>
-                    <% } %>
-                    </div>
-                    <a href="/products/productDetail/<%= product.id %> " class="see_more"><b>VER MÁS</b></a>                
-                </article>
-            <% }) %>
+                </div>
+
+            <% } else { %>
+
+                <% products.forEach(product => { %>
+                    <article class="product">
+                        <div class="product_img_container">
+                            <a href="/products/productDetail/<%= product.id %>">
+                                <img src="/images/products/<%= product.image %>" alt="<%= product.name %>" class= "product_img">
+                            </a>
+                        </div>
+                        <div class="product_description">
+                            <h2><%= product.name %></h2>
+                        <% if (product.discount !== 0) { %>
+                            <p><%= product.discount %>  % OFF</p>
+                            <p>$ <%= toThousand(product.price - (product.price * product.discount / 100)) %></p>
+                        <% } else { %>
+                        <p>$<%= toThousand(product.price) %></p>
+                        <% } %>
+                        </div>
+                        <a href="/products/productDetail/<%= product.id %> " class="see_more"><b>VER MÁS</b></a>                
+                    </article>
+                    
+                 <% }) %>
+            <% } %> 
         </main>
     <!--footer/partial-->
     <%- include('../partials/footer') %>

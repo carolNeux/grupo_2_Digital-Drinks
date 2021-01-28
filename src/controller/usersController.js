@@ -7,11 +7,11 @@ module.exports = {
     /*listado de usuarios para admins */
     list: async (req, res) => {
         try {
-            let users = await User.findAll({include: {all: true}});
-                for (let i = 0; i < users.length; i++) {
-                    users[i].dataValues.birthday = moment(users[i].dataValues.birthday).format("DD-MM-YYYY");
+            let usersList = await User.findAll({include: {all: true}});
+                for (let i = 0; i < usersList.length; i++) {
+                    usersList[i].dataValues.birthday = moment(usersList[i].dataValues.birthday).format("DD-MM-YYYY");
                 }
-            res.render("./users/userList", {users});
+            res.render("./users/userList", {usersList});
         } catch (error) {
             console.log(error);
         }
@@ -80,7 +80,7 @@ module.exports = {
         try {
             let userInformation = await User.findOne({
                 where: {
-                    username: req.session.username
+                    username: req.session.user.username
                 }
             });
             userInformation.dataValues.birthday = moment(userInformation.dataValues.birthday).format("DD-MM-YYYY");
@@ -93,7 +93,7 @@ module.exports = {
         try {
             let userInformation = await User.findOne({
                 where: {
-                    username: req.session.username
+                    username: req.session.user.username
                 }
             });
             res.render('./users/accountEdit', {userInformation})  
